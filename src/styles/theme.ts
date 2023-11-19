@@ -161,7 +161,7 @@ const fonts = {
   `,
   nb_kr: css`
     font-family: 'SF-Pro-Display-Regular';
-    font-size: 4.8rem;
+    font-size: 1.2rem;
     line-height: 140%;
     letter-spacing: -0.16rem;
   `,
