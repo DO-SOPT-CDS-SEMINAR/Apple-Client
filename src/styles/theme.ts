@@ -3,7 +3,7 @@ import { css, DefaultTheme } from 'styled-components';
 const colors = {
   grayScale: {
     white: '#ffffff',
-    gray1: '#81B7FF',
+    gray1: '#fafafa',
     gray2: '#fafafa',
     gray3: '#f5f5f7',
     gray4: '#ebebee',
