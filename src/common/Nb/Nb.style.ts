@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface NbBtnProps {
+  isActive: boolean;
+}
+
 export const NbWrapper = styled.header`
   display: flex;
 
@@ -10,15 +14,18 @@ export const NbWrapper = styled.header`
   background-color: ${({ theme: { colors } }) => colors.grayScale.gray1};
 `;
 
-export const NbBtn = styled.button`
+export const NbBtn = styled.button<NbBtnProps>`
   display: flex;
   align-items: center;
 
   padding: 0.5rem 3.5rem 0.5rem 0.5rem;
 
-  color: ${({ theme: { colors } }) => colors.grayScale.gray8};
+  color: ${({ theme: { colors }, isActive }) =>
+    isActive ? colors.grayScale.black : colors.grayScale.gray8};
 
-  font: ${({ theme: { fonts } }) => fonts.body1_2};
+  font: ${({ theme: { fonts }, isActive }) => (isActive ? fonts.body1 : fonts.body1_2)};
+  text-decoration-line: ${({ isActive }) => (isActive ? 'underline' : 'none')};
+  text-underline-position: under;
 
   cursor: pointer;
 `;
