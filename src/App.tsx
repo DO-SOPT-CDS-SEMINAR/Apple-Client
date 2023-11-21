@@ -5,6 +5,8 @@ import theme from './styles/theme';
 import styled, { css } from 'styled-components';
 import './styles/fonts/fonts.css';
 import { BuyButton } from './common/Button/BuyButton';
+import { DefaultButton } from './common/Button/DefaultButton';
+import { DisplayTypeButton } from './common/Button/DisplayTypeButton/indes';
 
 function App() {
   console.log('초기세팅 완료');
@@ -16,6 +18,8 @@ function App() {
         {/* Router 추가해야 함 !  */}
         <BlueHeading>적용 잘됨 확인!</BlueHeading>
         <BuyButton>구입하기</BuyButton>
+        <DefaultButton>button</DefaultButton>
+        <DisplayTypeButton title='Title' subtext='subtext' price='1,729,000' disabled />
       </ThemeProvider>
     </RecoilRoot>
   );

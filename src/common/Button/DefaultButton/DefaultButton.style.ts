@@ -5,8 +5,10 @@ export const Wrapper = styled.button`
   justify-content: center;
   align-items: center;
 
-  padding: 7px 15px;
-  border-radius: 999px;
+  width: 7, 4rem;
+  height: 3.6rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 99.9rem;
 
   ${({ theme }) => css`
     background-color: ${theme.colors.grayScale.gray4};

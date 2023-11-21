@@ -5,8 +5,10 @@ export const Wrapper = styled.button`
   justify-content: center;
   align-items: center;
 
-  padding: 7px 15px;
-  border-radius: 15px;
+  width: 8.5rem;
+  height: 3.6rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 1.5rem;
 
   background-color: ${({ theme }) => theme.colors.pointColor.blue1};
   color: ${({ theme }) => theme.colors.grayScale.white};
@@ -16,7 +18,7 @@ export const Wrapper = styled.button`
     background-color: ${({ theme }) => theme.colors.pointColor.blue2};
   }
 
-  &:active {
+  &:focus {
     background-color: ${({ theme }) => theme.colors.pointColor.blue0};
   }
 `;
