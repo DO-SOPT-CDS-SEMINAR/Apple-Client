@@ -6,7 +6,8 @@ import styled, { css } from 'styled-components';
 import './styles/fonts/fonts.css';
 import { BuyButton } from './common/Button/BuyButton';
 import { DefaultButton } from './common/Button/DefaultButton';
-import { DisplayTypeButton } from './common/Button/DisplayTypeButton/indes';
+import { DisplayTypeButton } from './common/Button/DisplayTypeButton';
+import { GigaTypeButton } from './common/Button/GigaTypeButton';
 
 function App() {
   console.log('초기세팅 완료');
@@ -19,7 +20,8 @@ function App() {
         <BlueHeading>적용 잘됨 확인!</BlueHeading>
         <BuyButton>구입하기</BuyButton>
         <DefaultButton>button</DefaultButton>
-        <DisplayTypeButton title='Title' subtext='subtext' price='1,729,000' disabled />
+        <DisplayTypeButton title='Title' subtext='subtext' price={1729000} disabled />
+        <GigaTypeButton giga={128} price={1729000} disabled />
       </ThemeProvider>
     </RecoilRoot>
   );
