@@ -8,6 +8,7 @@ import { BuyButton } from './common/Button/BuyButton';
 import { DefaultButton } from './common/Button/DefaultButton';
 import { DisplayTypeButton } from './common/Button/DisplayTypeButton';
 import { GigaTypeButton } from './common/Button/GigaTypeButton';
+import { AddToCartButton } from './common/Button/AddToCartButton';
 
 function App() {
   console.log('초기세팅 완료');
@@ -22,6 +23,7 @@ function App() {
         <DefaultButton>button</DefaultButton>
         <DisplayTypeButton title='Title' subtext='subtext' price={1729000} disabled />
         <GigaTypeButton giga={128} price={1729000} disabled />
+        <AddToCartButton>장바구니에 담기</AddToCartButton>
       </ThemeProvider>
     </RecoilRoot>
   );
