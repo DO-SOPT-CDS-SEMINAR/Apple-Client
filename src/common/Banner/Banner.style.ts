@@ -19,24 +19,22 @@ export const BannerText = styled.div`
   height: 2.2rem;
   margin: 0 28.2rem;
   padding: 0.1rem 0;
+`;
 
-  & > p {
-    color: ${({ theme: { colors } }) => colors.grayScale.gray8};
+export const Text = styled.p`
+  color: ${({ theme: { colors } }) => colors.grayScale.gray8};
 
-    font: ${({ theme: { fonts } }) => fonts.body3_2};
+  font: ${({ theme: { fonts } }) => fonts.body3_2};
+`;
 
-    cursor: pointer;
-  }
+export const Button = styled.button`
+  display: flex;
 
-  & > button {
-    display: flex;
+  padding: 0 0 0 0.5rem;
 
-    padding: 0 0 0 0.5rem;
+  color: ${({ theme: { colors } }) => colors.pointColor.blue0};
 
-    color: ${({ theme: { colors } }) => colors.pointColor.blue0};
+  font: ${({ theme: { fonts } }) => fonts.body3_2};
 
-    font: ${({ theme: { fonts } }) => fonts.body3_2};
-
-    cursor: pointer;
-  }
+  cursor: pointer;
 `;

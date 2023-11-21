@@ -17,8 +17,8 @@ const Banner = () => {
           />
         </svg>
         <S.BannerText>
-          <p>신용카드 결제 시 최대 12개월 할부 적용 가능. ²</p>
-          <button>
+          <S.Text>신용카드 결제 시 최대 12개월 할부 적용 가능. ²</S.Text>
+          <S.Button>
             더 알아보기
             <svg
               width='16'
@@ -32,7 +32,7 @@ const Banner = () => {
                 fill='#0066CC'
               />
             </svg>
-          </button>
+          </S.Button>
         </S.BannerText>
         <svg
           width='24'

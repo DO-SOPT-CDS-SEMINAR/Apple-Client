@@ -5,6 +5,7 @@ import theme from './styles/theme';
 import './styles/fonts/fonts.css';
 import Gnb from './common/Gnb/index';
 import Banner from './common/Banner';
+import Nb from './common/Nb';
 
 function App() {
   console.log('초기세팅 완료');
@@ -16,6 +17,7 @@ function App() {
         {/* Router 추가해야 함 !  */}
         <Gnb />
         <Banner />
+        <Nb />
       </ThemeProvider>
     </RecoilRoot>
   );
