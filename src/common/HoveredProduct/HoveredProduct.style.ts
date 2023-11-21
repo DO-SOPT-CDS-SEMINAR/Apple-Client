@@ -1,12 +1,24 @@
 import styled, { css } from 'styled-components';
 
-export const ProductContainer = styled.div`
+export const ProductContainer = styled.div<{
+  // eslint-disable-next-line prettier/prettier
+  $width: number;
+  $height: number;
+  $borderRadius: number;
+}>`
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 100%;
-  height: 100%;
+  width: ${({ $width }) => css`
+    ${$width}rem
+  `};
+  height: ${({ $height }) => css`
+    ${$height}rem
+  `};
+  border-radius: ${({ $borderRadius }) => css`
+    ${$borderRadius}rem
+  `};
 
   background-color: rgba(0, 0, 0, 0.5);
 `;
