@@ -51,7 +51,7 @@ module.exports = {
       },
     ],
     'no-console': 'off',
-    'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
+    'react/jsx-filename-extension': ['error', { extensions: ['.ts', '.tsx'] }],
     'linebreak-style': 'off',
     'react/jsx-props-no-spreading': 'off',
     'import/no-extraneous-dependencies': 'off',
@@ -69,22 +69,26 @@ module.exports = {
     '@typescript-eslint/naming-convention': [
       'warn',
       {
-        selector: 'variable',
-        format: ['camelCase'],
+        selector: 'default',
+        format: ['camelCase', 'PascalCase'],
+        leadingUnderscore: 'allow',
+        trailingUnderscore: 'allow',
       },
+
+      {
+        selector: 'import',
+        format: ['camelCase', 'PascalCase'],
+      },
+
       {
         selector: 'variable',
-        modifiers: ['const'],
-        format: ['UPPER_CASE'],
+        format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+        leadingUnderscore: 'allow',
+        trailingUnderscore: 'allow',
       },
+
       {
-        selector: 'variable',
-        types: ['function'],
-        format: ['PascalCase'],
-      },
-      {
-        selector: 'variable',
-        types: ['object'],
+        selector: 'typeLike',
         format: ['PascalCase'],
       },
     ],
