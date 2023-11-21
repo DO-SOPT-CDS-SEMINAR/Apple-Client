@@ -43,126 +43,147 @@ const fonts = {
     font-family: 'SF-Pro-Text-Semibold';
     font-size: 4.8rem;
     line-height: 140%;
+    font-weight: 590;
     letter-spacing: -0.4rem;
   `,
   heading2: css`
     font-family: 'SF-Pro-Text-Semibold';
     font-size: 4rem;
     line-height: 140%;
+    font-weight: 590;
     letter-spacing: 0rem;
   `,
   heading3: css`
     font-family: 'SF-Pro-Text-Semibold';
     font-size: 3.6rem;
     line-height: 140%;
+    font-weight: 590;
     letter-spacing: 0rem;
   `,
   heading4: css`
     font-family: 'SF-Pro-Text-Semibold';
     font-size: 3.2rem;
     line-height: 140%;
+    font-weight: 590;
     letter-spacing: 0rem;
   `,
   subheading1: css`
     font-family: 'SF-Pro-Text-Bold';
     font-size: 2.8rem;
     line-height: 140%;
+    font-weight: 700;
     letter-spacing: -0.1rem;
   `,
   subheading1_1: css`
     font-family: 'SF-Pro-Text-Bold';
     font-size: 2.8rem;
     line-height: 140%;
+    font-weight: 700;
     letter-spacing: -0.18rem;
   `,
   subheading2: css`
     font-family: 'SF-Pro-Text-Semibold';
     font-size: 2.4rem;
     line-height: 160%;
+    font-weight: 590;
     letter-spacing: -0.18rem;
   `,
   subheading3: css`
     font-family: 'SF-Pro-Text-Semibold';
     font-size: 2.4rem;
     line-height: 140%;
+    font-weight: 590;
     letter-spacing: -0.14rem;
   `,
   footnote: css`
     font-family: 'SF-Pro-Text-Bold';
     font-size: 2.4rem;
     line-height: 140%;
+    font-weight: 700;
     letter-spacing: -0.18rem;
   `,
   subheading4: css`
     font-family: 'SF-Pro-Text-Bold';
     font-size: 2.1rem;
     line-height: 140%;
+    font-weight: 700;
     letter-spacing: 0rem;
   `,
   body1: css`
     font-family: 'SF-Pro-Text-Semibold';
     font-size: 1.7rem;
     line-height: 140%;
+    font-weight: 590;
     letter-spacing: 0rem;
   `,
   body1_1: css`
     font-family: 'SF-Pro-Text-Semibold';
     font-size: 1.7rem;
     line-height: 140%;
+    font-weight: 590;
     letter-spacing: -0.06rem;
   `,
   body1_2: css`
     font-family: 'SF-Pro-Text-Regular';
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     line-height: 140%;
+    font-weight: 400;
     letter-spacing: 0rem;
   `,
   body2: css`
     font-family: 'SF-Pro-Text-Regular';
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 140%;
+    font-weight: 400;
     letter-spacing: 0rem;
   `,
   body3: css`
     font-family: 'SF-Pro-Text-Semibold';
     font-size: 1.4rem;
-    line-height: 160%;
+    line-height: 140%;
+    font-weight: 590;
     letter-spacing: 0rem;
   `,
   body3_1: css`
     font-family: 'SF-Pro-Text-Regular';
     font-size: 1.4rem;
     line-height: 160%;
+    font-weight: 400;
     letter-spacing: -0.1rem;
   `,
   body3_2: css`
     font-family: 'SF-Pro-Text-Regular';
-    font-size: 1.2rem;
-    line-height: 140%;
+    font-size: 1.4rem;
+    line-height: 160%;
+    font-weight: 400;
     letter-spacing: 0rem;
   `,
   caption1: css`
     font-family: 'SF-Pro-Text-Semibold';
     font-size: 1.2rem;
     line-height: 140%;
+    font-weight: 590;
     letter-spacing: 0rem;
   `,
   caption2: css`
     font-family: 'SF-Pro-Text-Regular';
     font-size: 1.2rem;
     line-height: 140%;
+    font-weight: 400;
     letter-spacing: 0rem;
   `,
   nb_en: css`
     font-family: 'SF-Pro-Text-Regular';
     font-size: 1.2rem;
     line-height: 140%;
+    font-weight: 400;
     letter-spacing: -0.02rem;
   `,
   nb_kr: css`
     font-family: 'SF-Pro-Text-Regular';
     font-size: 1.2rem;
     line-height: 140%;
+    font-weight: 400;
     letter-spacing: -0.16rem;
   `,
 };
