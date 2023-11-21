@@ -8,9 +8,6 @@ export const GnbWrapper = styled.header`
   height: 4.4rem;
 
   background-color: ${({ theme: { colors } }) => colors.grayScale.gray2};
-  & > svg {
-    margin: 0 1.363rem;
-  }
 `;
 
 export const GnbBtn = styled.button`
@@ -25,4 +22,16 @@ export const GnbBtn = styled.button`
   font: ${({ theme: { fonts } }) => fonts.nb_en};
 
   cursor: pointer;
+`;
+
+export const GnbIcAppleIcon = styled.img`
+  margin: 1rem 0.8rem;
+`;
+
+export const GnbIcSearchIcon = styled.img`
+  margin: 1rem 0.8rem;
+`;
+
+export const GnbIcShopIcon = styled.img`
+  margin: 1rem 0.8rem;
 `;

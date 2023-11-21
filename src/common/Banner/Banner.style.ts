@@ -29,6 +29,7 @@ export const Text = styled.p`
 
 export const Button = styled.button`
   display: flex;
+  align-items: center;
 
   padding: 0 0 0 0.5rem;
 

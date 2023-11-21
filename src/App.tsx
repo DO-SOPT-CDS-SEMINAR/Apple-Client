@@ -14,7 +14,6 @@ function App() {
     <RecoilRoot>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        {/* Router 추가해야 함 !  */}
         <Gnb />
         <Banner />
         <Nb />
