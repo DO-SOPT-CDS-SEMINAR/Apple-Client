@@ -144,7 +144,7 @@ export const GlobalStyle = createGlobalStyle`
 ${reset}
 
 * {
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
 // 사파리 웹 뷰 브라우저 상속 스타일 제거
