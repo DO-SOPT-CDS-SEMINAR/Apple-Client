@@ -4,12 +4,13 @@ interface HoveredProductProps {
   width: number;
   height: number;
   borderRadius: number;
+  haveDetailBtn?: boolean;
 }
 
-const HoveredProduct = ({ width, height, borderRadius }: HoveredProductProps) => {
+const HoveredProduct = ({ width, height, borderRadius, haveDetailBtn }: HoveredProductProps) => {
   return (
     <S.ProductContainer $width={width} $height={height} $borderRadius={borderRadius}>
-      <S.DetailBtn>제품 자세히 살펴보기</S.DetailBtn>
+      {haveDetailBtn && <S.DetailBtn>제품 자세히 살펴보기</S.DetailBtn>}
     </S.ProductContainer>
   );
 };
