@@ -14,9 +14,6 @@ function App() {
     <RecoilRoot>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Gnb />
-        <Banner />
-        <Nb />
       </ThemeProvider>
     </RecoilRoot>
   );
