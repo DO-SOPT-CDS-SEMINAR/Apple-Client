@@ -5,8 +5,6 @@ export const Wrapper = styled.button`
   justify-content: center;
   align-items: center;
 
-  width: 5.4rem;
-  height: 4.1rem;
   padding: 1.2rem 1.6rem;
   border-radius: 4.2rem;
   gap: 0.4rem;

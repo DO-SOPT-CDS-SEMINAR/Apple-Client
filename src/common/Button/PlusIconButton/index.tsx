@@ -1,5 +1,6 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { ButtonHTMLAttributes, ReactNode, useState } from 'react';
 import * as S from './PlusIconButton.style';
+import { IpadproIcPlusCircleFill, IpadproIcPlusCircleNormal } from '../../../assets/icon';
 
 export type PlusIconButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   disabled?: boolean;
@@ -7,5 +8,19 @@ export type PlusIconButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 export const PlusIconButton = ({ children, disabled }: PlusIconButtonProps) => {
-  return <S.Wrapper disabled={disabled}>{children}</S.Wrapper>;
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+  return (
+    <S.Wrapper disabled={disabled} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      {children}
+      {isHovered ? <IpadproIcPlusCircleFill /> : <IpadproIcPlusCircleNormal />}
+    </S.Wrapper>
+  );
 };
