@@ -11,6 +11,7 @@ import { GigaTypeButton } from './common/Button/GigaTypeButton';
 import { AddToCartButton } from './common/Button/AddToCartButton';
 import { PlusIconButton } from './common/Button/PlusIconButton';
 import { ColorTypeButton } from './common/Button/ColorTypeButton';
+import { IcSwatchSpaceGray } from './assets/icon';
 
 function App() {
   console.log('초기세팅 완료');
@@ -27,7 +28,7 @@ function App() {
         <GigaTypeButton giga={128} price={1729000} disabled />
         <AddToCartButton>장바구니에 담기</AddToCartButton>
         <PlusIconButton>Title</PlusIconButton>
-        <ColorTypeButton>스페이스 그레이</ColorTypeButton>
+        <ColorTypeButton ColorComponent={IcSwatchSpaceGray}>스페이스 그레이</ColorTypeButton>
       </ThemeProvider>
     </RecoilRoot>
   );
