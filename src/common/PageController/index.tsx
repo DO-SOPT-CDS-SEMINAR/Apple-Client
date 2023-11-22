@@ -1,5 +1,16 @@
+import { EllipseDark, EllipseLight } from '../../assets/icon';
 import * as S from './PageController.style';
 
-export const PageController = () => {
-  return <S.Wrapper>아이콘 넣어주기</S.Wrapper>;
+interface PageControllerProps {
+  pages: number;
+  nowPage: number;
+}
+
+export const PageController = ({ pages, nowPage }: PageControllerProps) => {
+  const renderEllipses = () => {
+    return Array.from({ length: pages }, (_, index) =>
+      index === nowPage ? <EllipseDark key={index} /> : <EllipseLight key={index} />,
+    );
+  };
+  return <S.Wrapper>{renderEllipses()}</S.Wrapper>;
 };
