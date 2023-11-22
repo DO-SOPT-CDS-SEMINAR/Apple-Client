@@ -1,17 +1,27 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface NbBtnProps {
   $isActive: boolean;
 }
 
-export const NbWrapper = styled.header`
+interface NbWrapperProps {
+  $isTab?: boolean;
+}
+
+// eslint-disable-next-line prettier/prettier
+export const NbWrapper = styled.header<NbWrapperProps>`
   display: flex;
+  justify-content: ${({ $isTab }) => $isTab && css`center`};
 
   width: 100vw;
   height: 6rem;
+
   padding-left: 12rem;
 
-  background-color: ${({ theme: { colors } }) => colors.grayScale.gray1};
+  border-bottom: ${({ theme: { colors }, $isTab }) =>
+    $isTab && css`0.1rem solid ${colors.grayScale.gray3}`};
+
+  gap: ${({ $isTab }) => ($isTab ? css`15.167rem` : css`3.5rem`)};
 `;
 
 // eslint-disable-next-line prettier/prettier
@@ -19,7 +29,7 @@ export const NbBtn = styled.button<NbBtnProps>`
   display: flex;
   align-items: center;
 
-  padding: 0.5rem 3.5rem 0.5rem 0.5rem;
+  padding: 0.5rem 0rem 0.5rem 0.5rem;
 
   color: ${({ theme: { colors }, $isActive }) =>
     $isActive ? colors.grayScale.black : colors.grayScale.gray8};

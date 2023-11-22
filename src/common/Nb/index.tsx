@@ -1,12 +1,17 @@
 import * as S from './Nb.style';
 import { useState } from 'react';
-import { MAIN_BUTTON_DATA } from '../../constant/MAIN_BUTTON';
+// import { MAIN_BUTTON_DATA } from '../../constant/MAIN_BUTTON';
 
 export interface NbButtonProps {
   label: string;
   index: number;
   onClick: (index: number) => void;
   isActive: boolean;
+}
+
+export interface NbProps {
+  DATA: Array<string>;
+  isTab?: boolean;
 }
 
 //버튼 안에 라벨 넣기
@@ -18,7 +23,7 @@ export const NbButton = ({ label, index, onClick, isActive }: NbButtonProps) => 
   );
 };
 
-const Nb = () => {
+const Nb = ({ DATA, isTab }: NbProps) => {
   const [isClicked, setIsClicked] = useState(0);
   const [, setIsActive] = useState(false);
 
@@ -30,11 +35,11 @@ const Nb = () => {
 
   // map을 통해서 버튼 생성
   return (
-    <S.NbWrapper>
-      {MAIN_BUTTON_DATA.map((button, index) => (
+    <S.NbWrapper $isTab={isTab}>
+      {DATA.map((button, index) => (
         <NbButton
           key={index}
-          label={button.label}
+          label={button}
           index={index}
           onClick={moveToPage}
           isActive={isClicked === index}
