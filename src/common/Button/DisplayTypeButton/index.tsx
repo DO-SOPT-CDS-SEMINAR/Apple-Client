@@ -8,7 +8,7 @@ export interface DisplayTypeButtonProps {
 }
 
 export const DisplayTypeButton = ({ title, subtext, price, disabled }: DisplayTypeButtonProps) => {
-  const formattedPrice = new Intl.NumberFormat('ko-KR').format(price);
+  const formattedPrice = price.toLocaleString();
   return (
     <S.Wrapper disabled={disabled}>
       <S.TextWrapper>
