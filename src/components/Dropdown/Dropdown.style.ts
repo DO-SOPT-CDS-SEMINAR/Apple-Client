@@ -24,8 +24,6 @@ export const SelectButton = styled.button`
 export const Select = styled.div`
   display: flex;
 
-  padding: 2rem 1.6rem;
-
   ${({ theme }) => theme.fonts.body1};
 `;
 

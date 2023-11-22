@@ -1,3 +1,4 @@
+import { IpadproIcDownBlue24 } from '../../assets/icon/index.js';
 import { DropDownMore, DropDownNow } from '../../constants/dropdown.constant.js';
 import * as S from './Dropdown.style.js';
 import { useState, useEffect, useRef } from 'react';
@@ -38,7 +39,7 @@ export const Dropdown = ({ onSelection }: DropdownProps) => {
     <S.Wrapper ref={selectRef}>
       <S.SelectButton type='button' onClick={toggleDropdown}>
         <S.Select>{selectedValue}</S.Select>
-        ...
+        <IpadproIcDownBlue24 />
       </S.SelectButton>
       {isDropDown && (
         <S.DropDown>
