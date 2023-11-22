@@ -12,7 +12,7 @@ export interface NbButtonProps {
 //버튼 안에 라벨 넣기
 export const NbButton = ({ label, index, onClick, isActive }: NbButtonProps) => {
   return (
-    <S.NbBtn onClick={() => onClick(index)} isActive={isActive}>
+    <S.NbBtn onClick={() => onClick(index)} $isActive={isActive}>
       {label}
     </S.NbBtn>
   );
