@@ -8,15 +8,15 @@ export const Wrapper = styled.button`
   padding: 1.5rem;
   border-radius: 1.2rem;
 
-  border: 0.1rem solid ${({ theme }) => theme.colors.grayScale.gray5};
-  ${({ theme }) => theme.colors.grayScale.gray8};
+  border: 0.1rem solid ${({ theme: { colors } }) => colors.grayScale.gray5};
+  ${({ theme: { colors } }) => colors.grayScale.gray8};
 
   &:focus {
-    border-color: ${({ theme }) => theme.colors.pointColor.blue0};
+    border-color: ${({ theme: { colors } }) => colors.pointColor.blue0};
   }
   &:disabled {
-    border-color: ${({ theme }) => theme.colors.grayScale.gray3};
-    color: ${({ theme }) => theme.colors.grayScale.gray5};
+    border-color: ${({ theme: { colors } }) => colors.grayScale.gray3};
+    color: ${({ theme: { colors } }) => colors.grayScale.gray5};
   }
 `;
 
@@ -31,9 +31,9 @@ export const TextWrapper = styled.div`
 `;
 
 export const Giga = styled.p`
-  ${({ theme }) => theme.fonts.body1};
+  ${({ theme: { fonts } }) => fonts.body1};
 `;
 
 export const Price = styled.p`
-  ${({ theme }) => theme.fonts.caption2};
+  ${({ theme: { fonts } }) => fonts.caption2};
 `;

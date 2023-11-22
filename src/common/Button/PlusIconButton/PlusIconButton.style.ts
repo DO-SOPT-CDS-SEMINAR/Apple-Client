@@ -9,7 +9,7 @@ export const Wrapper = styled.button`
   border-radius: 4.2rem;
   gap: 0.4rem;
 
-  background-color: ${({ theme }) => theme.colors.grayScale.gray2};
-  color: ${({ theme }) => theme.colors.grayScale.gray8};
-  ${({ theme }) => theme.fonts.caption2};
+  background-color: ${({ theme: { colors } }) => colors.grayScale.gray2};
+  color: ${({ theme: { colors } }) => colors.grayScale.gray8};
+  ${({ theme: { fonts } }) => fonts.caption2};
 `;

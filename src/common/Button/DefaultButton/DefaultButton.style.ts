@@ -10,9 +10,9 @@ export const Wrapper = styled.button`
   padding: 0.7rem 1.5rem;
   border-radius: 99.9rem;
 
-  ${({ theme }) => css`
-    background-color: ${theme.colors.grayScale.gray4};
-    color: ${theme.colors.grayScale.gray8};
-    ${theme.fonts.body3_2};
+  ${({ theme: { colors, fonts } }) => css`
+    background-color: ${colors.grayScale.gray4};
+    color: ${colors.grayScale.gray8};
+    ${fonts.body3_2};
   `}
 `;

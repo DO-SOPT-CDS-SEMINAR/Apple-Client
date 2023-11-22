@@ -10,15 +10,15 @@ export const Wrapper = styled.button`
   padding: 0.8rem 1.5rem;
   border-radius: 1.2rem;
 
-  background-color: ${({ theme }) => theme.colors.pointColor.blue1};
-  color: ${({ theme }) => theme.colors.grayScale.white};
-  ${({ theme }) => theme.fonts.body1};
+  background-color: ${({ theme: { colors } }) => colors.pointColor.blue1};
+  color: ${({ theme: { colors } }) => colors.grayScale.white};
+  ${({ theme: { fonts } }) => fonts.body1};
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.pointColor.blue2};
+    background-color: ${({ theme: { colors } }) => colors.pointColor.blue2};
   }
 
   &:focus {
-    background-color: ${({ theme }) => theme.colors.pointColor.blue0};
+    background-color: ${({ theme: { colors } }) => colors.pointColor.blue0};
   }
 `;
