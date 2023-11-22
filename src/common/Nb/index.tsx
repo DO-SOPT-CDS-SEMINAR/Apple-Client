@@ -1,6 +1,5 @@
 import * as S from './Nb.style';
 import { useState } from 'react';
-// import { MAIN_BUTTON_DATA } from '../../constant/MAIN_BUTTON';
 
 export interface NbButtonProps {
   label: string;
