@@ -1,11 +1,8 @@
 import * as S from './Nb.style';
 import { useState } from 'react';
+import { MAIN_BUTTON_DATA } from '../../constant/MAIN_BUTTON';
 
-interface Button {
-  label: string;
-}
-
-export interface NbButtonPros {
+export interface NbButtonProps {
   label: string;
   index: number;
   onClick: (index: number) => void;
@@ -13,7 +10,7 @@ export interface NbButtonPros {
 }
 
 //버튼 안에 라벨 넣기
-export const NbButton = ({ label, index, onClick, isActive }: NbButtonPros) => {
+export const NbButton = ({ label, index, onClick, isActive }: NbButtonProps) => {
   return (
     <S.NbBtn onClick={() => onClick(index)} isActive={isActive}>
       {label}
@@ -24,14 +21,6 @@ export const NbButton = ({ label, index, onClick, isActive }: NbButtonPros) => {
 const Nb = () => {
   const [isClicked, setIsClicked] = useState(0);
   const [isActive, setIsActive] = useState(false);
-
-  //메인 화면 label 데이터 임시저장
-  const MAIN_BUTTON_DATA: Button[] = [
-    { label: '최신제품' },
-    { label: '맞춤각인' },
-    { label: 'Apple 독점제공' },
-    { label: '특별할인' },
-  ];
 
   // 화면 내 키 전송을 통한 이동용
   const moveToPage = (index: number) => {
