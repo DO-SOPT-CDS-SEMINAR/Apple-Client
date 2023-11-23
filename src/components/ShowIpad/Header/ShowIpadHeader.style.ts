@@ -5,6 +5,8 @@ export const HeaderContainer = styled.header`
   ${({ theme: { fonts } }) => fonts.subheading1_1};
 
   margin-bottom: 2rem;
+
+  gap: 0.2rem;
 `;
 
 export const Title = styled.p`
