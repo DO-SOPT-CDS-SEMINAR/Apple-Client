@@ -1,29 +1,29 @@
 import { BuyButton } from '../../../../common/Button/BuyButton';
+import ColorPreview from '../../ColorPreview';
 import * as S from './IpadProducts.style';
 
 interface IpadProductsProps {
+  idx: number | string;
   productName: string;
+  productSubName?: string;
+  imgUrl: string;
   price: number;
 }
 
-const IpadProducts = ({ productName, price }: IpadProductsProps) => {
+const IpadProducts = ({ productName, productSubName, imgUrl, price, idx }: IpadProductsProps) => {
   const formattedPrice = price.toLocaleString();
+
   return (
     <S.ProductContainer>
-      <S.ProductName>{productName}</S.ProductName>
-      <S.ProductImg
-        src='https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-card-40-pro-202210?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1664578794100'
-        alt='아이패드 이미지'
-      />
+      <S.ProductNameContainer $productSubname={productSubName}>
+        <S.ProductName>{productName}</S.ProductName>
+        {productSubName && <S.ProductSubName>{productSubName}</S.ProductSubName>}
+      </S.ProductNameContainer>
+
+      <S.ProductImg src={imgUrl} alt={`${productName}` + `${productSubName}`} />
+
       <S.ColorsContainer>
-        <S.ProductColorsImg
-          src='https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-wifi-spacegray-202210_SW_COLOR?wid=32&hei=32&fmt=png-alpha&.v=1664559395059'
-          alt='아이패드 색상'
-        />
-        <S.ProductColorsImg
-          src='https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-wifi-silver-202210_SW_COLOR?wid=32&hei=32&fmt=png-alpha&.v=1664559395063'
-          alt='아이패드 색상'
-        />
+        <ColorPreview idx={idx} />
       </S.ColorsContainer>
 
       <S.BottomContainer>

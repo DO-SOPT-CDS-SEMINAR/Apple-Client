@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+interface ProductNameContainerProps {
+  $productSubname?: string;
+}
 
 export const ProductContainer = styled.article`
   display: flex;
@@ -13,12 +17,20 @@ export const ProductContainer = styled.article`
   background-color: ${({ theme: { colors } }) => colors.grayScale.white};
 `;
 
-export const ProductName = styled.p`
+export const ProductNameContainer = styled.div<ProductNameContainerProps>`
   width: calc(100% - 6rem);
-  margin: 5.4rem 0rem 5.6rem;
+  margin-top: 5.4rem;
+  margin-bottom: ${({ $productSubname }) => ($productSubname ? css`3.2rem` : css`5.6rem`)};
+`;
 
+export const ProductName = styled.p`
   color: ${({ theme: { colors } }) => colors.grayScale.gray8};
   ${({ theme: { fonts } }) => fonts.subheading1_1};
+`;
+
+export const ProductSubName = styled.p`
+  color: ${({ theme: { colors } }) => colors.grayScale.gray8};
+  ${({ theme: { fonts } }) => fonts.body1_2};
 `;
 
 export const ProductImg = styled.img`
@@ -30,16 +42,9 @@ export const ProductImg = styled.img`
 export const ColorsContainer = styled.div`
   display: flex;
 
-  width: 3rem;
-  height: 1.2rem;
   margin-bottom: 1.4rem;
 
   gap: 0.6rem;
-`;
-
-export const ProductColorsImg = styled.img`
-  width: 1.2rem;
-  height: 1.2rem;
 `;
 
 export const BottomContainer = styled.div`
