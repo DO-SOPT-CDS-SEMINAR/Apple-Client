@@ -1,7 +1,13 @@
+/* eslint-disable prettier/prettier */
 import styled, { css } from 'styled-components';
 
 interface ProductNameContainerProps {
   $productSubname?: string;
+  $isHovered: boolean;
+}
+
+interface IsHoveredProps {
+  $isHovered: boolean;
 }
 
 export const ProductContainer = styled.article`
@@ -21,16 +27,19 @@ export const ProductNameContainer = styled.div<ProductNameContainerProps>`
   width: calc(100% - 6rem);
   margin-top: 5.4rem;
   margin-bottom: ${({ $productSubname }) => ($productSubname ? css`3.2rem` : css`5.6rem`)};
+
+  color: ${({ $isHovered, theme: { colors } }) =>
+    $isHovered ? colors.grayScale.gray4 : colors.grayScale.gray8};
+
+  z-index: 10;
 `;
 
 export const ProductName = styled.p`
-  color: ${({ theme: { colors } }) => colors.grayScale.gray8};
-  ${({ theme: { fonts } }) => fonts.subheading1_1};
+  ${({ theme: { fonts } }) => fonts.subheading1_1}
 `;
 
 export const ProductSubName = styled.p`
-  color: ${({ theme: { colors } }) => colors.grayScale.gray8};
-  ${({ theme: { fonts } }) => fonts.body1_2};
+  ${({ theme: { fonts } }) => fonts.body1_2}
 `;
 
 export const ProductImg = styled.img`
@@ -51,12 +60,15 @@ export const BottomContainer = styled.div`
   display: flex;
 
   gap: 15.5rem;
+
+  z-index: 10;
 `;
 
-export const ProductPrice = styled.p`
+export const ProductPrice = styled.p<IsHoveredProps>`
   display: flex;
   align-items: end;
 
-  color: ${({ theme: { colors } }) => colors.grayScale.gray8};
+  color: ${({ $isHovered, theme: { colors } }) =>
+    $isHovered ? colors.grayScale.gray4 : colors.grayScale.gray8};
   ${({ theme: { fonts } }) => fonts.body3_1};
 `;

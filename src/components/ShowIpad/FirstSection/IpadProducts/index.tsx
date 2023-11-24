@@ -27,7 +27,7 @@ const IpadProducts = ({ productName, productSubName, imgUrl, price, idx }: IpadP
         <HoveredProduct width={40} height={49} borderRadius={1.8} haveDetailBtn={true} />
       )}
 
-      <S.ProductNameContainer $productSubname={productSubName}>
+      <S.ProductNameContainer $productSubname={productSubName} $isHovered={isHovered}>
         <S.ProductName>{productName}</S.ProductName>
         {productSubName && <S.ProductSubName>{productSubName}</S.ProductSubName>}
       </S.ProductNameContainer>
@@ -39,7 +39,7 @@ const IpadProducts = ({ productName, productSubName, imgUrl, price, idx }: IpadP
       </S.ColorsContainer>
 
       <S.BottomContainer>
-        <S.ProductPrice>₩{formattedPrice}부터</S.ProductPrice>
+        <S.ProductPrice $isHovered={isHovered}>₩{formattedPrice}부터</S.ProductPrice>
         <BuyButton>구입하기</BuyButton>
       </S.BottomContainer>
     </S.ProductContainer>
