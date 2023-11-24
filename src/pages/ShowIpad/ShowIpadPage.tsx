@@ -1,5 +1,7 @@
+import ShowAllProducts from '../../components/ShowIpad/FirstSection/ShowAllProducts';
+
 const ShowIpadPage = () => {
-  return <div>ShowIpadPage</div>;
+  return <ShowAllProducts />;
 };
 
 export default ShowIpadPage;
