@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { BuyButton } from '../../../../common/Button/BuyButton';
 import ColorPreview from '../../ColorPreview';
 import * as S from './IpadProducts.style';
+import HoveredProduct from '../../../../common/HoveredProduct';
 
 interface IpadProductsProps {
   idx: number | string;
@@ -12,9 +14,19 @@ interface IpadProductsProps {
 
 const IpadProducts = ({ productName, productSubName, imgUrl, price, idx }: IpadProductsProps) => {
   const formattedPrice = price.toLocaleString();
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <S.ProductContainer>
+    <S.ProductContainer
+      onMouseEnter={() => {
+        setIsHovered(true);
+      }}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {isHovered && (
+        <HoveredProduct width={40} height={49} borderRadius={1.8} haveDetailBtn={true} />
+      )}
+
       <S.ProductNameContainer $productSubname={productSubName}>
         <S.ProductName>{productName}</S.ProductName>
         {productSubName && <S.ProductSubName>{productSubName}</S.ProductSubName>}
