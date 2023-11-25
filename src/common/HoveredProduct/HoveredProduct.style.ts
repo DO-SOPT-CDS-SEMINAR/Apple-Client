@@ -1,14 +1,17 @@
 import styled, { css } from 'styled-components';
 
-export const ProductContainer = styled.div<{
-  // eslint-disable-next-line prettier/prettier
+interface ProductContainerProps {
   $width: number;
   $height: number;
   $borderRadius: number;
-}>`
+}
+
+export const ProductContainer = styled.div<ProductContainerProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: absolute;
 
   width: ${({ $width }) => css`
     ${$width}rem
