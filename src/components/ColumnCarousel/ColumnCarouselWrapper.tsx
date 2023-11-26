@@ -1,5 +1,10 @@
 import * as S from './ColumnCarousel.style';
+import { ModelCarouselComponent } from './ModelCarouselComponent';
 
 export const ColumnCarouselWrapper = () => {
-  return <S.Wrapper>세로 캐러셸</S.Wrapper>;
+  return (
+    <S.Wrapper>
+      <ModelCarouselComponent />
+    </S.Wrapper>
+  );
 };
