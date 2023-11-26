@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 export const Dim = styled.section`
   display: flex;
+  position: relative;
   align-items: center;
+  justify-content: center;
 
   width: 100vw;
   height: 100vw;
@@ -14,8 +16,9 @@ export const Dim = styled.section`
 `;
 
 export const CloseIcon = styled.button`
-  position: fixed;
+  position: absolute;
   top: 11.5rem;
+  left: 20.1rem;
 
   width: 3.6rem;
   height: 3.6rem;
@@ -24,7 +27,7 @@ export const CloseIcon = styled.button`
 `;
 
 export const Modal = styled.section`
-  position: fixed;
+  position: absolute;
   top: 27.1rem;
 
   width: 98rem;
@@ -58,6 +61,8 @@ export const ModalImg = styled.div`
   width: 40rem;
   margin: 10.7rem 2.8rem 4.8rem 0rem;
 
+  background-color: lightgrey;
+
   z-index: 3;
 `;
 
@@ -69,12 +74,18 @@ export const SubTitle = styled.h2`
   color: ${({ theme: { colors } }) => colors.grayScale.gray8};
 
   font: ${({ theme: { fonts } }) => fonts.subheading1};
+
+  word-break: keep-all;
 `;
 
 export const PriceWrapper = styled.div`
   display: flex;
 
   & > p {
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+
     height: 3.6rem;
     width: 27.6rem;
     margin-right: 7.9rem;
@@ -82,14 +93,5 @@ export const PriceWrapper = styled.div`
     color: ${({ theme: { colors } }) => colors.grayScale.gray8};
 
     font: ${({ theme: { fonts } }) => fonts.body3_2};
-  }
-`;
-
-export const Explanation = styled.div`
-  diplay: flex;
-
-  & > p {
-    color: ${({ theme: { colors } }) => colors.grayScale.gray8};
-    font: ${({ theme: { fonts } }) => fonts.body2};
   }
 `;
