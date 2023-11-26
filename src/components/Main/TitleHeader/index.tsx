@@ -1,7 +1,7 @@
 import * as S from './TitleHeader.style';
-import { MainIcPinstore } from '../../assets/icon';
-import { MainImgChatSpecialist } from '../../assets/icon';
-import { IpadproIcRightBlue16 } from '../../assets/icon';
+import { MainIcPinstore } from '../../../assets/icon';
+import { MainImgChatSpecialist } from '../../../assets/icon';
+import { IpadproIcRightBlue16 } from '../../../assets/icon';
 
 const TitleHeader = () => {
   return (
