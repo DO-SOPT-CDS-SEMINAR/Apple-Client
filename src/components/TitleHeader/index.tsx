@@ -1,6 +1,7 @@
 import * as S from './TitleHeader.style';
 import { MainIcPinstore } from '../../assets/icon';
 import { MainImgChatSpecialist } from '../../assets/icon';
+import { IpadproIcRightBlue16 } from '../../assets/icon';
 
 const TitleHeader = () => {
   return (
@@ -13,14 +14,17 @@ const TitleHeader = () => {
           <MainIcPinstore />
           <S.Plus>
             <p>쇼핑지원이 필요하다면?</p>
-            <button>스페셜리스트에게 문의하세요</button>
+            <S.Button>스페셜리스트에게 문의하세요</S.Button>
           </S.Plus>
         </div>
         <div>
           <MainImgChatSpecialist />
           <S.Plus>
             <p>Apple Store를 방문하세요</p>
-            <button>가까운 매장찾기</button>
+            <S.Button>
+              가까운 매장찾기
+              <IpadproIcRightBlue16 />
+            </S.Button>
           </S.Plus>
         </div>
       </S.MoreInfoWrapper>

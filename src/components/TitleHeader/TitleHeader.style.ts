@@ -32,17 +32,6 @@ export const Plus = styled.div`
 
     font: ${({ theme: { fonts } }) => fonts.body3};
   }
-
-  & > button {
-    padding: 0;
-    margin-bottom: 1.6rem;
-
-    color: ${({ theme: { colors } }) => colors.pointColor.blue0};
-
-    font: ${({ theme: { fonts } }) => fonts.body3_2};
-
-    text-align: left;
-  }
 `;
 
 export const MoreInfoWrapper = styled.section`
@@ -53,4 +42,20 @@ export const MoreInfoWrapper = styled.section`
   & > div {
     display: flex;
   }
+`;
+
+export const Button = styled.button`
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+  grid-gap: 0.2rem;
+
+  padding: 0;
+  margin-bottom: 1.6rem;
+
+  color: ${({ theme: { colors } }) => colors.pointColor.blue0};
+
+  font: ${({ theme: { fonts } }) => fonts.body3_2};
+
+  text-align: left;
 `;
