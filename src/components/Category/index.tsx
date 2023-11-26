@@ -1,4 +1,5 @@
 import * as S from './Category.style';
+import ListItem from './ListItem';
 
 const DUMMY = [
   {
@@ -53,18 +54,13 @@ const DUMMY = [
 
 const Category = () => {
   return (
-    <S.List>
+    <S.CategoryWrapper>
       {DUMMY.map((item) => {
         return (
-          <S.ListComponent
-            key={item.id}
-            idx={item.id}
-            listName={item.listName}
-            imgUrl={item.imgUrl}
-          />
+          <ListItem key={item.id} idx={item.id} ListName={item.listName} imgUrl={item.imgUrl} />
         );
       })}
-    </S.List>
+    </S.CategoryWrapper>
   );
 };
 
