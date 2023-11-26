@@ -12,7 +12,6 @@ function App() {
     <RecoilRoot>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Main></Main>
       </ThemeProvider>
     </RecoilRoot>
   );
