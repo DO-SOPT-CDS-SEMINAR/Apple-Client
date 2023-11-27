@@ -26,7 +26,7 @@ export const ListName = styled.p`
 
   color: ${({ theme: { colors } }) => colors.grayScale.gray8};
 
-  font: ${({ theme: { fonts } }) => fonts.body3};
+  ${({ theme: { fonts } }) => fonts.body3};
 `;
 
 export const imgUrl = styled.img`
