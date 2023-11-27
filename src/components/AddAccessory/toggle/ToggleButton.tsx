@@ -1,8 +1,9 @@
+import { ReactNode } from 'react';
 import * as S from './ToggleMenu.style';
 
 interface ToggleButtonProps {
   idx: number;
-  ButtonName: string;
+  ButtonName: ReactNode;
   onClick: (id: number) => void;
   isActive: boolean;
 }
