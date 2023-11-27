@@ -44,7 +44,7 @@ export const Title = styled.h1`
 
   color: ${({ theme: { colors } }) => colors.grayScale.gray8};
 
-  font: ${({ theme: { fonts } }) => fonts.heading3};
+  ${({ theme: { fonts } }) => fonts.heading3};
 `;
 
 export const ContextWrapper = styled.div`
@@ -73,7 +73,7 @@ export const ContextText = styled.div`
 export const SubTitle = styled.h2`
   color: ${({ theme: { colors } }) => colors.grayScale.gray8};
 
-  font: ${({ theme: { fonts } }) => fonts.subheading1};
+  ${({ theme: { fonts } }) => fonts.subheading1};
 
   word-break: keep-all;
 `;
@@ -92,6 +92,6 @@ export const PriceWrapper = styled.div`
 
     color: ${({ theme: { colors } }) => colors.grayScale.gray8};
 
-    font: ${({ theme: { fonts } }) => fonts.body3_2};
+    ${({ theme: { fonts } }) => fonts.body3_2};
   }
 `;
