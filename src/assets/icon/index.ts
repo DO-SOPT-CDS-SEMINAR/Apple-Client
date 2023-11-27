@@ -63,6 +63,7 @@ import MainIcCard from './main_ic_card.svg?react';
 import MainIcPinstore from './main_ic_pinstore.svg?react';
 import MainIcStore from './main_ic_store.svg?react';
 import MainIcTrade from './main_ic_trade.svg?react';
+import MainImgChatSpecialist from './main_img_chat_specialist.svg?react';
 
 export { AddIcAngle };
 export { AddIcEye };
@@ -128,3 +129,4 @@ export { MainIcCard };
 export { MainIcPinstore };
 export { MainIcStore };
 export { MainIcTrade };
+export { MainImgChatSpecialist };
