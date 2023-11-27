@@ -145,6 +145,7 @@ const ShowCommonSection = ({ section }: ShowCommonSectionProps) => {
                 subTitle={item.subTitle}
                 title={item.title}
                 imgUrl={item.imgUrl}
+                whiteColor={section === 7 && item.id === 1}
               />
             </SwiperSlide>
           );

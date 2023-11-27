@@ -1,6 +1,10 @@
 /* eslint-disable prettier/prettier */
 import styled from 'styled-components';
 
+interface ColorProps {
+  $whiteColor: boolean;
+}
+
 export const CardContainer = styled.article`
   display: flex;
 
@@ -23,15 +27,17 @@ export const CardTitleContainer = styled.div`
   z-index: 10;
 `;
 
-export const SubTitle = styled.p`
+export const SubTitle = styled.p<ColorProps>`
   margin-bottom: 0.8rem;
 
-  color: ${({ theme: { colors } }) => colors.grayScale.gray6};
+  color: ${({ $whiteColor, theme: { colors } }) =>
+    $whiteColor ? colors.grayScale.white : colors.grayScale.gray6};
   ${({ theme: { fonts } }) => fonts.caption1}
 `;
 
-export const Title = styled.p`
-  color: ${({ theme: { colors } }) => colors.grayScale.gray8};
+export const Title = styled.p<ColorProps>`
+  color: ${({ $whiteColor, theme: { colors } }) =>
+    $whiteColor ? colors.grayScale.white : colors.grayScale.gray8};
   ${({ theme: { fonts } }) => fonts.subheading1_1}
 `;
 
