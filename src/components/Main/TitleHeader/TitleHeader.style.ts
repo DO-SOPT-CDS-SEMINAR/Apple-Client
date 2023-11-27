@@ -11,13 +11,13 @@ export const CategorySec = styled.section`
 
   & > h1 {
     color: ${({ theme: { colors } }) => colors.grayScale.gray6};
-    font: ${({ theme: { fonts } }) => fonts.heading1};
+    ${({ theme: { fonts } }) => fonts.heading1};
   }
 `;
 
 export const Point = styled.span`
   color: ${({ theme: { colors } }) => colors.pointColor.red0};
-  font: ${({ theme: { fonts } }) => fonts.heading1};
+  ${({ theme: { fonts } }) => fonts.heading1};
 `;
 
 export const Plus = styled.div`
@@ -30,7 +30,7 @@ export const Plus = styled.div`
   & > p {
     color: ${({ theme: { colors } }) => colors.grayScale.gray8};
 
-    font: ${({ theme: { fonts } }) => fonts.body3};
+    ${({ theme: { fonts } }) => fonts.body3};
   }
 `;
 
@@ -55,7 +55,7 @@ export const Button = styled.button`
 
   color: ${({ theme: { colors } }) => colors.pointColor.blue0};
 
-  font: ${({ theme: { fonts } }) => fonts.body3_2};
+  ${({ theme: { fonts } }) => fonts.body3_2};
 
   text-align: left;
 `;
