@@ -38,3 +38,14 @@ export const Text = styled.p`
     ${({ theme: { fonts } }) => fonts.subheading2};
   }
 `;
+
+export const TypeWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const GigaWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+`;
