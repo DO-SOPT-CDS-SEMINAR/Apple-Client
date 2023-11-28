@@ -50,24 +50,44 @@ export const Title = styled.h1`
 export const ContextWrapper = styled.div`
   display: flex;
 
-  width: 88rem;
-  height: 52.8rem;
   margin: 5rem 5rem 4.8rem 5rem;
 
   z-index: 2;
 `;
 
-export const ModalImg = styled.div`
+export const ImgWrapper = styled.section`
+  margin: 5.7rem 2.8rem auto auto;
   width: 40rem;
-  margin: 10.7rem 2.8rem 4.8rem 0rem;
+`;
+
+export const ModalImg = styled.div`
+  width: 41.2rem;
+  height: 40.9rem;
 
   background-color: lightgrey;
 
   z-index: 3;
 `;
 
+export const ItemInfo = styled.div`
+  width: 40rem;
+
+  color: ${({ theme: { colors } }) => colors.grayScale.gray6};
+
+  text-align: center;
+  ${({ theme: { fonts } }) => fonts.caption2};
+
+  & > div {
+    margin-top: 0.9rem;
+  }
+  & > div > * {
+    width: 1.2rem;
+    margin: 0 0.25rem;
+  }
+`;
+
 export const ContextText = styled.div`
-  margin: 5rem 0rem auto auto;
+  width: 44rem;
 `;
 
 export const SubTitle = styled.h2`
@@ -80,6 +100,7 @@ export const SubTitle = styled.h2`
 
 export const PriceWrapper = styled.div`
   display: flex;
+  justify-content: space-between;
 
   & > p {
     display: flex;
@@ -88,10 +109,22 @@ export const PriceWrapper = styled.div`
 
     height: 3.6rem;
     width: 27.6rem;
-    margin-right: 7.9rem;
 
     color: ${({ theme: { colors } }) => colors.grayScale.gray8};
 
     ${({ theme: { fonts } }) => fonts.body3_2};
   }
+`;
+
+export const BuyBtn = styled.button`
+  display: flex;
+  align-items: center;
+  vertical-align: center;
+
+  width: 44rem;
+  text-align: left;
+
+  color: ${({ theme: { colors } }) => colors.pointColor.blue0};
+
+  ${({ theme: { fonts } }) => fonts.body2};
 `;
