@@ -18,13 +18,25 @@ const DUMMY_DATA: Product[] = [
     mainItemName: 'MacBook Pro',
     mainItemPrice: '₩1,550,000부터',
     mainCategoryImg:
-      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-holiday-iphone-15-pro-202311?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1696863030449',
+      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-holiday-watch-s9-202311?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1696865069259',
   },
   {
     mainItemName: 'iPhone 15 Pro',
     mainItemPrice: '₩1,550,000부터',
     mainCategoryImg:
-      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-holiday-iphone-15-pro-202311?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1696863030449',
+      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-holiday-macbook-pro-202311?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1696872235281',
+  },
+  {
+    mainItemName: 'iPhone 15 Pro',
+    mainItemPrice: '₩1,550,000부터',
+    mainCategoryImg:
+      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-holiday-iphone-15-202311?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1698188084112',
+  },
+  {
+    mainItemName: 'iPhone 15 Pro',
+    mainItemPrice: '₩1,550,000부터',
+    mainCategoryImg:
+      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-holiday-ipad-202311?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1696863030352',
   },
 ];
 

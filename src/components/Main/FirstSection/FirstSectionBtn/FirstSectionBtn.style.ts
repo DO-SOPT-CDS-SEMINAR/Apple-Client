@@ -36,14 +36,17 @@ export const ProductImg = styled.img`
   position: absolute;
 `;
 
-export const Btn = styled.section`
+export const Btn = styled.button`
   position: relative;
+
+  display: flex;
 
   width: 48rem;
   height: 50rem;
   margin-right: 2.2rem;
-
   border-radius: 1.8rem;
+
+  text-align: left;
 
   box-shadow: 2px 4px 12px 0px rgba(0, 0, 0, 0.08);
   overflow: hidden;

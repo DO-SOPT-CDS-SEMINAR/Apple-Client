@@ -7,6 +7,11 @@ export const SectionWrapper = styled.section`
   overflow: hidden;
 
   background-color: ${({ theme: { colors } }) => colors.grayScale.gray2};
+
+    -ms-overflow-style: none;
+  ::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none; /* 파이어폭스 */
 `;
 
 export const ScrollWrapper = styled.div`
@@ -20,11 +25,5 @@ export const ScrollContent = styled.div`
   display: flex;
   height: 50rem;
 
-
   padding: 0 12rem;
-
-  -ms-overflow-style: none;
-  ::-webkit-scrollbar {
-    display: none;
-    scrollbar-width: none; /* 파이어폭스 */
 `;
