@@ -2,6 +2,7 @@ import * as S from './AddAccessory.style';
 
 import { BuyButton } from '../../common/Button/BuyButton';
 import { AddIpadproIcClose } from '../../assets/icon';
+import ItemInfo from '../../components/AddAccessory/toggle/ItemInfo';
 // import { PageController } from '../../common/PageController';
 
 const AddAccssoryPage = () => {
@@ -20,6 +21,7 @@ const AddAccssoryPage = () => {
               <p>￦519,000</p>
               <BuyButton>구입하기</BuyButton>
             </S.PriceWrapper>
+            <ItemInfo />
           </S.ContextText>
         </S.ContextWrapper>
       </S.Modal>
