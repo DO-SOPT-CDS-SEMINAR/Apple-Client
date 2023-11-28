@@ -56,7 +56,7 @@ const ShowFifthSection = () => {
   return (
     <S.ShowFifthSectionContainer>
       <ShowIpadHeader title='IPad 액세서리.' subTitle='일도, 취미도 손쉽게.' />
-      <CommonSwiper slidesPerView={3}>
+      <CommonSwiper slidesPerView={3.5}>
         {DUMMY.map((item) => {
           return (
             <SwiperSlide key={item.id}>
