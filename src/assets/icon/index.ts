@@ -8,10 +8,6 @@ import AddIcUsbC from './add_ic_usb_c.svg?react';
 import AddIpadproIcClose from './add_ipadpro_ic_close.svg?react';
 
 import AddImg129MagicKeyBoard1 from './add_img_12.9_magickeyboard1.svg?react';
-import AddImg129MagicKeyBoard2 from './add_img_12.9_magickeyboard2.svg?react';
-import AddImg129MagicKeyBoard3 from './add_img_12.9_magickeyboard3.svg?react';
-import AddImg129MagicKeyBoard4 from './add_img_12.9_magickeyboard4.svg?react';
-import AddImg129MagicKeyBoard5 from './add_img_12.9_magickeyboard5.svg?react';
 
 import EllipseDark from './ellipse_dark.svg?react';
 import EllipseLight from './ellipse_light.svg?react';
@@ -79,10 +75,6 @@ export { AddIcUsbC };
 export { AddIpadproIcClose };
 
 export { AddImg129MagicKeyBoard1 };
-export { AddImg129MagicKeyBoard2 };
-export { AddImg129MagicKeyBoard3 };
-export { AddImg129MagicKeyBoard4 };
-export { AddImg129MagicKeyBoard5 };
 
 export { EllipseDark };
 export { EllipseLight };

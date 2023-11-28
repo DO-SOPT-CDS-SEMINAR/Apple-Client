@@ -3,48 +3,52 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   position: relative;
-  width: 40rem;
-  height: 40.9rem;
+
+  margin-left: 20rem;
+  width: 44.2rem;
+  height: 40rem;
 `;
 
 export const SliderWrapper = styled(Slider)`
-  width: 100%;
-  height: 100%;
+  position: absolute;
+
+  margin-left: 2.1rem;
+  left: 0rem;
+  width: 40rem;
+  height: 36.5rem;
 `;
 
 export const Img = styled.div`
-  width: 40rem;
+  margin: 0 1.6rem;
+  height: 36.8rem;
 
   & > img {
-    width: 40rem;
+    height: 36.8rem;
   }
 `;
 
 export const CustomDotsContainer = styled.div`
   position: absolute;
-  bottom: 0.8rem;
+  top: 35.3rem;
+
   ul {
     justify-content: center;
     display: flex;
-
-    height: 2.7rem;
-    width: 40rem;
-
     align-items: center;
 
-    list-style: none;
+    width: 40rem;
+    height: 2.7rem;
 
     li {
       button {
         width: 1rem;
-        height: 1rem;
-        margin: 0 0.5rem;
+        height: 1.3rem;
 
         cursor: pointer;
 
         &:before {
           content: '•';
-          font-size: 3.5rem;
+          font-size: 1.3rem;
           color: ${({ theme: { colors } }) => colors.grayScale.gray5};
         }
 
@@ -66,4 +70,11 @@ export const CustomDotsContainer = styled.div`
   .slick-dots {
     display: none;
   }
+`;
+
+export const ArrowWrapper = styled.div`
+  position: absolute;
+  left: 38.8rem;
+  top: 17.2rem;
+  pointer: cursor;
 `;
