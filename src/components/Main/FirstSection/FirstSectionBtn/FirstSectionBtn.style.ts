@@ -10,6 +10,7 @@ export const ProductName = styled.h1`
   z-index: 2;
 `;
 
+// eslint-disable-next-line prettier/prettier
 export const ProductInfo = styled.div<ProductInfoProps>`
   position: absolute;
   z-index: 2;
@@ -22,6 +23,7 @@ export const ProductInfo = styled.div<ProductInfoProps>`
     ${({ theme: { fonts } }) => fonts.subheading1_1};
     color: ${({ $isHovered, theme: { colors } }) =>
       $isHovered ? colors.grayScale.gray4 : colors.grayScale.gray8};
+    z-index: 10;
   }
 
   & > h2 {
@@ -30,6 +32,8 @@ export const ProductInfo = styled.div<ProductInfoProps>`
     color: ${({ $isHovered, theme: { colors } }) =>
       $isHovered ? colors.grayScale.gray4 : colors.grayScale.gray6};
     ${({ theme: { fonts } }) => fonts.caption1};
+
+    z-index: 10;
   }
 
   & > p {
@@ -37,6 +41,7 @@ export const ProductInfo = styled.div<ProductInfoProps>`
     color: ${({ $isHovered, theme: { colors } }) =>
       $isHovered ? colors.grayScale.gray4 : colors.grayScale.gray8};
   }
+  z-index: 10;
 `;
 
 export const ProductImg = styled.img`
@@ -54,4 +59,5 @@ export const Btn = styled.div`
 
   box-shadow: 2px 4px 12px 0px rgba(0, 0, 0, 0.08);
   overflow: hidden;
+  cursor: pointer;
 `;

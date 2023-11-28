@@ -54,7 +54,9 @@ const FirstSectionBtn = () => {
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <>
-            <HoveredProduct width={40} height={49} borderRadius={1.8} haveDetailBtn={true} />
+            {hoveredIndex === index && (
+              <HoveredProduct width={48} height={50} borderRadius={1.8} haveDetailBtn={true} />
+            )}
           </>
 
           <S.ProductInfo $isHovered={hoveredIndex === index}>
