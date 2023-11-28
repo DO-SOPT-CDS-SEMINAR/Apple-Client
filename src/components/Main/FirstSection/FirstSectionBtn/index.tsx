@@ -1,4 +1,5 @@
-// import HoveredProduct from '../../../../common/HoveredProduct';
+import HoveredProduct from '../../../../common/HoveredProduct';
+import { useState } from 'react';
 import * as S from './FirstSectionBtn.style';
 
 interface Product {
@@ -7,6 +8,7 @@ interface Product {
   mainCategoryImg: string;
 }
 
+//임의로 데이터 넣어서 가로 스크롤 구현 확인
 const DUMMY_DATA: Product[] = [
   {
     mainItemName: 'iPhone 15 Pro',
@@ -41,11 +43,21 @@ const DUMMY_DATA: Product[] = [
 ];
 
 const FirstSectionBtn = () => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   return (
     <>
       {DUMMY_DATA.map((item, index) => (
-        <S.Btn key={index}>
-          <S.ProductInfo>
+        <S.Btn
+          key={index}
+          onMouseEnter={() => setHoveredIndex(index)}
+          onMouseLeave={() => setHoveredIndex(null)}
+        >
+          <>
+            <HoveredProduct width={40} height={49} borderRadius={1.8} haveDetailBtn={true} />
+          </>
+
+          <S.ProductInfo $isHovered={hoveredIndex === index}>
             <h2>NEW</h2>
             <h1>{item.mainItemName}</h1>
             <p>{item.mainItemPrice}</p>

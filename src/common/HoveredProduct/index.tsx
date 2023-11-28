@@ -1,4 +1,3 @@
-import { Children } from 'react';
 import * as S from './HoveredProduct.style';
 
 interface HoveredProductProps {
@@ -12,7 +11,6 @@ const HoveredProduct = ({ width, height, borderRadius, haveDetailBtn }: HoveredP
   return (
     <S.ProductContainer $width={width} $height={height} $borderRadius={borderRadius}>
       {haveDetailBtn && <S.DetailBtn>제품 자세히 살펴보기</S.DetailBtn>}
-      {Children}
     </S.ProductContainer>
   );
 };
