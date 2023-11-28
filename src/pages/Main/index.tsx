@@ -4,6 +4,7 @@ import { MAIN_BUTTON_DATA } from '../../constant/mainButton';
 import Nb from '../../common/Nb';
 import Category from '../../components/Category';
 import TitleHeader from '../../components/Main/TitleHeader';
+import FirstSection from '../../components/Main/FirstSection';
 
 const MainPage = () => {
   return (
@@ -12,6 +13,7 @@ const MainPage = () => {
       <TitleHeader />
       <Category />
       <Nb DATA={MAIN_BUTTON_DATA} />
+      <FirstSection />
     </div>
   );
 };
