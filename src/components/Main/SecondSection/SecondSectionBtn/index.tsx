@@ -11,28 +11,34 @@ interface Product {
 //임의로 데이터 넣어서 가로 스크롤 구현 확인
 const DUMMY_DATA: Product[] = [
   {
-    mainItemName: 'MacBook Pro',
-    mainItemPrice: '₩1,550,000',
+    mainItemName: 'AirPods Pro MagSafe 충전 케이스 모델(2세대,USB_C)',
+    mainItemPrice: '₩ 359,000',
     mainCategoryImg:
       'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTJV3?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1694014871985',
   },
   {
-    mainItemName: 'iPhone 15 Pro',
-    mainItemPrice: '₩1,550,000부터',
+    mainItemName: 'AirTag',
+    mainItemPrice: '₩ 45,000',
     mainCategoryImg:
       'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airtag-single-select-202104?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1617761671000',
   },
   {
-    mainItemName: 'iPhone 15 Pro',
-    mainItemPrice: '₩1,550,000부터',
+    mainItemName: 'AirPods (3세대) Lightning 충전케이스 모델',
+    mainItemPrice: '₩ 259,000',
     mainCategoryImg:
       'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MME73?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1632861342000',
   },
   {
-    mainItemName: 'iPhone 15 Pro',
-    mainItemPrice: '₩1,550,000부터',
+    mainItemName: 'Apple Pencil (2세대)',
+    mainItemPrice: '₩ 195,000',
     mainCategoryImg:
-      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-holiday-ipad-202311?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1696863030352',
+      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU8F2?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1540596407165',
+  },
+  {
+    mainItemName: 'AirPods Max - 핑크',
+    mainItemPrice: '₩ 769,000',
+    mainCategoryImg:
+      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-pink-202011?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1604022365000',
   },
 ];
 

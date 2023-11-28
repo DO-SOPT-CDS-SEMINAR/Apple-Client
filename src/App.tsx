@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from './styles/theme';
 import './styles/fonts/fonts.css';
 import SecondSection from './components/Main/SecondSection';
+import ThirdSection from './components/Main/ThirdSection';
 
 function App() {
   console.log('초기세팅 완료');
@@ -13,6 +14,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <SecondSection />
+        <ThirdSection />
       </ThemeProvider>
     </RecoilRoot>
   );

@@ -75,33 +75,33 @@ export const Btn = styled.div`
 export const FirstBtn = styled.div`
   position: relative;
 
-  width: 40rem;
-  height: 50rem;
+  width: 31.3rem;
+  height: 24rem;
   margin-right: 2.2rem;
 
+  background-color: ${({ theme: { colors } }) => colors.grayScale.white};
   border-radius: 1.8rem;
   box-shadow: 2px 4px 12px 0px rgba(0, 0, 0, 0.08);
-  overflow:hidden;
   cursor: pointer;
-
-  & > h1 {
-
-    position: absolute;
-    max-width: 30.5rem;
-    height: 7.8rem;
-    overflow: hidden;
-
-    top: 6rem;
-    left: 3rem;
-    ${({ theme: { fonts } }) => fonts.subheading1_1};
-
-    z-index: 10;
-
-
-
 `;
 
-export const FirstBtnImg = styled.img`
+export const FirstBtnWrapper = styled.div`
   position: absolute;
-  width: 40rem;
+  top: 3rem;
+  left: 3rem;
+  & > h1 {
+    ${({ theme: { fonts } }) => fonts.subheading2};
+
+    z-index: 10;
+  }
+
+  & > h1 > span {
+    color: ${({ theme: { colors } }) => colors.pointColor.red0};
+    ${({ theme: { fonts } }) => fonts.subheading2};
+  }
+`;
+
+export const FirstWrapper = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
