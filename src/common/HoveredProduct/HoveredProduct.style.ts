@@ -11,7 +11,6 @@ export const ProductContainer = styled.div<ProductContainerProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
   position: absolute;
 
   width: ${({ $width }) => css`
