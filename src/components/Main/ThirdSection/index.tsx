@@ -1,4 +1,4 @@
-import * as S from './ThirdSection.style';
+import * as S from '../Section.style';
 import SectionHeader from '../SectionHeader';
 import ThirdSectionBtn from './ThirdSectionBtn/index';
 

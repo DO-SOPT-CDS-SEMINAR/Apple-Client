@@ -1,18 +1,18 @@
 import * as S from '../Section.style';
 import SectionHeader from '../SectionHeader';
-import SecondSectionBtn from './SecondSectionBtn/index';
+import FourthSectionBtn from './FourthSectionBtn/index';
 
-const SecondSection = () => {
+const FourthSection = () => {
   return (
     <S.SectionWrapper>
-      <SectionHeader title='맞춤 각인.' subtitle='애틋함을 아로새기다.' />
+      <SectionHeader title='특별 할인.' subtitle='비즈니스, 학교 등을 위한 혜택.' />
       <S.ScrollWrapper>
         <S.ScrollContent>
-          <SecondSectionBtn />
+          <FourthSectionBtn />
         </S.ScrollContent>
       </S.ScrollWrapper>
     </S.SectionWrapper>
   );
 };
 
-export default SecondSection;
+export default FourthSection;

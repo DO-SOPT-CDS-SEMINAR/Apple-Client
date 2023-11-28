@@ -1,4 +1,4 @@
-import * as S from './FirstSection.style';
+import * as S from '../Section.style';
 import SectionHeader from '../SectionHeader';
 import FirstSectionBtn from './FirstSectionBtn';
 

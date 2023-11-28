@@ -99,16 +99,16 @@ const ThirdSectionBtn = () => {
           >
             <>
               {hoveredIndex === index && (
-                <HoveredProduct width={31.3} height={50} borderRadius={1.8} haveDetailBtn={false} />
+                <HoveredProduct width={48} height={24} borderRadius={1.8} haveDetailBtn={false} />
               )}
             </>
+
+            <S.ProductImg src={item.mainCategoryImg} alt={item.mainItemName}></S.ProductImg>
 
             <S.ProductInfo $isHovered={hoveredIndex === index}>
               <p>{item.mainItemPrice}</p>
               <h1>{item.mainItemName}</h1>
             </S.ProductInfo>
-
-            <S.ProductImg src={item.mainCategoryImg} alt={item.mainItemName}></S.ProductImg>
           </S.Btn>
         ))}
       </S.FirstWrapper>
