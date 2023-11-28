@@ -12,7 +12,6 @@ const DUMMY = [
     productName: ['마음이 든든해지는 악세서리'],
     imgUrl:
       'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-card-40-story-202210_GEO_KR?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1665516908132',
-    price: 1249000,
   },
   {
     id: 'acc_1',
@@ -63,7 +62,7 @@ const ShowFifthSection = () => {
             <SwiperSlide key={item.id}>
               <FifthCard
                 key={item.id}
-                idx={item.id}
+                id={item.id}
                 productName={item.productName}
                 productTag={item.productTag}
                 imgUrl={item.imgUrl}
