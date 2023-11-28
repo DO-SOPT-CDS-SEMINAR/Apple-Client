@@ -1,3 +1,6 @@
 import styled from 'styled-components';
 
-export const Test = styled.div``;
+export const ShowEighthSectionContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+`;
