@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SectionWrapper = styled.section`
-  height: 60.1rem;
+  height: 62.8rem;
   padding-top: 4.2rem;
 
   overflow: hidden;
@@ -17,7 +17,6 @@ export const SectionWrapper = styled.section`
 export const ScrollWrapper = styled.div`
   display: flex;
   height: 55rem;
-
   overflow-x: auto;
   white-space: nowrap;
 `;
