@@ -2,15 +2,25 @@
 import styled, { css } from 'styled-components';
 
 interface ProductNameContainerProps {
-  $productSubname?: string;
+  $productSubTag?: string;
+  $isMainCard: boolean;
 }
 
-export const ProductContainer = styled.article`
+interface MainCardProps {
+  $isMainCard: boolean;
+}
+
+interface ColorPrevProps {
+  $isExistColorPrev: boolean;
+}
+
+export const ProductContainer = styled.article<MainCardProps>`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: ${({ $isMainCard }) => !$isMainCard && 'center'};
+  position: relative;
 
-  width: 40rem;
+  width: ${({ $isMainCard }) => ($isMainCard ? css`40rem` : css`31.3rem`)};
   height: 50rem;
 
   border-radius: 1.8rem;
@@ -18,50 +28,84 @@ export const ProductContainer = styled.article`
   background-color: ${({ theme: { colors } }) => colors.grayScale.white};
 `;
 
-export const ProductNameContainer = styled.div<ProductNameContainerProps>`
-  width: calc(100% - 6rem);
-  margin-top: 5.4rem;
-  margin-bottom: ${({ $productSubname }) => ($productSubname ? css`3.2rem` : css`5.6rem`)};
+export const ProductImg = styled.img<MainCardProps>`
+  width: 23rem;
+  height: 23rem;
+  margin-top: 7.07rem;
 
-  color: ${({ theme: { colors } }) => colors.grayScale.gray8};
+  ${({ $isMainCard }) =>
+    $isMainCard &&
+    css`
+      position: relative;
 
-  z-index: 10;
+      width: 40rem;
+      height: 50rem;
+      margin: 0;
+
+      border-radius: 1.8rem;
+    `};
 `;
 
-export const ProductName = styled.p`
-  ${({ theme: { fonts } }) => fonts.subheading1_1}
-`;
-
-export const ProductSubName = styled.p`
-  ${({ theme: { fonts } }) => fonts.body1_2}
-`;
-
-export const ProductImg = styled.img`
-  width: 25.2rem;
-  height: 22.5rem;
-  margin-bottom: 2.4rem;
-`;
-
-export const ColorsContainer = styled.div`
+export const ColorsContainer = styled.div<ColorPrevProps>`
   display: flex;
 
-  margin-bottom: 1.4rem;
+  margin-top: ${({ $isExistColorPrev }) => $isExistColorPrev && css`2.6rem`};
 
   gap: 0.6rem;
 `;
 
+export const ProductNameContainer = styled.div<ProductNameContainerProps>`
+  display: flex;
+  flex-direction: column;
+
+  width: calc(100% - 3.6rem);
+
+  margin-top: ${({ $productSubTag }) => ($productSubTag ? css`5.1rem` : css`3.8rem`)};
+
+  color: ${({ theme: { colors } }) => colors.grayScale.gray8};
+
+  ${({ $isMainCard, theme: { colors } }) =>
+    $isMainCard &&
+    css`
+      position: absolute;
+      margin-top: 6rem;
+      margin-left: 3rem;
+
+      color: ${colors.grayScale.black};
+    `};
+`;
+
+export const ProductSubTag = styled.p`
+  margin-bottom: 0.8rem;
+
+  color: ${({ theme: { colors } }) => colors.pointColor.orange0};
+  ${({ theme: { fonts } }) => fonts.caption2}
+`;
+
+export const ProductName = styled.p<MainCardProps>`
+  ${({ theme: { fonts } }) => fonts.body1_1}
+
+  ${({ $isMainCard, theme: { fonts } }) =>
+    $isMainCard &&
+    css`
+      ${fonts.subheading1_1}
+    `};
+`;
+
 export const BottomContainer = styled.div`
   display: flex;
+  position: absolute;
+  bottom: 0;
 
-  gap: 15.5rem;
+  width: calc(100% - 3.6rem);
+  margin-bottom: 3.13rem;
 
   z-index: 10;
 `;
 
 export const ProductPrice = styled.p`
   display: flex;
-  align-items: end;
 
   color: ${({ theme: { colors } }) => colors.grayScale.gray8};
-  ${({ theme: { fonts } }) => fonts.body3_1};
+  ${({ theme: { fonts } }) => fonts.body1_2};
 `;
