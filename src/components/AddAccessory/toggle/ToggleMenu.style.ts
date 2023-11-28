@@ -5,6 +5,9 @@ interface ButtonProps {
 }
 
 export const ToggleWrapper = styled.div`
+  position: absolute;
+  top: 19.1rem;
+
   display: flex;
   align-items: center;
   vertical-algin: center;
@@ -12,6 +15,9 @@ export const ToggleWrapper = styled.div`
   width: 59.4rem;
   height: 5rem;
   border-radius: 2.5rem;
+
+  z-index: 2;
+  padding-left: 0.2rem;
 
   background-color: ${({ theme }) => theme.colors.grayScale.gray2};
 `;
@@ -28,7 +34,7 @@ export const Button = styled.button<ButtonProps>`
   background-color: ${({ theme: { colors }, $isActive }) =>
     $isActive ? colors.grayScale.gray8 : colors.grayScale.gray2};
 
-  font: ${({ theme: { fonts } }) => fonts.body1};
+  ${({ theme: { fonts } }) => fonts.body1};
 
   cursor: pointer;
 `;

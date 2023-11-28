@@ -6,6 +6,7 @@ import ItemInfo from '../../components/AddAccessory/toggle/ItemInfo';
 import { IpadproIcRightBlue16 } from '../../assets/icon';
 import { IcSwatchSilver } from '../../assets/icon';
 import { IcSwatchSpaceGray } from '../../assets/icon';
+import ToggleMenu from '../../components/AddAccessory/toggle';
 // import { PageController } from '../../common/PageController';
 
 const AddAccssoryPage = () => {
@@ -14,6 +15,7 @@ const AddAccssoryPage = () => {
       <S.CloseIcon>
         <AddIpadproIcClose />
       </S.CloseIcon>
+      <ToggleMenu />
       <S.Modal>
         <S.Title>꼭 필요한 것부터 알아두면 좋은 것까지.</S.Title>
         <S.ContextWrapper>
