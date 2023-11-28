@@ -9,34 +9,26 @@ interface ProductInfoProps {
 // eslint-disable-next-line prettier/prettier
 export const ProductInfo = styled.div<ProductInfoProps>`
   position: absolute;
+
+  width: 20.4;
+  top: 6.2rem;
+  left: 3rem;
+
   z-index: 2;
 
-  bottom: 3.13rem;
-  left: 1.8rem;
-
   & > h1 {
-    margin-bottom: 2rem;
-    ${({ theme: { fonts } }) => fonts.body1_1};
+    margin-top: 0.8rem;
+    ${({ theme: { fonts } }) => fonts.subheading3};
 
     color: ${({ $isHovered, theme: { colors } }) =>
-      $isHovered ? colors.grayScale.gray4 : colors.grayScale.gray8};
-    z-index: 10;
-  }
-
-  & > h2 {
-    margin-bottom: 0.8rem;
-
-    color: ${({ $isHovered, theme: { colors } }) =>
-      $isHovered ? colors.grayScale.gray4 : colors.pointColor.orange0};
-    ${({ theme: { fonts } }) => fonts.caption1};
-
+      $isHovered ? colors.grayScale.gray4 : colors.grayScale.black};
     z-index: 10;
   }
 
   & > p {
-    ${({ theme: { fonts } }) => fonts.body1_2};
+    ${({ theme: { fonts } }) => fonts.caption1};
     color: ${({ $isHovered, theme: { colors } }) =>
-      $isHovered ? colors.grayScale.gray4 : colors.grayScale.gray8};
+      $isHovered ? colors.grayScale.gray4 : colors.grayScale.gray6};
   }
   z-index: 10;
 `;
@@ -44,24 +36,18 @@ export const ProductInfo = styled.div<ProductInfoProps>`
 export const ProductImg = styled.img`
   position: absolute;
 
-  width: 23rem;
-  height: 23rem;
-`;
+  right: 0;
+  top: 0;
 
-export const ImgWrapper = styled.div`
-  width: 27.1rem;
-  height: 28.1rem;
-  margin-top: 7.07rem;
-  margin-left: 1.8rem;
-
-  padding: 0 2.35rem;
+  width: 24rem;
+  height: 24rem;
 `;
 
 export const Btn = styled.div`
   position: relative;
 
-  width: 31.3rem;
-  height: 50rem;
+  width: 48rem;
+  height: 24rem;
   margin-right: 2.2rem;
   border-radius: 1.8rem;
 

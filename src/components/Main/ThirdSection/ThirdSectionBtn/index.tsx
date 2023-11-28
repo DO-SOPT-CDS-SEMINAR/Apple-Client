@@ -19,25 +19,25 @@ const DUMMY_DATA: Product[] = [
     mainItemName: '선물을 구할 때 도움을 받아보세요.',
     mainItemPrice: 'Apple 스페셜리스트',
     mainCategoryImg:
-      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airtag-single-select-202104?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1617761671000',
+      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-holiday-specialist-help-202311?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1696362492013',
   },
   {
     mainItemName: 'Mac 구성하기.',
     mainItemPrice: 'Customizing with Apple',
     mainCategoryImg:
-      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MME73?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1632861342000',
+      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-holiday-mac-customize-202311?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1698124290015',
   },
   {
     mainItemName: 'Apple Store의 무료 세션에 참여해 보세요',
     mainItemPrice: 'Today at Apple',
     mainCategoryImg:
-      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU8F2?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1540596407165',
+      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-holiday-mac-customize-202311?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1698124290015',
   },
   {
     mainItemName: 'Apple Store의 무료 세션에 참여해 보세요',
     mainItemPrice: '캠퍼스에서 만나는 Apple',
     mainCategoryImg:
-      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTJV3?wid=400&hei=400&fmt=jpeg&qlt=90&.v=1694014871985',
+      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-50-specialist-video-202309?wid=960&hei=1000&fmt=p-jpg&qlt=95&.v=1694270835539',
   },
 ];
 
@@ -90,27 +90,28 @@ const ThirdSectionBtn = () => {
           </S.FirstBtnWrapper>
         </S.FirstBtn>
       </S.FirstWrapper>
+      <S.FirstWrapper>
+        {DUMMY_DATA.map((item, index) => (
+          <S.Btn
+            key={index}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <>
+              {hoveredIndex === index && (
+                <HoveredProduct width={31.3} height={50} borderRadius={1.8} haveDetailBtn={false} />
+              )}
+            </>
 
-      {DUMMY_DATA.map((item, index) => (
-        <S.Btn
-          key={index}
-          onMouseEnter={() => setHoveredIndex(index)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
-          <>
-            {hoveredIndex === index && (
-              <HoveredProduct width={31.3} height={50} borderRadius={1.8} haveDetailBtn={false} />
-            )}
-          </>
-          <S.ImgWrapper>
+            <S.ProductInfo $isHovered={hoveredIndex === index}>
+              <p>{item.mainItemPrice}</p>
+              <h1>{item.mainItemName}</h1>
+            </S.ProductInfo>
+
             <S.ProductImg src={item.mainCategoryImg} alt={item.mainItemName}></S.ProductImg>
-          </S.ImgWrapper>
-          <S.ProductInfo $isHovered={hoveredIndex === index}>
-            <p>{item.mainItemPrice}</p>
-            <h1>{item.mainItemName}</h1>
-          </S.ProductInfo>
-        </S.Btn>
-      ))}
+          </S.Btn>
+        ))}
+      </S.FirstWrapper>
     </>
   );
 };
