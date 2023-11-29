@@ -24,6 +24,8 @@ export const ProductContainer = styled.div<ProductContainerProps>`
   `};
 
   background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 5;
 `;
 
 export const DetailBtn = styled.button`
