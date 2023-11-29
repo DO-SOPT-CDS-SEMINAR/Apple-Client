@@ -1,10 +1,17 @@
-import { RecoilRoot } from "recoil";
+import { RecoilRoot } from 'recoil';
+import GlobalStyle from './styles/GlobalStyle';
+import { ThemeProvider } from 'styled-components';
+import theme from './styles/theme';
+import './styles/fonts/fonts.css';
 
 function App() {
+  console.log('초기세팅 완료');
+
   return (
     <RecoilRoot>
-      {/* ThemeProvider, GlobalStyle, Router 추가해야 함 ! */}
-      <>초기세팅어어어</>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+      </ThemeProvider>
     </RecoilRoot>
   );
 }
