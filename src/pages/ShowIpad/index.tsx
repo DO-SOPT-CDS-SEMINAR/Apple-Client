@@ -2,7 +2,7 @@ import * as S from './ShowIpad.style';
 import ShowCommonSection from '../../components/ShowIpad/CommonSection/ShowCommonSection';
 import ShowFirstSection from '../../components/ShowIpad/FirstSection/ShowFirstSection';
 import ShowFifthSection from '../../components/ShowIpad/FifthSection/ShowFifthSection';
-// import ShowSixthSection from '../../components/ShowIpad/SixthSection/ShowSixthSection';
+import ShowSixthSection from '../../components/ShowIpad/SixthSection/ShowSixthSection';
 import PageHeader from '../../components/ShowIpad/PageHeader';
 import { useEffect, useState } from 'react';
 import API from '../../libs/api';
@@ -33,7 +33,7 @@ const ShowIpadPage = () => {
   }, []);
 
   return (
-    <S.ShowIpadPageContainer>
+    <S.ShowIpadPageContainer className='gray'>
       <PageHeader />
       <ShowFirstSection />
       <ShowCommonSection
@@ -55,7 +55,7 @@ const ShowIpadPage = () => {
         headerInfo={IPAD_COMMON_HEADER_TITLE.filter((it) => it.section === 4)}
       />
       <ShowFifthSection data={ipadItems?.filter((it) => it.productAsset === 4)} />
-      {/* <ShowSixthSection data={ipadItems?.filter((it) => it.productAsset === 5)}/> */}
+      <ShowSixthSection data={ipadItems?.filter((it) => it.productAsset === 5)} />
       <ShowCommonSection
         section={7}
         data={ipadItems?.filter((it) => it.productAsset === 6)}
