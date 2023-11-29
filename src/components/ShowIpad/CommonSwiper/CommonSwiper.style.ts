@@ -4,7 +4,6 @@ export const ProductsContainer = styled.div`
   display: flex;
   position: relative;
 
-  width: 100vw;
   height: fit-content;
 
   .swiper {
