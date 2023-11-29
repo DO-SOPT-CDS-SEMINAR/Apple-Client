@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 
 interface ColorProps {
   $whiteColor?: boolean;
+  $isHovered: boolean;
 }
 
 interface FirstCardProps {
@@ -31,14 +32,21 @@ export const CardTitleContainer = styled.div`
 
 export const SubTitle = styled.p<ColorProps>`
   margin-bottom: 0.8rem;
-  color: ${({ $whiteColor, theme: { colors } }) =>
-    $whiteColor ? colors.grayScale.white : colors.grayScale.gray6};
+
+  color: ${({ $isHovered, $whiteColor, theme: { colors } }) =>
+    $isHovered
+      ? colors.grayScale.gray2
+      : $whiteColor
+        ? colors.grayScale.white
+        : colors.grayScale.gray6};
+
   ${({ theme: { fonts } }) => fonts.caption1}
 `;
 
 export const Title = styled.p<ColorProps>`
-  color: ${({ $whiteColor, theme: { colors } }) =>
-    $whiteColor ? colors.grayScale.white : colors.grayScale.gray8};
+  color: ${({ $isHovered, $whiteColor, theme: { colors } }) =>
+    $isHovered || $whiteColor ? colors.grayScale.white : colors.grayScale.gray6};
+
   ${({ theme: { fonts } }) => fonts.subheading1_1}
 `;
 

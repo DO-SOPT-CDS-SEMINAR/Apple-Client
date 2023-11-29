@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import * as S from './SixthCard.style';
+import HoveredProduct from '../../../../common/HoveredProduct';
 
 interface IpadProductsProps {
   id: number;
@@ -9,15 +11,31 @@ interface IpadProductsProps {
   isFirstCard?: boolean;
 }
 
-const SixthCard = ({ subTitle, title, imgUrl, whiteColor, isFirstCard, id }: IpadProductsProps) => {
+const SixthCard = ({ subTitle, title, imgUrl, whiteColor, isFirstCard }: IpadProductsProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <S.SixthCardContainer>
+    <S.SixthCardContainer
+      onMouseEnter={() => {
+        setIsHovered(true);
+      }}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {isHovered &&
+        (isFirstCard ? (
+          <HoveredProduct width={48} height={50} borderRadius={1.8} />
+        ) : (
+          <HoveredProduct width={48} height={24} borderRadius={1.8} />
+        ))}
+
       <S.CardContainer $isFirstCard={isFirstCard}>
         <S.CardTitleContainer>
-          <S.SubTitle $whiteColor={whiteColor}>{subTitle}</S.SubTitle>
+          <S.SubTitle $whiteColor={whiteColor} $isHovered={isHovered}>
+            {subTitle}
+          </S.SubTitle>
           {title.map((it, idx) => {
             return (
-              <S.Title key={idx} $whiteColor={whiteColor}>
+              <S.Title key={idx} $whiteColor={whiteColor} $isHovered={isHovered}>
                 {it}
               </S.Title>
             );
