@@ -1,7 +1,7 @@
 import * as S from './ShowIpad.style';
 import ShowCommonSection from '../../components/ShowIpad/CommonSection/ShowCommonSection';
 import ShowFirstSection from '../../components/ShowIpad/FirstSection/ShowFirstSection';
-// import ShowFifthSection from '../../components/ShowIpad/FifthSection/ShowFifthSection';
+import ShowFifthSection from '../../components/ShowIpad/FifthSection/ShowFifthSection';
 // import ShowSixthSection from '../../components/ShowIpad/SixthSection/ShowSixthSection';
 import PageHeader from '../../components/ShowIpad/PageHeader';
 import { useEffect, useState } from 'react';
@@ -54,7 +54,7 @@ const ShowIpadPage = () => {
         subtitle={IPAD_COMMON_SUB_TITLE[2].subtitle}
         headerInfo={IPAD_COMMON_HEADER_TITLE.filter((it) => it.section === 4)}
       />
-      {/* <ShowFifthSection data={ipadItems?.filter((it) => it.productAsset === 4)}/> */}
+      <ShowFifthSection data={ipadItems?.filter((it) => it.productAsset === 4)} />
       {/* <ShowSixthSection data={ipadItems?.filter((it) => it.productAsset === 5)}/> */}
       <ShowCommonSection
         section={7}
