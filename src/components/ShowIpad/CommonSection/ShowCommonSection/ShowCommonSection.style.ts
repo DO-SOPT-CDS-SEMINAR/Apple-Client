@@ -6,3 +6,12 @@ export const ShowCommonSectionContainer = styled.div`
 
   margin-top: 7.9rem;
 `;
+
+export const ProductContainer = styled.div`
+  display: flex;
+
+  width: 100vw;
+  height: fit-content;
+
+  gap: 2.2rem;
+`;

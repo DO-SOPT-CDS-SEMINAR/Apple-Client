@@ -5,11 +5,18 @@ interface IpadProductsProps {
   title: string[];
   imgUrl: string;
   whiteColor: boolean;
+  section: number;
 }
 
-const AdevertisementCard = ({ subTitle, title, imgUrl, whiteColor }: IpadProductsProps) => {
+const AdevertisementCard = ({
+  subTitle,
+  title,
+  imgUrl,
+  whiteColor,
+  section,
+}: IpadProductsProps) => {
   return (
-    <S.CardContainer>
+    <S.CardContainer $isSection8={section === 8}>
       <S.CardTitleContainer>
         <S.SubTitle $whiteColor={whiteColor}>{subTitle}</S.SubTitle>
         {title.map((it, idx) => {
@@ -21,7 +28,7 @@ const AdevertisementCard = ({ subTitle, title, imgUrl, whiteColor }: IpadProduct
         })}
       </S.CardTitleContainer>
 
-      <S.CardImg src={imgUrl} alt={`${subTitle}`} />
+      <S.CardImg src={imgUrl} alt={`${subTitle}`} $isSection8={section === 8} />
     </S.CardContainer>
   );
 };

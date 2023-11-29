@@ -118,6 +118,25 @@ const ShowCommonSection = ({ section }: ShowCommonSectionProps) => {
     ];
   }
 
+  if (section === 8) {
+    DUMMY = [
+      {
+        id: 1,
+        subTitle: '교육',
+        title: ['학생과 교육자를 위한 특별가로', 'iPad를 구입하세요.3'],
+        imgUrl:
+          'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-card-40-education-202108_GEO_KR?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1627664723000',
+      },
+      {
+        id: 2,
+        subTitle: '비지니스',
+        title: ['대기업부터 중소기업까지', 'Apple이 함께합니다.3'],
+        imgUrl:
+          'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-card-40-business-202210_GEO_KR?wid=800&hei=1000&fmt=jpeg&qlt=90&.v=1664998875435',
+      },
+    ];
+  }
+
   return (
     <S.ShowCommonSectionContainer>
       {section === 2 && (
@@ -135,22 +154,45 @@ const ShowCommonSection = ({ section }: ShowCommonSectionProps) => {
       {section === 7 && (
         <ShowIpadHeader title='iPad 경험.' subTitle='Apple의 모든 것과 연결되어 있는 느낌.' />
       )}
+      {section === 8 && (
+        <ShowIpadHeader title='특별 할인.' subTitle='특별한 가격 혜택을 누리세요.' />
+      )}
 
-      <CommonSwiper slidesPerView={2.5}>
-        {DUMMY.map((item) => {
-          return (
-            <SwiperSlide key={item.id}>
+      {(section === 2 || section === 4 || section === 8) && (
+        <S.ProductContainer>
+          {DUMMY.map((item) => {
+            return (
               <AdevertisementCard
                 key={item.id}
+                section={section}
                 subTitle={item.subTitle}
                 title={item.title}
                 imgUrl={item.imgUrl}
-                whiteColor={section === 7 && item.id === 1}
+                whiteColor={section === 8 && item.id === 2}
               />
-            </SwiperSlide>
-          );
-        })}
-      </CommonSwiper>
+            );
+          })}
+        </S.ProductContainer>
+      )}
+
+      {(section === 3 || section === 7) && (
+        <CommonSwiper>
+          {DUMMY.map((item) => {
+            return (
+              <SwiperSlide key={item.id}>
+                <AdevertisementCard
+                  key={item.id}
+                  section={section}
+                  subTitle={item.subTitle}
+                  title={item.title}
+                  imgUrl={item.imgUrl}
+                  whiteColor={section === 7 && item.id === 1}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </CommonSwiper>
+      )}
     </S.ShowCommonSectionContainer>
   );
 };

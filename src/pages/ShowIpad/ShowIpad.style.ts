@@ -5,5 +5,5 @@ export const ShowIpadPageContainer = styled.div`
   flex-direction: column;
 
   margin-top: 4.2rem;
-  margin-left: 11.9rem;
+  margin-left: 12rem;
 `;

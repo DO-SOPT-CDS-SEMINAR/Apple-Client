@@ -1,15 +1,27 @@
 /* eslint-disable prettier/prettier */
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface ColorProps {
   $whiteColor: boolean;
 }
 
-export const CardContainer = styled.article`
+interface SectionProps {
+  $isSection8: boolean;
+}
+
+export const CardContainer = styled.article<SectionProps>`
   display: flex;
 
-  width: 48rem;
-  height: 50rem;
+  ${({ $isSection8 }) =>
+    $isSection8
+      ? css`
+          width: 40rem;
+          height: 50rem;
+        `
+      : css`
+          width: 48rem;
+          height: 50rem;
+        `};
 
   border-radius: 1.8rem;
 
@@ -41,10 +53,19 @@ export const Title = styled.p<ColorProps>`
   ${({ theme: { fonts } }) => fonts.subheading1_1}
 `;
 
-export const CardImg = styled.img`
+export const CardImg = styled.img<SectionProps>`
   position: relative;
-  width: 48rem;
-  height: 50rem;
+
+  ${({ $isSection8 }) =>
+    $isSection8
+      ? css`
+          width: 40rem;
+          height: 50rem;
+        `
+      : css`
+          width: 48rem;
+          height: 50rem;
+        `};
 
   border-radius: 1.8rem;
 `;

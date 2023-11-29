@@ -50,7 +50,7 @@ const ShowFirstSection = () => {
   return (
     <S.ShowFirstSectionContainer>
       <ShowIpadHeader title='모든 모델.' subTitle='당신의 선택은?' />
-      <CommonSwiper slidesPerView={3}>
+      <CommonSwiper>
         {DUMMY.map((item) => {
           return (
             <SwiperSlide key={item.id}>
