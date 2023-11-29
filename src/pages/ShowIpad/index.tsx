@@ -3,10 +3,12 @@ import ShowCommonSection from '../../components/ShowIpad/CommonSection/ShowCommo
 import ShowFirstSection from '../../components/ShowIpad/FirstSection/ShowFirstSection';
 import ShowFifthSection from '../../components/ShowIpad/FifthSection/ShowFifthSection';
 import ShowSixthSection from '../../components/ShowIpad/SixthSection/ShowSixthSection';
+import PageHeader from '../../components/ShowIpad/PageHeader';
 
 const ShowIpadPage = () => {
   return (
     <S.ShowIpadPageContainer>
+      <PageHeader />
       <ShowFirstSection />
       <ShowCommonSection section={2} />
       <ShowCommonSection section={3} />
