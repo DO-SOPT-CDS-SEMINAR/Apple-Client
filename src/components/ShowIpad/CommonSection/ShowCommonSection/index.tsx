@@ -20,8 +20,6 @@ interface ShowCommonSectionProps {
 const ShowCommonSection = ({ section, data, subtitle, headerInfo }: ShowCommonSectionProps) => {
   const productName = data && data?.map((it) => it.productName.split('<br>'));
 
-  console.log(headerInfo);
-
   return (
     <S.ShowCommonSectionContainer>
       <ShowIpadHeader title={headerInfo[0].title} subTitle={headerInfo[0].subtitle} />
