@@ -4,7 +4,6 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: 10rem;
   width: 32.8rem;
 `;
@@ -48,4 +47,40 @@ export const GigaWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+`;
+
+export const PriceWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
+export const FinalPrice = styled.p`
+  display: flex;
+  color: ${({ theme: { colors } }) => colors.grayScale.gray8};
+
+  ${({ theme: { fonts } }) => fonts.subheading1};
+`;
+
+export const VATText = styled.p`
+  display: flex;
+  color: ${({ theme: { colors } }) => colors.grayScale.gray6};
+  ${({ theme: { fonts } }) => fonts.body3_1};
+`;
+
+export const CardText = styled.p`
+  display: flex;
+  color: ${({ theme: { colors } }) => colors.pointColor.blue0};
+  ${({ theme: { fonts } }) => fonts.body3_1};
+`;
+
+export const ItemWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+`;
+
+export const ItemBox = styled.div`
+  display: flex;
+  flex-direction: column;
 `;

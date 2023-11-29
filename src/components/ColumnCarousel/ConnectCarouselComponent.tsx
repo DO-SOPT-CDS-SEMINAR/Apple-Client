@@ -20,8 +20,9 @@ export const ConnectCarouselComponent = () => {
         price={1249000}
       />
       <S.PlusContent>
-        <p>용량이 얼마나 필요할지 확실피 않으신가요?</p>iPad Pro의 저장 용량의 클수록 지금은 물론
-        앞으로도 더 많은 디지털 콘텐츠를 저장할 수 있습니다.
+        <p>Wi-Fi + Cellular 모델에 대해 더 알아보시겠어요?</p>Wi-Fi 연결이 불가능한 환경에서도
+        Wi-Fi+Celluar 모델만 있으면 셀룰러 데이터 요금제에 가입해 인터넷 연결을 유지할 수 있죠.
+        Wi-Fi + Cellular 모델을 구입하시고 나면 셀룰러 연결을 설정해야합니다.
       </S.PlusContent>
     </S.ComponentWrapper>
   );
