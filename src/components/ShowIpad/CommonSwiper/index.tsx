@@ -4,15 +4,15 @@ import 'swiper/css';
 
 interface CommonSwiperProps {
   children: React.ReactNode;
-  slidesPerView: number;
 }
 
-const CommonSwiper = ({ children, slidesPerView }: CommonSwiperProps) => {
+const CommonSwiper = ({ children }: CommonSwiperProps) => {
   return (
     <S.ProductsContainer>
       <Swiper
-        slidesPerView={slidesPerView}
-        spaceBetween={22}
+        slidesPerView={'auto'}
+        // 2.2rem
+        spaceBetween={2.2 * 10}
         observer={true}
         observeParents={true}
         mousewheel={true}

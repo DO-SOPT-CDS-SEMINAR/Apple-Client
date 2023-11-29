@@ -48,7 +48,7 @@ const ShowSixthSection = () => {
   return (
     <S.ShowSixthSectionContainer>
       <ShowIpadHeader title='설명 및 지원.' subTitle='차근차근 스페셜리스트의 도움과 함께.' />
-      <CommonSwiper slidesPerView={2.5}>
+      <CommonSwiper>
         {DUMMY.map((item) => {
           return (
             <SwiperSlide key={item.id}>
