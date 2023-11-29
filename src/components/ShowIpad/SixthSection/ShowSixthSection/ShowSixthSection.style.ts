@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const ShowSixthSectionContainer = styled.section`
   display: flex;
@@ -7,50 +7,35 @@ export const ShowSixthSectionContainer = styled.section`
   margin-top: 7.9rem;
 `;
 
-// export const ShowSixthSectionContainer = styled.section`
-//   display: grid;
-//   grid-template-columns: repeat(3, 1fr);
-//   grid-template-columns: repeat(2, 1fr);
+export const PositionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
 
-//   row-gap: 2rem;
+  width: 48rem;
+  height: 50rem;
 
-/* &:nth-child(1) {
-    width: 48rem;
-    height: 50rem;
+  row-gap: 2rem;
+`;
 
-    grid-row: 1 / 3;
-    grid-column: 1 / 2;
-  }
+export const TopContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 
-  &:nth-child(2) {
-    width: 48rem;
-    height: 24rem;
+  width: 100%;
+  height: 24rem;
+`;
 
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-  }
+export const BottomContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-  &:nth-child(3) {
-    width: 48rem;
-    height: 24rem;
-
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-  }
-
-  &:nth-child(4) {
-    width: 48rem;
-    height: 24rem;
-
-    grid-row: 1 / 2;
-    grid-column: 3 / 4;
-  }
-
-  &:nth-child(5) {
-    width: 48rem;
-    height: 24rem;
-
-    grid-row: 2 / 3;
-    grid-column: 3 / 4;
-  } */
-// `;
+  width: 100%;
+  height: 24rem;
+`;

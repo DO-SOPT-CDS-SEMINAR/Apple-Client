@@ -45,22 +45,55 @@ const DUMMY = [
 ];
 
 const ShowSixthSection = () => {
+  const createdSwiperSlide = DUMMY.filter((it) => it.id === 1 || it.id === 2 || it.id === 4);
+  const top = DUMMY.filter((it) => it.id === 2 || it.id === 4);
+  const bottom = DUMMY.filter((it) => it.id === 3 || it.id === 5);
+
   return (
     <S.ShowSixthSectionContainer>
       <ShowIpadHeader title='설명 및 지원.' subTitle='차근차근 스페셜리스트의 도움과 함께.' />
+
       <CommonSwiper>
-        {DUMMY.map((item) => {
+        {createdSwiperSlide.map((it, idx) => {
           return (
-            <SwiperSlide key={item.id}>
-              <SixthCard
-                key={item.id}
-                id={item.id}
-                subTitle={item.subTitle}
-                title={item.title}
-                imgUrl={item.imgUrl}
-                whiteColor={item.id === 5}
-                isFirstCard={item.id === 1}
-              />
+            <SwiperSlide key={it.id}>
+              {it.id === 1 ? (
+                <SixthCard
+                  key={it.id}
+                  id={it.id}
+                  subTitle={it.subTitle}
+                  title={it.title}
+                  imgUrl={it.imgUrl}
+                  isFirstCard={it.id === 1}
+                />
+              ) : (
+                <S.PositionContainer>
+                  {top[idx - 1] && (
+                    <S.TopContainer>
+                      <SixthCard
+                        key={top[idx - 1].id}
+                        id={top[idx - 1].id}
+                        subTitle={top[idx - 1].subTitle}
+                        title={top[idx - 1].title}
+                        imgUrl={top[idx - 1].imgUrl}
+                      />
+                    </S.TopContainer>
+                  )}
+
+                  {bottom[idx - 1] && (
+                    <S.BottomContainer>
+                      <SixthCard
+                        key={bottom[idx - 1].id}
+                        id={bottom[idx - 1].id}
+                        subTitle={bottom[idx - 1].subTitle}
+                        title={bottom[idx - 1].title}
+                        imgUrl={bottom[idx - 1].imgUrl}
+                        whiteColor={bottom[idx - 1].id === 5}
+                      />
+                    </S.BottomContainer>
+                  )}
+                </S.PositionContainer>
+              )}
             </SwiperSlide>
           );
         })}
