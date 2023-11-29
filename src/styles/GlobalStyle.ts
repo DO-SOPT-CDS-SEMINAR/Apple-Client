@@ -1,4 +1,3 @@
-import { PageController } from './../common/PageController/index';
 import { createGlobalStyle, css } from 'styled-components';
 
 export const reset = css`
