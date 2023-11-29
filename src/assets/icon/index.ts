@@ -33,6 +33,9 @@ import IcSwatchSmSpacegray from './ic_swatch_sm_spacegray.svg?react';
 import IcSwatchSmTurquiose from './ic_swatch_sm_turquiose.svg?react';
 import IcSwatchSmYellow from './ic_swatch_sm_yellow.svg?react';
 
+import IpadIcRight from './ipad_ic_right.svg?react';
+import IpadImgChatSpecialist from './ipad_img_chat_specialist.svg?react';
+
 import IpadImgSwPattern01 from './ipad_img_sw_pattern01.svg?react';
 import IpadImgSwPattern02 from './ipad_img_sw_pattern02.svg?react';
 import IpadImgSwPattern03 from './ipad_img_sw_pattern03.svg?react';
@@ -98,6 +101,9 @@ export { IcSwatchSmSkyblue };
 export { IcSwatchSmSpacegray };
 export { IcSwatchSmTurquiose };
 export { IcSwatchSmYellow };
+
+export { IpadIcRight };
+export { IpadImgChatSpecialist };
 
 export { IpadImgSwPattern01 };
 export { IpadImgSwPattern02 };
