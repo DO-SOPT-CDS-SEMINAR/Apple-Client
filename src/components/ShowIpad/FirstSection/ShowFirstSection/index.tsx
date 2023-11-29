@@ -7,7 +7,7 @@ import CommonSwiper from '../../CommonSwiper';
 import { useEffect, useState } from 'react';
 import API from '../../../../libs/api';
 
-export interface DataProps {
+interface DataProps {
   productName: string;
   productCost: string;
   productImgUrl: string;

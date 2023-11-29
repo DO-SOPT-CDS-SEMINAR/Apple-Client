@@ -13,7 +13,6 @@ interface IpadProductsProps {
 }
 
 const IpadProducts = ({ productName, productSubName, imgUrl, price, idx }: IpadProductsProps) => {
-  // const formattedPrice = price.toLocaleString();
   const [isHovered, setIsHovered] = useState(false);
 
   return (
