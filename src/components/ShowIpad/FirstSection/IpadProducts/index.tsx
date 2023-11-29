@@ -9,11 +9,11 @@ interface IpadProductsProps {
   productName: string;
   productSubName?: string;
   imgUrl: string;
-  price: number;
+  price: string;
 }
 
 const IpadProducts = ({ productName, productSubName, imgUrl, price, idx }: IpadProductsProps) => {
-  const formattedPrice = price.toLocaleString();
+  // const formattedPrice = price.toLocaleString();
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -39,7 +39,7 @@ const IpadProducts = ({ productName, productSubName, imgUrl, price, idx }: IpadP
       </S.ColorsContainer>
 
       <S.BottomContainer>
-        <S.ProductPrice $isHovered={isHovered}>₩{formattedPrice}부터</S.ProductPrice>
+        <S.ProductPrice $isHovered={isHovered}>₩{price}</S.ProductPrice>
         <BuyButton>구입하기</BuyButton>
       </S.BottomContainer>
     </S.ProductContainer>
