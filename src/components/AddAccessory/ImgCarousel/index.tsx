@@ -7,6 +7,7 @@ import { IcRightBold } from '../../../assets/icon';
 
 const ImgCarousel = () => {
   const settings: Settings = {
+    slide: 'div',
     arrows: true,
     dots: true,
     infinite: true,
@@ -15,6 +16,12 @@ const ImgCarousel = () => {
     slidesToScroll: 1,
     swipeToSlide: true,
     initialSlide: 0,
+    prevArrow: undefined,
+    nextArrow: (
+      <S.ArrowWrapper>
+        <IcRightBold />
+      </S.ArrowWrapper>
+    ),
 
     appendDots: (dots: React.ReactNode) => (
       <S.CustomDotsContainer>
@@ -46,9 +53,6 @@ const ImgCarousel = () => {
           </S.Img>
         ))}
       </S.SliderWrapper>
-      <S.ArrowWrapper>
-        <IcRightBold />
-      </S.ArrowWrapper>
     </S.Wrapper>
   );
 };

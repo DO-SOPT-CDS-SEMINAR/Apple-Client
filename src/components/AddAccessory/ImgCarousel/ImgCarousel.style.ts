@@ -14,7 +14,7 @@ export const SliderWrapper = styled(Slider)`
 
   margin-left: 2.1rem;
   left: 0rem;
-  width: 40rem;
+  width: 38rem;
   height: 36.5rem;
 `;
 
@@ -23,7 +23,7 @@ export const Img = styled.div`
   height: 36.8rem;
 
   & > img {
-    height: 36.8rem;
+    width: 35rem;
   }
 `;
 
@@ -77,4 +77,5 @@ export const ArrowWrapper = styled.div`
   left: 38.8rem;
   top: 17.2rem;
   pointer: cursor;
+  display: none;
 `;
