@@ -40,18 +40,20 @@ const ShowIpadPage = () => {
       <Banner />
       <S.ShowIpadPageContainer className='gray'>
         <PageHeader />
-        <Nb
-          DATA={[
-            '모든 모델',
-            '쇼핑안내',
-            '각종 할인 방법',
-            '남다른 Apple Store',
-            '액세서리',
-            '설정 및 지원',
-            'iPad 경험',
-            '특별 할인',
-          ]}
-        />
+        <S.NbContainer>
+          <Nb
+            DATA={[
+              '모든 모델',
+              '쇼핑안내',
+              '각종 할인 방법',
+              '남다른 Apple Store',
+              '액세서리',
+              '설정 및 지원',
+              'iPad 경험',
+              '특별 할인',
+            ]}
+          />
+        </S.NbContainer>
 
         <ShowFirstSection headerInfo={IPAD_COMMON_HEADER_TITLE.filter((it) => it.section === 1)} />
 
