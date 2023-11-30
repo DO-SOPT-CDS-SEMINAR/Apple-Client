@@ -4,19 +4,26 @@ import 'swiper/css';
 import ShowIpadHeader from '../../Header';
 import CommonSwiper from '../../CommonSwiper';
 import FifthCard from '../FifthCard';
-import { IpadItemProps } from '../../../../pages/ShowIpad';
+import { IpadItemProps } from '../../../../libs/hooks/useGetIpadItems';
 import { ADDITIONAL_INFO } from '../../../../constant/ipadAdditionalInfo';
 
+/* eslint-disable prettier/prettier */
 interface ShowFifthSectionProps {
   data: Array<IpadItemProps> | undefined;
+  headerInfo: Array<{
+    section: number;
+    title: string;
+    subtitle: string;
+  }>;
 }
 
-const ShowFifthSection = ({ data }: ShowFifthSectionProps) => {
+const ShowFifthSection = ({ data, headerInfo }: ShowFifthSectionProps) => {
   const productName = data && data?.map((it) => it.productName.split('<br>'));
+  const { title, subtitle } = headerInfo[0];
 
   return (
     <S.ShowFifthSectionContainer>
-      <ShowIpadHeader title='IPad 액세서리.' subTitle='일도, 취미도 손쉽게.' />
+      <ShowIpadHeader title={title} subTitle={subtitle} />
       <CommonSwiper>
         {data &&
           data.map((item, idx) => {

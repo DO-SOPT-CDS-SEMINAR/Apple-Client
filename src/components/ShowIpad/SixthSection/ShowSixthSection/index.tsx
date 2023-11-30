@@ -4,14 +4,22 @@ import 'swiper/css';
 import ShowIpadHeader from '../../Header';
 import CommonSwiper from '../../CommonSwiper';
 import SixthCard from '../SixthCard';
-import { IpadItemProps } from '../../../../pages/ShowIpad';
+import { IpadItemProps } from '../../../../libs/hooks/useGetIpadItems';
 import { SIXTH_SECTION_ADD_INFO } from '../../../../constant/ipadAdditionalInfo';
 
+/* eslint-disable prettier/prettier */
 interface ShowSixthSectionProps {
   data: Array<IpadItemProps> | undefined;
+  headerInfo: Array<{
+    section: number;
+    title: string;
+    subtitle: string;
+  }>;
 }
 
-const ShowSixthSection = ({ data }: ShowSixthSectionProps) => {
+const ShowSixthSection = ({ data, headerInfo }: ShowSixthSectionProps) => {
+  const { title, subtitle } = headerInfo[0];
+
   const productName = data && data?.map((it) => it.productName.split('<br>'));
   const productImgUrl = data && data?.map((it) => it.productImgUrl);
 
@@ -23,7 +31,7 @@ const ShowSixthSection = ({ data }: ShowSixthSectionProps) => {
 
   return (
     <S.ShowSixthSectionContainer>
-      <ShowIpadHeader title='설명 및 지원.' subTitle='차근차근 스페셜리스트의 도움과 함께.' />
+      <ShowIpadHeader title={title} subTitle={subtitle} />
 
       <CommonSwiper>
         {createdSwiperSlide.map((it, idx) => {
