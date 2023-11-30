@@ -1,23 +1,9 @@
 /* eslint-disable react/jsx-key */
 import HoveredProduct from '../../../../common/HoveredProduct';
+import { IconComponents } from '../../../../constant/iconComponents';
 import { useState } from 'react';
 
 import * as S from './ThirdSectionBtn.style';
-import { MainIcCard } from '../../../../assets/icon';
-import { MainIcTrade } from '../../../../assets/icon';
-import { MainIcBoxtruck } from '../../../../assets/icon';
-import { MainIcStore } from '../../../../assets/icon';
-
-const iconComponents = [
-  <MainIcCard />,
-  <MainIcTrade />,
-  'Apple 스페셜리스트',
-  'Today at Apple',
-  <MainIcBoxtruck />,
-  <MainIcStore />,
-  'Customizing with Apple',
-  '캠퍼스에서 만나는 Apple',
-];
 
 interface Product {
   mainItemName: string;
@@ -98,12 +84,12 @@ const ThirdSectionBtn = () => {
             <S.ProductInfo $isHovered={hoveredIndex === index}>
               <h1>{item.mainItemName}</h1>
             </S.ProductInfo>
-            {iconComponents[index] && (
+            {IconComponents[index] && (
               <S.IconWrapper $isHovered={hoveredIndex === index}>
-                {typeof iconComponents[index] === 'string' ? (
-                  <p>{iconComponents[index]}</p>
+                {typeof IconComponents[index] === 'string' ? (
+                  <p>{IconComponents[index]}</p>
                 ) : (
-                  <div>{iconComponents[index]}</div>
+                  <div>{IconComponents[index]}</div>
                 )}
               </S.IconWrapper>
             )}
