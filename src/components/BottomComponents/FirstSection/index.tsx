@@ -1,4 +1,4 @@
-// import { ImgIpadproAdapter, ImgIpadproCtype, ImgIpadproIpad } from '../../../../assets/icon';
+import { ImgIpadproAdapter, ImgIpadproCtype, ImgIpadproIpad } from '../../../assets/icon';
 import * as S from './FirstSection.style';
 
 const FirstSection = () => {
@@ -7,9 +7,9 @@ const FirstSection = () => {
       <S.FirstSectionHeader>제품 구성</S.FirstSectionHeader>
       <S.ContentsContainer>
         <S.ImgContainer>
-          {/* <ImgIpadproIpad />
+          <ImgIpadproIpad />
           <ImgIpadproCtype />
-          <ImgIpadproAdapter /> */}
+          <ImgIpadproAdapter />
         </S.ImgContainer>
 
         <S.TextContainer>

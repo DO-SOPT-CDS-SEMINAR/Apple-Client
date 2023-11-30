@@ -1,5 +1,5 @@
-// import { IpadproIcRightBlue16 } from '../../../../assets/icon';
-// import { CARD_CONTENTS } from '../../../../constant/ipadProCard';
+import { IpadproIcRightBlue16 } from '../../../assets/icon';
+import { IPAD_PRO_EVENT_CONTENTS } from '../../../constant/IpadProEvent';
 import * as S from './SecondSection.style';
 
 const SecondSection = () => {
@@ -13,7 +13,7 @@ const SecondSection = () => {
       </S.TitleContainer>
 
       <S.ContentsContainer>
-        {/* {CARD_CONTENTS.map((card, idx) => {
+        {IPAD_PRO_EVENT_CONTENTS.map((card, idx) => {
           return (
             <S.CardContainer key={idx}>
               {card.exImg}
@@ -21,7 +21,7 @@ const SecondSection = () => {
               {card.icImg}
               <S.Name>{card.name}</S.Name>
               <S.DescriptionContainer>
-                {card.descriprion.map((desc, idx) => {
+                {card.description.map((desc, idx) => {
                   return <S.Description key={idx}>{desc}</S.Description>;
                 })}
               </S.DescriptionContainer>
@@ -32,7 +32,7 @@ const SecondSection = () => {
               </S.MoreInfo>
             </S.CardContainer>
           );
-        })} */}
+        })}
       </S.ContentsContainer>
     </S.SecondSectionContainer>
   );
