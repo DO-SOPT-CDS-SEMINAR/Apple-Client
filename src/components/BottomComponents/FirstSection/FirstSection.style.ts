@@ -23,11 +23,14 @@ export const ContentsContainer = styled.article`
 
 export const ImgContainer = styled.div`
   display: flex;
+  justify-content: center;
 
   width: 93.4rem;
   height: 33.9rem;
 
   background-color: ${({ theme: { colors } }) => colors.grayScale.gray1};
+
+  gap: 9.3rem;
 `;
 
 export const TextContainer = styled.div`
