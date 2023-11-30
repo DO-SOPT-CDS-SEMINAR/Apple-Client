@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 interface ProductInfoProps {
   $isHovered: boolean;
+  $isSecondBox: boolean;
 }
 
 export const ProductName = styled.h1`
@@ -21,15 +22,15 @@ export const ProductInfo = styled.div<ProductInfoProps>`
   & > h1 {
     margin-top: 1.3rem;
     ${({ theme: { fonts } }) => fonts.subheading1_1};
-    color: ${({ $isHovered, theme: { colors } }) =>
-      $isHovered ? colors.grayScale.gray4 : colors.grayScale.gray8};
+    color: ${({ $isHovered, $isSecondBox, theme: { colors } }) =>
+      $isHovered || $isSecondBox ? colors.grayScale.gray4 : colors.grayScale.gray8};
     z-index: 10;
   }
 
   & > p {
     ${({ theme: { fonts } }) => fonts.caption1};
-    color: ${({ $isHovered, theme: { colors } }) =>
-      $isHovered ? colors.grayScale.gray4 : colors.grayScale.gray8};
+    color: ${({ $isHovered, $isSecondBox, theme: { colors } }) =>
+      $isHovered || $isSecondBox ? colors.grayScale.gray4 : colors.grayScale.gray5};
   }
   z-index: 10;
 `;
