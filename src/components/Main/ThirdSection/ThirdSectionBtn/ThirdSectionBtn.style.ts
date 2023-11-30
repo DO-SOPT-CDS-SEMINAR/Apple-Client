@@ -24,17 +24,20 @@ export const ProductInfo = styled.div<ProductInfoProps>`
 
     color: ${({ $isHovered, theme: { colors } }) =>
       $isHovered ? colors.grayScale.gray4 : colors.grayScale.black};
-  }
+      
+  .highlighted-text {
+      color: ${({ theme: { colors } }) => colors.pointColor.red0};
+      ${({ theme: { fonts } }) => fonts.subheading3};
 `;
 
 export const ProductImg = styled.img`
   position: absolute;
 
-  right: 0;
-  top: 0;
+  right: -2rem;
+  top: -1rem;
 
-  width: 24rem;
-  height: 24rem;
+  width: 27rem;
+  height: 27rem;
 `;
 
 // eslint-disable-next-line prettier/prettier

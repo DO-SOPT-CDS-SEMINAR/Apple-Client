@@ -17,6 +17,12 @@ interface Product {
 const ThirdSectionBtn = ({ ThirdSectionData }: ThirdSectionBtnProps) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
+  const itemsWithHighlightedText = ThirdSectionData.map((item) =>
+    item.mainItemName
+      .replace(/<br>/g, '\n')
+      .replace(/<span class="highlight">/g, '<span class="highlighted-text">'),
+  );
+
   return (
     <>
       <S.FirstWrapper>
@@ -36,7 +42,7 @@ const ThirdSectionBtn = ({ ThirdSectionData }: ThirdSectionBtnProps) => {
               <S.ProductImg src={item.mainCategoryImg} alt={item.mainItemName}></S.ProductImg>
             )}
             <S.ProductInfo $isHovered={hoveredIndex === index}>
-              <h1>{item.mainItemName.replace(/<br>/g, '\n')}</h1>
+              <h1 dangerouslySetInnerHTML={{ __html: itemsWithHighlightedText[index] }} />
             </S.ProductInfo>
             {IconComponents[index] && (
               <S.IconWrapper $isHovered={hoveredIndex === index}>
