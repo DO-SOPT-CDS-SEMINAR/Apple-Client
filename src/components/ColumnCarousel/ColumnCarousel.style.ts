@@ -6,6 +6,15 @@ export const Wrapper = styled.div`
   justify-content: center;
   gap: 10rem;
   width: 32.8rem;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -ms-overflow-style: none; /* IE, Edge에서 스크롤바 감추기 */
+  scrollbar-width: none; /* Firefox에서 스크롤바 감추기 */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera에서 스크롤바 감추기 */
+  }
 `;
 
 export const ComponentWrapper = styled.div`
