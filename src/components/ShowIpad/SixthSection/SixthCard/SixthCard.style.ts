@@ -45,7 +45,7 @@ export const SubTitle = styled.p<ColorProps>`
 
 export const Title = styled.p<ColorProps>`
   color: ${({ $isHovered, $whiteColor, theme: { colors } }) =>
-    $isHovered || $whiteColor ? colors.grayScale.white : colors.grayScale.gray6};
+    $isHovered || $whiteColor ? colors.grayScale.white : colors.grayScale.gray8};
 
   ${({ theme: { fonts } }) => fonts.subheading1_1}
 `;

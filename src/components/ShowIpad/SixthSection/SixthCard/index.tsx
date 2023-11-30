@@ -3,10 +3,9 @@ import * as S from './SixthCard.style';
 import HoveredProduct from '../../../../common/HoveredProduct';
 
 interface IpadProductsProps {
-  id: number;
   subTitle: string;
-  title: string[];
-  imgUrl: string;
+  title: string[] | undefined;
+  imgUrl: string | undefined;
   whiteColor?: boolean;
   isFirstCard?: boolean;
 }
@@ -33,13 +32,14 @@ const SixthCard = ({ subTitle, title, imgUrl, whiteColor, isFirstCard }: IpadPro
           <S.SubTitle $whiteColor={whiteColor} $isHovered={isHovered}>
             {subTitle}
           </S.SubTitle>
-          {title.map((it, idx) => {
-            return (
-              <S.Title key={idx} $whiteColor={whiteColor} $isHovered={isHovered}>
-                {it}
-              </S.Title>
-            );
-          })}
+          {title &&
+            title.map((it, idx) => {
+              return (
+                <S.Title key={idx} $whiteColor={whiteColor} $isHovered={isHovered}>
+                  {it}
+                </S.Title>
+              );
+            })}
         </S.CardTitleContainer>
 
         <S.CardImg src={imgUrl} alt={`${subTitle}`} $isFirstCard={isFirstCard} />

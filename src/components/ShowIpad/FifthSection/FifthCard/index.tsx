@@ -3,14 +3,13 @@ import ColorPreview from '../../ColorPreview';
 
 interface IpadProductsProps {
   id: number | string;
-  productName: string[];
+  productName: string[] | undefined;
   productTag?: string;
   imgUrl: string;
-  price?: number;
+  price?: string | null;
 }
 
 const FifthCard = ({ productName, productTag, imgUrl, price, id }: IpadProductsProps) => {
-  const formattedPrice = price && price.toLocaleString();
   return (
     <S.ProductContainer $isMainCard={id === 'acc_0'}>
       <S.ProductImg src={imgUrl} alt={`${productName}`} $isMainCard={id === 'acc_0'} />
@@ -21,18 +20,19 @@ const FifthCard = ({ productName, productTag, imgUrl, price, id }: IpadProductsP
 
       <S.ProductNameContainer $productSubTag={productTag} $isMainCard={id === 'acc_0'}>
         {productTag && <S.ProductSubTag>{productTag}</S.ProductSubTag>}
-        {productName.map((name, idx) => {
-          return (
-            <S.ProductName key={idx} $isMainCard={id === 'acc_0'}>
-              {name}
-            </S.ProductName>
-          );
-        })}
+        {productName &&
+          productName.map((name, idx) => {
+            return (
+              <S.ProductName key={idx} $isMainCard={id === 'acc_0'}>
+                {name}
+              </S.ProductName>
+            );
+          })}
       </S.ProductNameContainer>
 
       {id !== 'acc_0' && (
         <S.BottomContainer>
-          <S.ProductPrice>₩{formattedPrice}부터</S.ProductPrice>
+          <S.ProductPrice>₩{price}</S.ProductPrice>
         </S.BottomContainer>
       )}
     </S.ProductContainer>
