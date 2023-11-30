@@ -121,11 +121,14 @@ export const BuyBtn = styled.button`
   display: flex;
   align-items: center;
   vertical-align: center;
+  margin: 1.5rem 0rem;
 
   width: 44rem;
   text-align: left;
 
   color: ${({ theme: { colors } }) => colors.pointColor.blue0};
 
-  ${({ theme: { fonts } }) => fonts.body2};
+  & > p {
+    ${({ theme: { fonts } }) => fonts.body2};
+  }
 `;
