@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import API from '../api';
-import { AxiosError } from 'axios';
 
 export interface IpadItemProps {
   productAsset: number;
