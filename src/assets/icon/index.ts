@@ -1,3 +1,4 @@
+//icon
 import AddIcAngle from './add_ic_angle.svg?react';
 import AddIcEye from './add_ic_eye.svg?react';
 import AddIcFold from './add_ic_fold.svg?react';
