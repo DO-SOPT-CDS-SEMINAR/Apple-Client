@@ -47,6 +47,7 @@ export const ProductInfo = styled.div<ProductInfoProps>`
 export const ProductImg = styled.img`
   width: 51rem;
   left: -1rem;
+  top: -1rem;
   position: absolute;
 `;
 
