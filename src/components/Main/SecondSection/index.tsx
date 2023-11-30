@@ -2,13 +2,24 @@ import * as S from '../Section.style';
 import SectionHeader from '../SectionHeader';
 import SecondSectionBtn from './SecondSectionBtn/index';
 
-const SecondSection = () => {
+interface SecondSectionProps {
+  data: Product[];
+}
+
+interface Product {
+  mainItemAsset: number;
+  mainItemName: string;
+  mainItemPrice: string;
+  mainCategoryImg: string;
+}
+
+const SecondSection = ({ data }: SecondSectionProps) => {
   return (
     <S.SectionWrapper>
       <SectionHeader title='맞춤 각인.' subtitle='애틋함을 아로새기다.' />
       <S.ScrollWrapper>
         <S.ScrollContent>
-          <SecondSectionBtn />
+          <SecondSectionBtn SecondSectionData={data} />
         </S.ScrollContent>
       </S.ScrollWrapper>
     </S.SectionWrapper>
