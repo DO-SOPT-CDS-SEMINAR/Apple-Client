@@ -72,9 +72,11 @@ export const CustomDotsContainer = styled.div`
 `;
 
 export const ArrowWrapper = styled.div`
+  display: none;
   position: absolute;
+
   left: 38.8rem;
   top: 17.2rem;
+
   pointer: cursor;
-  display: none;
 `;
