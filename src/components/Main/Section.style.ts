@@ -16,6 +16,7 @@ export const SectionWrapper = styled.section`
 
 export const ScrollWrapper = styled.div`
   display: flex;
+  height: 55rem;
 
   overflow-x: auto;
   white-space: nowrap;
