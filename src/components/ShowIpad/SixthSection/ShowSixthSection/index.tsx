@@ -27,6 +27,8 @@ const ShowSixthSection = ({ data }: ShowSixthSectionProps) => {
 
       <CommonSwiper>
         {createdSwiperSlide.map((it, idx) => {
+          const topIdx = top[idx - 1];
+          const bottomIdx = bottom[idx - 1];
           return (
             <SwiperSlide key={it.id}>
               {it.id === 1 ? (
@@ -39,25 +41,25 @@ const ShowSixthSection = ({ data }: ShowSixthSectionProps) => {
                 />
               ) : (
                 <S.PositionContainer>
-                  {top[idx - 1] && (
+                  {topIdx && (
                     <S.TopContainer>
                       <SixthCard
-                        key={top[idx - 1].id}
-                        subTitle={top[idx - 1].subTitle}
-                        title={productName && productName[idx + 1]}
-                        imgUrl={productImgUrl && productImgUrl[top[idx - 1].id - 1]}
+                        key={topIdx.id}
+                        subTitle={topIdx.subTitle}
+                        title={productName && productName[topIdx.id - 1]}
+                        imgUrl={productImgUrl && productImgUrl[topIdx.id - 1]}
                       />
                     </S.TopContainer>
                   )}
 
-                  {bottom[idx - 1] && (
+                  {bottomIdx && (
                     <S.BottomContainer>
                       <SixthCard
-                        key={bottom[idx - 1].id}
-                        subTitle={bottom[idx - 1].subTitle}
-                        title={productName && productName[idx + 2]}
-                        imgUrl={productImgUrl && productImgUrl[bottom[idx - 1].id - 1]}
-                        whiteColor={bottom[idx - 1].id === 5}
+                        key={bottomIdx.id}
+                        subTitle={bottomIdx.subTitle}
+                        title={productName && productName[bottomIdx.id - 1]}
+                        imgUrl={productImgUrl && productImgUrl[bottomIdx.id - 1]}
+                        whiteColor={bottomIdx.id === 5}
                       />
                     </S.BottomContainer>
                   )}
