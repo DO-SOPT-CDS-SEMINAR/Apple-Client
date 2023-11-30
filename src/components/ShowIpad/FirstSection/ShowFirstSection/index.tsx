@@ -4,38 +4,27 @@ import 'swiper/css';
 import ShowIpadHeader from '../../Header';
 import IpadProducts from '../IpadProducts';
 import CommonSwiper from '../../CommonSwiper';
-import { useEffect, useState } from 'react';
-import API from '../../../../libs/api';
+import useGetIpad from '../../../../libs/hooks/useGetIpad';
 
-interface DataProps {
-  productName: string;
-  productCost: string;
-  productImgUrl: string;
-  productSubName?: string;
+/* eslint-disable prettier/prettier */
+interface ShowFirstSectionProps {
+  headerInfo: Array<{
+    section: number;
+    title: string;
+    subtitle: string;
+  }>;
 }
 
-const ShowFirstSection = () => {
-  const [data, setData] = useState<Array<DataProps> | undefined>();
-
-  const getItems = async () => {
-    try {
-      const res = await API.get(`/product/3/items`);
-      setData(res.data.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  useEffect(() => {
-    getItems();
-  }, []);
+const ShowFirstSection = ({ headerInfo }: ShowFirstSectionProps) => {
+  const { res } = useGetIpad();
+  const { title, subtitle } = headerInfo[0];
 
   return (
     <S.ShowFirstSectionContainer>
-      <ShowIpadHeader title='모든 모델.' subTitle='당신의 선택은?' />
+      <ShowIpadHeader title={title} subTitle={subtitle} />
       <CommonSwiper>
-        {data &&
-          data.map((item: DataProps, idx: number) => {
+        {res &&
+          res.map((item, idx) => {
             return (
               <SwiperSlide key={idx}>
                 <IpadProducts
