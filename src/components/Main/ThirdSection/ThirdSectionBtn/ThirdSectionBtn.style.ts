@@ -12,11 +12,12 @@ interface SpecialSizeProps {
 export const ProductInfo = styled.div<ProductInfoProps>`
   position: absolute;
 
-  width: 20.4rem;
+  width: 30rem;
   top: 8.7rem;
   left: 3rem;
 
   z-index: 10;
+  white-space: pre-line;
 
   & > h1 {
     ${({ theme: { fonts } }) => fonts.subheading3};

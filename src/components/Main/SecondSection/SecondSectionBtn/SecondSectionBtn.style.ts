@@ -28,6 +28,7 @@ export const ProductInfo = styled.div<ProductInfoProps>`
           : colors.grayScale.gray8};
 
     z-index: 10;
+    white-space: pre-line;
   }
 
   & > h2 {
@@ -53,7 +54,7 @@ export const ProductImg = styled.img<FirstBtnProps>`
   position: absolute;
 
   width: ${({ $isFirst }) => ($isFirst ? '42rem' : '23rem')};
-  left: ${({ $isFirst }) => ($isFirst ? '-1rem' : '0')};
+  left: ${({ $isFirst }) => ($isFirst ? '-1rem' : '4.15rem')};
 `;
 
 // eslint-disable-next-line prettier/prettier

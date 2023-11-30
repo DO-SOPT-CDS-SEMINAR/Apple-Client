@@ -10,12 +10,6 @@ interface ThirdSectionBtnProps {
 interface Product {
   mainItemAsset: number;
   mainItemName: string;
-  mainItemPrice: string;
-  mainCategoryImg: string;
-}
-
-interface Product {
-  mainItemName: string;
   mainItemPrice: string | null;
   mainCategoryImg: string | null;
 }
@@ -42,7 +36,7 @@ const ThirdSectionBtn = ({ ThirdSectionData }: ThirdSectionBtnProps) => {
               <S.ProductImg src={item.mainCategoryImg} alt={item.mainItemName}></S.ProductImg>
             )}
             <S.ProductInfo $isHovered={hoveredIndex === index}>
-              <h1>{item.mainItemName}</h1>
+              <h1>{item.mainItemName.replace(/<br>/g, '\n')}</h1>
             </S.ProductInfo>
             {IconComponents[index] && (
               <S.IconWrapper $isHovered={hoveredIndex === index}>

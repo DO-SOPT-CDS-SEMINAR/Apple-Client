@@ -36,7 +36,7 @@ const FourthSectionBtn = ({ FourthSectionData }: FourthSectionBtnProps) => {
 
             <S.ProductInfo $isHovered={hoveredIndex === index} $isSecondBox={isSecondBox}>
               <p>{category}</p>
-              <h1>{item.mainItemName}</h1>
+              <h1>{item.mainItemName.replace(/<br>/g, '\n')}</h1>
             </S.ProductInfo>
             <S.ProductImg src={item.mainCategoryImg} alt={item.mainItemName}></S.ProductImg>
           </S.Btn>

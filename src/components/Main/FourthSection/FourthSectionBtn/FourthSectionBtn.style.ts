@@ -25,6 +25,7 @@ export const ProductInfo = styled.div<ProductInfoProps>`
     color: ${({ $isHovered, $isSecondBox, theme: { colors } }) =>
       $isHovered || $isSecondBox ? colors.grayScale.gray4 : colors.grayScale.gray8};
     z-index: 10;
+    white-space: pre-line;
   }
 
   & > p {

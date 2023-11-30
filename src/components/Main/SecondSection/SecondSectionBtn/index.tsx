@@ -38,7 +38,7 @@ const SecondSectionBtn = ({ SecondSectionData }: SecondSectionBtnProps) => {
           </S.ImgWrapper>
           <S.ProductInfo $isHovered={hoveredIndex === index} $isFirst={index === 0}>
             {index >= 1 && index <= 5 && <h2>무료각인</h2>}
-            <h1>{item.mainItemName}</h1>
+            <h1>{item.mainItemName.replace(/<br>/g, '\n')}</h1>
             <p>{item.mainItemPrice}</p>
           </S.ProductInfo>
         </S.Btn>
