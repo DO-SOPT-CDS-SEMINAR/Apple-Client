@@ -4,7 +4,6 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   position: relative;
 
-  margin-left: 20rem;
   width: 44.2rem;
   height: 40rem;
 `;
@@ -13,7 +12,7 @@ export const SliderWrapper = styled(Slider)`
   position: absolute;
 
   margin-left: 2.1rem;
-  left: 0rem;
+  left: -2rem;
   width: 38rem;
   height: 36.5rem;
 `;

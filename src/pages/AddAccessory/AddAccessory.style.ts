@@ -1,18 +1,22 @@
 import styled from 'styled-components';
 
-export const Dim = styled.section`
+export const Dim = styled.div`
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  opacity: 80%;
+
+  background-color: black;
+
+  z-index: 1;
+`;
+
+export const Wrapper = styled.section`
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
-
-  width: 100vw;
-  height: 100vw;
-
-  background-color: black;
-
-  opacity: 80%;
-  z-index: 1;
+  z-index: 2;
 `;
 
 export const CloseIcon = styled.button`
