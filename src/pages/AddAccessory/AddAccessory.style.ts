@@ -24,9 +24,6 @@ export const CloseIcon = styled.button`
   top: 11.5rem;
   left: 20.1rem;
 
-  width: 3.6rem;
-  height: 3.6rem;
-
   z-index: 2;
 `;
 
