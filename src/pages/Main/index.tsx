@@ -5,6 +5,9 @@ import Nb from '../../common/Nb';
 import Category from '../../components/Category';
 import TitleHeader from '../../components/Main/TitleHeader';
 import FirstSection from '../../components/Main/FirstSection';
+import SecondSection from '../../components/Main/SecondSection';
+import ThirdSection from '../../components/Main/ThirdSection';
+import FourthSection from '../../components/Main/FourthSection';
 
 const MainPage = () => {
   return (
@@ -14,6 +17,9 @@ const MainPage = () => {
       <Category />
       <Nb DATA={MAIN_BUTTON_DATA} />
       <FirstSection />
+      <SecondSection />
+      <ThirdSection />
+      <FourthSection />
     </div>
   );
 };

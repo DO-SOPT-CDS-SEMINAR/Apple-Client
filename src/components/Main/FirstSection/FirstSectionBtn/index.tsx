@@ -60,7 +60,7 @@ const FirstSectionBtn = () => {
           </>
 
           <S.ProductInfo $isHovered={hoveredIndex === index}>
-            <h2>NEW</h2>
+            {(index === 1 || index === 2 || index === 3 || index === 5) && <h2>NEW</h2>}
             <h1>{item.mainItemName}</h1>
             <p>{item.mainItemPrice}</p>
           </S.ProductInfo>
