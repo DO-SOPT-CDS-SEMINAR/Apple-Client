@@ -4,6 +4,10 @@ interface DescriptionProps {
   $isPrice?: boolean;
 }
 
+interface ContainerProps {
+  $height?: number;
+}
+
 export const ThirdSectionContainer = styled.section`
   display: flex;
   flex-direction: column;
@@ -22,7 +26,6 @@ export const ThirdSectionHeader = styled.header`
 
 export const ContentsContainer = styled.article`
   display: flex;
-
   justify-content: center;
   align-items: center;
 
@@ -34,6 +37,10 @@ export const Contents = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+export const ImgContainer = styled.div`
+  margin-top: 4rem;
 `;
 
 export const IpadContainer = styled.div`
@@ -81,11 +88,18 @@ export const Price = styled.p`
   ${({ theme: { fonts } }) => fonts.body3_1};
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  width: 100%;
+  height: ${({ $height }) =>
+    $height &&
+    css`
+      ${$height}rem
+    `};
 
   padding: 4rem 0 1rem;
 

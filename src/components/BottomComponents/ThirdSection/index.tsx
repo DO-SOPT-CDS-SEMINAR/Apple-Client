@@ -18,7 +18,8 @@ const ThirdSection = () => {
           return (
             <S.Contents key={idx}>
               <Dropdown onSelection={() => handleSelectChange(value)} />
-              {ipad.ipadImg}
+              <S.ImgContainer>{ipad.ipadImg}</S.ImgContainer>
+
               <S.IpadContainer key={idx}>
                 <S.NameContainer>
                   <S.Name>{ipad.name}</S.Name>
@@ -39,7 +40,7 @@ const ThirdSection = () => {
 
                 {ipad.info.map((info, idx) => {
                   return (
-                    <S.Container key={idx}>
+                    <S.Container key={idx} $height={17.2}>
                       {info.icon}
                       {info.desc.map((desc, idx) => {
                         return <S.Text key={idx}>{desc}</S.Text>;
@@ -51,36 +52,6 @@ const ThirdSection = () => {
             </S.Contents>
           );
         })}
-
-        {/* <S.IpadContainer>
-          <S.NameContainer>
-            <S.Name>IPad Air</S.Name>
-            <S.Description>얇고 가벼운 디자인. 결코 가볍지 않은 성능.</S.Description>
-          </S.NameContainer>
-
-          <S.Container>
-            <S.SizeContainer>
-              <S.Size>27.5cm</S.Size>
-              <S.Text>Liquid Retina 디스플레이²</S.Text>
-            </S.SizeContainer>
-
-            <S.Text>-</S.Text>
-            <S.Text>넓은 색영역(P3)</S.Text>
-            <S.Text>반사 방지 코팅</S.Text>
-          </S.Container>
-
-          <S.Container>
-            <ImgIpadproM1 />
-            <S.Text>M1칩</S.Text>
-          </S.Container>
-
-          <S.Container>
-            <ImgIpadproFront />
-            <S.Text>12MP 울트라 와이드 전면 카메라</S.Text>
-            <S.Text>-</S.Text>
-            <S.Text>4K 동영상</S.Text>
-          </S.Container>
-        </S.IpadContainer> */}
       </S.ContentsContainer>
     </S.ThirdSectionContainer>
   );
