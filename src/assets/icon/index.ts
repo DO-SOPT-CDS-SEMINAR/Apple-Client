@@ -5,8 +5,6 @@ import AddIcHandtap from './add_ic_handtap.svg?react';
 import AddIcUsbC from './add_ic_usb_c.svg?react';
 import AddIpadproIcClose from './add_ipadpro_ic_close.svg?react';
 
-import AddImg129MagicKeyBoard1 from './add_img_12.9_magickeyboard1.svg?react';
-
 import EllipseDark from './ellipse_dark.svg?react';
 import EllipseLight from './ellipse_light.svg?react';
 
@@ -71,8 +69,6 @@ export { AddIcFold };
 export { AddIcHandtap };
 export { AddIcUsbC };
 export { AddIpadproIcClose };
-
-export { AddImg129MagicKeyBoard1 };
 
 export { EllipseDark };
 export { EllipseLight };
