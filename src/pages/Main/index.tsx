@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Gnb from '../../common/Gnb';
 import useGetMain from '../../libs/hooks/useGetMain';
 import { GNB_CONTENTS } from '../../constant/gnbContents';
@@ -26,7 +26,19 @@ interface FilterItemProps {
 
 const MainPage = () => {
   const { res: mainItemsData } = useGetMain();
-  const [isClicked, setIsClicked] = useState(0);
+  const [isClicked, setIsClicked] = useState(10);
+  const location = document.querySelector(`#section${isClicked + 1}`);
+
+  const goClickedSection = (location: Element) => {
+    // Element 형식에는 offsetTop 속성을 활용할 수 없기 때문에 HTMLElement로 활용
+    window.scrollTo({ top: (location as HTMLElement).offsetTop, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    if (location) {
+      goClickedSection(location);
+    }
+  }, [location]);
 
   if (!mainItemsData) {
     return <div>loading...</div>;

@@ -15,7 +15,7 @@ interface Product {
 
 const SecondSection = ({ data }: SecondSectionProps) => {
   return (
-    <S.SectionWrapper>
+    <S.SectionWrapper id='section2'>
       <SectionHeader title='맞춤 각인.' subtitle='애틋함을 아로새기다.' />
       <S.ScrollWrapper>
         <S.ScrollContent>
