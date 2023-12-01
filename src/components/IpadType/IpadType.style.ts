@@ -45,7 +45,7 @@ export const ButtonLeft = styled.button`
 export const ButtonRight = styled.button`
   display: flex;
   position: relative;
-  top: -25rem;
-  left: 68rem;
+  top: 20rem;
+  left: -6rem;
   z-index: 0;
 `;
