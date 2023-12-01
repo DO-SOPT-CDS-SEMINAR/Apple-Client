@@ -27,7 +27,6 @@ export const NbButton = ({ label, index, onClick, isActive }: NbButtonProps) => 
 const Nb = ({ DATA, isTab, isClicked, setIsClicked }: NbProps) => {
   const [, setIsActive] = useState(false);
 
-  // 화면 내 키 전송을 통한 이동용
   const moveToPage = (index: number) => {
     setIsClicked(index);
     setIsActive(true);

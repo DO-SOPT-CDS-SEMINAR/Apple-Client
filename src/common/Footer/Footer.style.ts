@@ -61,7 +61,7 @@ export const Link = styled.p`
   }
 `;
 
-export const Bar = styled.p`
+export const Bar = styled.div`
   display: flex;
   position: relative;
 

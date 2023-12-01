@@ -19,3 +19,10 @@ export const NbContainer = styled.div`
 
   z-index: 15;
 `;
+
+export const FooterContainer = styled.footer`
+  width: 100%;
+  padding: 4.6rem 0 4rem;
+
+  background-color: ${({ theme: { colors } }) => colors.grayScale.gray2};
+`;

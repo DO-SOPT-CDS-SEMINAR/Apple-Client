@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Gnb from '../../common/Gnb';
 import useGetMain from '../../libs/hooks/useGetMain';
 import { GNB_CONTENTS } from '../../constant/gnbContents';
@@ -9,7 +10,12 @@ import FirstSection from '../../components/Main/FirstSection';
 import SecondSection from '../../components/Main/SecondSection';
 import ThirdSection from '../../components/Main/ThirdSection';
 import FourthSection from '../../components/Main/FourthSection';
-import { useState } from 'react';
+
+import * as S from './Main.style';
+import Footer from '../../common/Footer';
+import { footerData } from '../../constant/footerData';
+import MainFooter from '../../common/Footer/MainFooter';
+import CommonFooter from '../../common/Footer/CommonFooter';
 
 interface FilterItemProps {
   mainItemAsset: number;
@@ -20,7 +26,7 @@ interface FilterItemProps {
 
 const MainPage = () => {
   const { res: mainItemsData } = useGetMain();
-  const [isClicked, setIsClicked] = useState(10);
+  const [isClicked, setIsClicked] = useState(0);
 
   if (!mainItemsData) {
     return <div>loading...</div>;
@@ -40,15 +46,22 @@ const MainPage = () => {
   );
 
   return (
-    <div>
+    <div className='gray'>
       <Gnb DATA={GNB_CONTENTS} />
       <TitleHeader />
       <Category />
-      <Nb DATA={MAIN_BUTTON_DATA} isClicked={isClicked} setIsClicked={setIsClicked} />
-      <FirstSection data={firstSectionData} />
-      <SecondSection data={secondSectionData} />
-      <ThirdSection data={thirdSectionData} />
-      <FourthSection data={fourthSectionData} />
+      <S.SectionWrapper>
+        <S.NbWrapper>
+          <Nb DATA={MAIN_BUTTON_DATA} isClicked={isClicked} setIsClicked={setIsClicked} />
+        </S.NbWrapper>
+        <FirstSection data={firstSectionData} />
+        <SecondSection data={secondSectionData} />
+        <ThirdSection data={thirdSectionData} />
+        <FourthSection data={fourthSectionData} />
+      </S.SectionWrapper>
+      <MainFooter />
+      <CommonFooter />
+      <Footer data={footerData} />
     </div>
   );
 };
