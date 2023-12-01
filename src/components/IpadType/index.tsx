@@ -1,12 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { IpadproIcLeftCircleNormal, IpadproIcRightCircleNormal } from '../../assets/icon';
 import * as S from './IpadType.style';
 import { useEffect, useState } from 'react';
 
 const IpadType = () => {
   const API_URL = import.meta.env.VITE_APP_BASE_URL;
-  const [imageIndex, setImageIndex] = useState<number>(0); // 이미지 인덱스 상태 추가
+  const [imageIndex, setImageIndex] = useState<number>(0);
   const [imageUrls, setImageUrls] = useState<string[]>([]);
 
   useEffect(() => {
@@ -26,24 +28,47 @@ const IpadType = () => {
     fetchData();
   }, [API_URL]);
 
-  const handleNextImage = () => {
-    setImageIndex((prevIndex) => (prevIndex + 1) % imageUrls.length);
+  const handleSelectImage = (selectedIndex: number) => {
+    setImageIndex(selectedIndex);
   };
 
   const handlePrevImage = () => {
-    setImageIndex((prevIndex) => (prevIndex === 0 ? imageUrls.length - 1 : prevIndex - 1));
+    const newIndex = (imageIndex - 1 + imageUrls.length) % imageUrls.length;
+    setImageIndex(newIndex);
+  };
+
+  const handleNextImage = () => {
+    const newIndex = (imageIndex + 1) % imageUrls.length;
+    setImageIndex(newIndex);
   };
 
   return (
-    <S.Container>
-      <div>{imageUrls.length > 0 && <S.Img src={imageUrls[imageIndex]} />}</div>
-      <S.Button onClick={handlePrevImage}>
+    <S.ParentContainer>
+      <S.Container>
+        {imageUrls.length > 0 && (
+          <Carousel
+            selectedItem={imageIndex}
+            onChange={handleSelectImage}
+            showArrows={false}
+            showThumbs={false}
+          >
+            {imageUrls.map((imageUrl, index) => (
+              <S.CarouselContainer key={index}>
+                <S.ImgContainer>
+                  <S.Img src={imageUrl} />
+                </S.ImgContainer>
+              </S.CarouselContainer>
+            ))}
+          </Carousel>
+        )}
+      </S.Container>
+      <S.ButtonLeft onClick={handlePrevImage}>
         <IpadproIcLeftCircleNormal />
-      </S.Button>
-      <S.Button onClick={handleNextImage}>
+      </S.ButtonLeft>
+      <S.ButtonRight onClick={handleNextImage}>
         <IpadproIcRightCircleNormal />
-      </S.Button>
-    </S.Container>
+      </S.ButtonRight>
+    </S.ParentContainer>
   );
 };
 
