@@ -147,6 +147,16 @@ ${reset}
     box-sizing: border-box;
 }
 
+body {
+  .white {
+    background-color: ${({ theme: { colors } }) => colors.grayScale.white};
+  }
+
+  .gray{
+    background-color: ${({ theme: { colors } }) => colors.grayScale.gray2};
+  }
+}
+
 // 사파리 웹 뷰 브라우저 상속 스타일 제거
 input, textarea,button {
     appearance: none;

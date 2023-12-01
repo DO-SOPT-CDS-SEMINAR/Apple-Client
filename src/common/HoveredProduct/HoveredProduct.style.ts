@@ -6,11 +6,11 @@ interface ProductContainerProps {
   $borderRadius: number;
 }
 
+// eslint-disable-next-line prettier/prettier
 export const ProductContainer = styled.div<ProductContainerProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: absolute;
 
   width: ${({ $width }) => css`
@@ -24,6 +24,8 @@ export const ProductContainer = styled.div<ProductContainerProps>`
   `};
 
   background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 5;
 `;
 
 export const DetailBtn = styled.button`

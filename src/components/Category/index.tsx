@@ -1,63 +1,40 @@
+import { useEffect, useState } from 'react';
+import API from '../../libs/api';
 import * as S from './Category.style';
 import ListItem from './ListItem';
 
-const DUMMY = [
-  {
-    id: 1,
-    listName: 'Mac',
-    imgUrl:
-      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-ipad-nav-202210?wid=400&hei=260&fmt=png-alpha&.v=1664912135437',
-  },
-  {
-    id: 2,
-    listName: 'iPhone',
-    imgUrl:
-      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-ipad-nav-202210?wid=400&hei=260&fmt=png-alpha&.v=1664912135437',
-  },
-  {
-    id: 3,
-    listName: 'iPad',
-    imgUrl:
-      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-ipad-nav-202210?wid=400&hei=260&fmt=png-alpha&.v=1664912135437',
-  },
-  {
-    id: 4,
-    listName: 'Apple Watch',
-    imgUrl:
-      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-ipad-nav-202210?wid=400&hei=260&fmt=png-alpha&.v=1664912135437',
-  },
-  {
-    id: 5,
-    listName: 'AirPods',
-    imgUrl:
-      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-ipad-nav-202210?wid=400&hei=260&fmt=png-alpha&.v=1664912135437',
-  },
-  {
-    id: 6,
-    listName: 'AirTag',
-    imgUrl:
-      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-ipad-nav-202210?wid=400&hei=260&fmt=png-alpha&.v=1664912135437',
-  },
-  {
-    id: 7,
-    listName: 'Apple TV 4K',
-    imgUrl:
-      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-ipad-nav-202210?wid=400&hei=260&fmt=png-alpha&.v=1664912135437',
-  },
-  {
-    id: 8,
-    listName: '악세사리',
-    imgUrl:
-      'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-ipad-nav-202210?wid=400&hei=260&fmt=png-alpha&.v=1664912135437',
-  },
-];
+interface CategoryProps {
+  mainCategoryId: number;
+  mainCategoryName: string;
+  mainCategoryImg: string;
+}
 
 const Category = () => {
+  const [data, setData] = useState<CategoryProps[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await API.get('https://api.sopt-cds-web8.p-e.kr/main/category');
+        setData(response.data.data);
+      } catch (error) {
+        console.error(error, data);
+      }
+    };
+
+    fetchData();
+  });
+
   return (
     <S.CategoryWrapper>
-      {DUMMY.map((item) => {
+      {data.map((item) => {
         return (
-          <ListItem key={item.id} idx={item.id} ListName={item.listName} imgUrl={item.imgUrl} />
+          <ListItem
+            key={item.mainCategoryId}
+            idx={item.mainCategoryId}
+            ListName={item.mainCategoryName}
+            imgUrl={item.mainCategoryImg}
+          />
         );
       })}
     </S.CategoryWrapper>
