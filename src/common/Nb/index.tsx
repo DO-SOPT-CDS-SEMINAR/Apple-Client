@@ -25,7 +25,6 @@ export const NbButton = ({ label, index, onClick, isActive }: NbButtonProps) => 
 };
 
 const Nb = ({ DATA, isTab, isClicked, setIsClicked }: NbProps) => {
-  // const [isClicked, setIsClicked] = useState(0);
   const [, setIsActive] = useState(false);
 
   // 화면 내 키 전송을 통한 이동용
