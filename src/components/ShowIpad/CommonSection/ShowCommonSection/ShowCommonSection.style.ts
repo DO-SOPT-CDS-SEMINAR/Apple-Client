@@ -5,6 +5,7 @@ export const ShowCommonSectionContainer = styled.div`
   flex-direction: column;
 
   margin-top: 7.9rem;
+  padding-left: 12rem;
 `;
 
 export const ProductContainer = styled.div`

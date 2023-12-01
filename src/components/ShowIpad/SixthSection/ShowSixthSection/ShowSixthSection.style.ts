@@ -5,6 +5,7 @@ export const ShowSixthSectionContainer = styled.section`
   flex-direction: column;
 
   margin-top: 7.9rem;
+  padding-left: 12rem;
 `;
 
 export const PositionContainer = styled.div`

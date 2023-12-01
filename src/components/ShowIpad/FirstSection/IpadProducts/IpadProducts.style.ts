@@ -64,6 +64,8 @@ export const BottomContainer = styled.div`
   z-index: 10;
 `;
 
+export const BuyBtnContainer = styled.div``;
+
 export const ProductPrice = styled.p<IsHoveredProps>`
   display: flex;
   align-items: end;

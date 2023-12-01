@@ -3,6 +3,7 @@ import { BuyButton } from '../../../../common/Button/BuyButton';
 import ColorPreview from '../../ColorPreview';
 import * as S from './IpadProducts.style';
 import HoveredProduct from '../../../../common/HoveredProduct';
+import { useNavigate } from 'react-router-dom';
 
 interface IpadProductsProps {
   idx: number | string;
@@ -14,6 +15,11 @@ interface IpadProductsProps {
 
 const IpadProducts = ({ productName, productSubName, imgUrl, price, idx }: IpadProductsProps) => {
   const [isHovered, setIsHovered] = useState(false);
+  const navigator = useNavigate();
+
+  const goShopIpad = () => {
+    idx === 0 && navigator('/shop-ipad');
+  };
 
   return (
     <S.ProductContainer
@@ -39,7 +45,9 @@ const IpadProducts = ({ productName, productSubName, imgUrl, price, idx }: IpadP
 
       <S.BottomContainer>
         <S.ProductPrice $isHovered={isHovered}>₩{price}</S.ProductPrice>
-        <BuyButton>구입하기</BuyButton>
+        <S.BuyBtnContainer onClick={goShopIpad}>
+          <BuyButton>구입하기</BuyButton>
+        </S.BuyBtnContainer>
       </S.BottomContainer>
     </S.ProductContainer>
   );
