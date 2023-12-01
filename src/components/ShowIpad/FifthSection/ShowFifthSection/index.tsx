@@ -22,7 +22,7 @@ const ShowFifthSection = ({ data, headerInfo }: ShowFifthSectionProps) => {
   const { title, subtitle } = headerInfo[0];
 
   return (
-    <S.ShowFifthSectionContainer>
+    <S.ShowFifthSectionContainer id='section5'>
       <ShowIpadHeader title={title} subTitle={subtitle} />
       <CommonSwiper>
         {data &&
