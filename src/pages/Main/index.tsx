@@ -28,10 +28,14 @@ const MainPage = () => {
   const { res: mainItemsData } = useGetMain();
   const [isClicked, setIsClicked] = useState(10);
   const location = document.querySelector(`#section${isClicked + 1}`);
+  const wrapperLocation = document.querySelector(`#header`);
 
   const goClickedSection = (location: Element) => {
     // Element 형식에는 offsetTop 속성을 활용할 수 없기 때문에 HTMLElement로 활용
-    window.scrollTo({ top: (location as HTMLElement).offsetTop, behavior: 'smooth' });
+    window.scrollTo({
+      top: (location as HTMLElement).offsetTop - (wrapperLocation as HTMLElement).offsetHeight,
+      behavior: 'smooth',
+    });
   };
 
   useEffect(() => {

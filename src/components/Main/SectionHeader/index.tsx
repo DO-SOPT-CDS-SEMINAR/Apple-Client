@@ -7,7 +7,7 @@ interface SectionHeaderProps {
 
 const SectionHeader = ({ title, subtitle }: SectionHeaderProps) => {
   return (
-    <S.HeaderContainer>
+    <S.HeaderContainer id='header'>
       <S.Title>{title}</S.Title>
       <S.SubTitle>{subtitle}</S.SubTitle>
     </S.HeaderContainer>
