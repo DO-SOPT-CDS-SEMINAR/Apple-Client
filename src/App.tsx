@@ -10,10 +10,7 @@ function App() {
     <RecoilRoot>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-<<<<<<< HEAD
-=======
         <Router />
->>>>>>> 068e8ee7511e4c05afebd2cf98daab6ae3350f25
       </ThemeProvider>
     </RecoilRoot>
   );

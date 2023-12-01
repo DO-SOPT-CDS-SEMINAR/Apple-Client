@@ -13,10 +13,7 @@
   "dependencies": {
     "@types/react-slick": "^0.23.12",
     "@types/styled-components": "^5.1.30",
-<<<<<<< HEAD
-=======
     "axios": "^1.6.2",
->>>>>>> 068e8ee7511e4c05afebd2cf98daab6ae3350f25
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -5,15 +5,10 @@ import AddIcFold from './add_ic_fold.svg?react';
 import AddIcHandtap from './add_ic_handtap.svg?react';
 import AddIcUsbC from './add_ic_usb_c.svg?react';
 import AddIpadproIcClose from './add_ipadpro_ic_close.svg?react';
-<<<<<<< HEAD
-import EllipseDark from './ellipse_dark.svg?react';
-import EllipseLight from './ellipse_light.svg?react';
-=======
 
 import EllipseDark from './ellipse_dark.svg?react';
 import EllipseLight from './ellipse_light.svg?react';
 
->>>>>>> 068e8ee7511e4c05afebd2cf98daab6ae3350f25
 import GnbIcApple from './gnb_ic_apple.svg?react';
 import GnbIcSearch from './gnb_ic_search.svg?react';
 import GnbIcShop from './gnb_ic_shop.svg?react';
@@ -23,8 +18,6 @@ import IcRightBold from './ic_right_bold.svg?react';
 import IcSwatch from './ic_swatch.svg?react';
 import IcSwatchSilver from './ic_swtach_silver.svg?react';
 import IcSwatchSpaceGray from './ic_swtach_spacegray.svg?react';
-<<<<<<< HEAD
-=======
 
 import IcSwatchSmBeige from './ic_swatch_sm_beige.svg?react';
 import IcSwatchSmCoral from './ic_swatch_sm_coral.svg?react';
@@ -72,7 +65,6 @@ import IpadImgSwPattern01 from './ipad_img_sw_pattern01.svg?react';
 import IpadImgSwPattern02 from './ipad_img_sw_pattern02.svg?react';
 import IpadImgSwPattern03 from './ipad_img_sw_pattern03.svg?react';
 
->>>>>>> 068e8ee7511e4c05afebd2cf98daab6ae3350f25
 import IpadproIcApplebag from './ipadpro_ic_applebag.svg?react';
 import IpadproIcDownBlue24 from './ipadpro_ic_down_blue_24.svg?react';
 import IpadproIcDownGray24 from './ipadpro_ic_down_gray_24.svg?react';
@@ -107,15 +99,10 @@ export { AddIcFold };
 export { AddIcHandtap };
 export { AddIcUsbC };
 export { AddIpadproIcClose };
-<<<<<<< HEAD
-export { EllipseDark };
-export { EllipseLight };
-=======
 
 export { EllipseDark };
 export { EllipseLight };
 
->>>>>>> 068e8ee7511e4c05afebd2cf98daab6ae3350f25
 export { GnbIcApple };
 export { GnbIcSearch };
 export { GnbIcShop };
@@ -125,8 +112,6 @@ export { IcRightBold };
 export { IcSwatch };
 export { IcSwatchSilver };
 export { IcSwatchSpaceGray };
-<<<<<<< HEAD
-=======
 
 export { IcSwatchSmBeige };
 export { IcSwatchSmCoral };
@@ -174,7 +159,6 @@ export { IpadImgSwPattern01 };
 export { IpadImgSwPattern02 };
 export { IpadImgSwPattern03 };
 
->>>>>>> 068e8ee7511e4c05afebd2cf98daab6ae3350f25
 export { IpadproIcApplebag };
 export { IpadproIcDownBlue24 };
 export { IpadproIcDownGray24 };
