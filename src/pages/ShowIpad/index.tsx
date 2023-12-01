@@ -12,6 +12,9 @@ import { GNB_CONTENTS } from '../../constant/gnbContents';
 import Banner from '../../common/Banner';
 import Nb from '../../common/Nb';
 import { useEffect, useState } from 'react';
+import Footer from '../../common/Footer';
+import { footerData } from '../../constant/footerData';
+import CommonFooter from '../../common/Footer/CommonFooter';
 
 interface RenderedCommonSectionProps {
   section: number;
@@ -95,6 +98,11 @@ const ShowIpadPage = () => {
           {renderCommonSection({ section: 8, productAsset: 7, subtitleIdx: 4 })}
         </S.ContentsContainer>
       </div>
+
+      <S.FooterContainer>
+        <CommonFooter />
+        <Footer data={footerData} />
+      </S.FooterContainer>
     </S.ShowIpadPageContainer>
   );
 };
