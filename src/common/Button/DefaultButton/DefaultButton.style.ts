@@ -14,5 +14,5 @@ export const Wrapper = styled.button`
     background-color: ${colors.grayScale.gray4};
     color: ${colors.grayScale.gray8};
     ${fonts.body3_2};
-  `}
+  `};
 `;
