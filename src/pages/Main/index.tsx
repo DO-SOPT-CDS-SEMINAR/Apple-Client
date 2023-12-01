@@ -15,6 +15,7 @@ import * as S from './Main.style';
 import Footer from '../../common/Footer';
 import { footerData } from '../../constant/footerData';
 import MainFooter from '../../common/Footer/MainFooter';
+import CommonFooter from '../../common/Footer/CommonFooter';
 
 interface FilterItemProps {
   mainItemAsset: number;
@@ -45,7 +46,7 @@ const MainPage = () => {
   );
 
   return (
-    <div>
+    <div className='gray'>
       <Gnb DATA={GNB_CONTENTS} />
       <TitleHeader />
       <Category />
@@ -59,6 +60,7 @@ const MainPage = () => {
         <FourthSection data={fourthSectionData} />
       </S.SectionWrapper>
       <MainFooter />
+      <CommonFooter />
       <Footer data={footerData} />
     </div>
   );
