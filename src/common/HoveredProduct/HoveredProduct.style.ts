@@ -1,14 +1,17 @@
 import styled, { css } from 'styled-components';
 
-export const ProductContainer = styled.div<{
-  // eslint-disable-next-line prettier/prettier
+interface ProductContainerProps {
   $width: number;
   $height: number;
   $borderRadius: number;
-}>`
+}
+
+// eslint-disable-next-line prettier/prettier
+export const ProductContainer = styled.div<ProductContainerProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
 
   width: ${({ $width }) => css`
     ${$width}rem
@@ -21,6 +24,8 @@ export const ProductContainer = styled.div<{
   `};
 
   background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 5;
 `;
 
 export const DetailBtn = styled.button`
