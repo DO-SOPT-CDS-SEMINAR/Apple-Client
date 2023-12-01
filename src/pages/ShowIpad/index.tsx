@@ -30,12 +30,6 @@ const ShowIpadPage = () => {
     window.scrollTo({ top: (location as HTMLElement).offsetTop, behavior: 'smooth' });
   };
 
-  useEffect(() => {
-    if (location) {
-      goClickedSection(location);
-    }
-  }, [location]);
-
   const renderCommonSection = ({
     section,
     productAsset,
@@ -48,6 +42,12 @@ const ShowIpadPage = () => {
       headerInfo={IPAD_COMMON_HEADER_TITLE.filter((it) => it.section === productAsset + 1)}
     />
   );
+
+  useEffect(() => {
+    if (location) {
+      goClickedSection(location);
+    }
+  }, [location]);
 
   return (
     <>
