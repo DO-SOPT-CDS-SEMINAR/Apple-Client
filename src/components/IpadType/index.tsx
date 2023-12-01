@@ -1,15 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios';
-import { EllipseLight } from '../../assets/icon';
+import { IpadproIcLeftCircleNormal, IpadproIcRightCircleNormal } from '../../assets/icon';
 import * as S from './IpadType.style';
 import { useEffect, useState } from 'react';
 
 const IpadType = () => {
   const API_URL = import.meta.env.VITE_APP_BASE_URL;
-  const [firstUrl, setFirstUrl] = useState('');
-  const [secondUrl, setSecondUrl] = useState('');
-  useEffect(() => {
-    // 비동기 함수 선언
+  const [imageIndex, setImageIndex] = useState<number>(0); // 이미지 인덱스 상태 추가
+  const [imageUrls, setImageUrls] = useState<string[]>([]);
 
+  useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`${API_URL}/product/1/images`, {
@@ -17,20 +17,31 @@ const IpadType = () => {
             'Content-Type': 'application/json',
           },
         });
-        setFirstUrl(response.data[0]);
-        setSecondUrl(response.data[1]);
+        const urls = response.data.data.map((item: any) => item.productImgUrl);
+        setImageUrls(urls);
       } catch (err) {
         console.log(err);
       }
     };
     fetchData();
   }, [API_URL]);
+
+  const handleNextImage = () => {
+    setImageIndex((prevIndex) => (prevIndex + 1) % imageUrls.length);
+  };
+
+  const handlePrevImage = () => {
+    setImageIndex((prevIndex) => (prevIndex === 0 ? imageUrls.length - 1 : prevIndex - 1));
+  };
+
   return (
     <S.Container>
-      <S.Img src={firstUrl} />
-      <S.Img src={secondUrl} />
-      <S.Button>
-        <EllipseLight />
+      <div>{imageUrls.length > 0 && <S.Img src={imageUrls[imageIndex]} />}</div>
+      <S.Button onClick={handlePrevImage}>
+        <IpadproIcLeftCircleNormal />
+      </S.Button>
+      <S.Button onClick={handleNextImage}>
+        <IpadproIcRightCircleNormal />
       </S.Button>
     </S.Container>
   );
