@@ -9,8 +9,6 @@ import FirstSection from '../../components/Main/FirstSection';
 import SecondSection from '../../components/Main/SecondSection';
 import ThirdSection from '../../components/Main/ThirdSection';
 import FourthSection from '../../components/Main/FourthSection';
-import Footer from '../../common/Footer';
-import { footerData } from '../../constant/footerData';
 
 interface FilterItemProps {
   mainItemAsset: number;
@@ -49,7 +47,6 @@ const MainPage = () => {
       <SecondSection data={secondSectionData} />
       <ThirdSection data={thirdSectionData} />
       <FourthSection data={fourthSectionData} />
-      <Footer data={footerData} />
     </div>
   );
 };

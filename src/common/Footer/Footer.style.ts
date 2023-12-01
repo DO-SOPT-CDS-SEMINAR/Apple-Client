@@ -62,18 +62,27 @@ export const Link = styled.p`
 `;
 
 export const Bar = styled.p`
+  display: flex;
   position: relative;
 
   height: 6.1rem;
   padding-top: 1.65rem;
   padding-bottom: 2.1rem;
 
-  color: ${({ theme: { colors } }) => colors.grayScale.gray6};
-  ${({ theme: { fonts } }) => fonts.caption2};
-
+  & > h1 {
+    margin-right: 1.5rem;
+    ${({ theme: { fonts } }) => fonts.caption2};
+    color: ${({ theme: { colors } }) => colors.grayScale.gray6};
+  }
   & > button {
+    padding: 0 1.5rem;
+    height: 2rem;
+
     color: ${({ theme: { colors } }) => colors.grayScale.gray7};
     ${({ theme: { fonts } }) => fonts.caption2};
+    border-right: 1px solid;
+    border-color: ${({ theme: { colors } }) => colors.grayScale.gray3};
+
     cursor: pointer;
   }
 

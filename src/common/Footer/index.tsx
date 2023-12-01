@@ -44,7 +44,7 @@ const Footer = ({ data }: FooterProps) => {
         080-330-8877번으로 전화하세요.
       </S.Link>
       <S.Bar>
-        Copyright © 2023 Apple Inc. 모든 권리 보유.
+        <h1>Copyright © 2023 Apple Inc. 모든 권리 보유.</h1>
         <button>개인정보 처리방침</button>
         <button>약관</button>
         <button>판매 및 환불</button>
