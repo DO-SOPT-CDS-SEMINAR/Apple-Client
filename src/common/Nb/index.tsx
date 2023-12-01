@@ -26,7 +26,6 @@ const Nb = ({ DATA, isTab }: NbProps) => {
   const [isClicked, setIsClicked] = useState(0);
   const [, setIsActive] = useState(false);
 
-  // 화면 내 키 전송을 통한 이동용
   const moveToPage = (index: number) => {
     setIsClicked(index);
     setIsActive(true);

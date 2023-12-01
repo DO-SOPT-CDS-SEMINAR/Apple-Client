@@ -10,7 +10,7 @@ import SecondSection from '../../components/Main/SecondSection';
 import ThirdSection from '../../components/Main/ThirdSection';
 import FourthSection from '../../components/Main/FourthSection';
 
-import * as S from './Main.sytle';
+import * as S from './Main.style';
 
 interface FilterItemProps {
   mainItemAsset: number;
