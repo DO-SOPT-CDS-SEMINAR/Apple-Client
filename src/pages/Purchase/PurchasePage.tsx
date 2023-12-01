@@ -1,4 +1,3 @@
-import { PlusIconButton } from '../../common/Button/PlusIconButton';
 import { ColumnCarouselWrapper } from '../../components/ColumnCarousel/ColumnCarouselWrapper';
 import IpadType from '../../components/IpadType';
 import * as S from './Purchase.style';
