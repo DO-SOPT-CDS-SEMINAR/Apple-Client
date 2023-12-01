@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { AddToCartButton } from '../../common/Button/AddToCartButton';
 import { ColorCarouselComponent } from './ColorCarouselComponent';
 import * as S from './ColumnCarousel.style';
@@ -6,12 +6,15 @@ import { ConnectCarouselComponent } from './ConnectCarouselComponent';
 import { GigaCarouselComponent } from './GigaCarouselComponent';
 import { ModelCarouselComponent } from './ModelCarouselComponent';
 import { IpadproIcApplebag, IpadproIcScrabNormal, IpadproIcTruck } from '../../assets/icon';
+import axios from 'axios';
 
 export const ColumnCarouselWrapper = () => {
+  const API_URL = import.meta.env.VITE_APP_BASE_URL;
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startY, setStartY] = useState(0);
-  const [scrollTop, setScrollTop] = useState(0);
+  const [isDragging, setIsDragging] = useState<boolean>(false);
+  const [startY, setStartY] = useState<number>(0);
+  const [scrollTop, setScrollTop] = useState<number>(0);
+  const [deliverdate, setDeliverdate] = useState<string>('');
 
   const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
     if (wrapperRef.current) {
@@ -42,6 +45,23 @@ export const ColumnCarouselWrapper = () => {
       wrapperRef.current.scrollBy({ top: delta, behavior: 'smooth' }); // 스크롤 이동
     }
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(`${API_URL}/product/1/delivery-date`, {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        console.log(res);
+        setDeliverdate(res.data.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <S.Wrapper
       ref={wrapperRef}
@@ -73,7 +93,7 @@ export const ColumnCarouselWrapper = () => {
           <S.ItemText>
             <S.ItemTitle>도착 : </S.ItemTitle>
             <S.ItemSub>
-              <p>수 2023/11/15 - 무료 배송</p> 추가 배송 옵션 확인
+              <p>수 {deliverdate} - 무료 배송</p> 추가 배송 옵션 확인
             </S.ItemSub>
           </S.ItemText>
         </S.ItemBox>
