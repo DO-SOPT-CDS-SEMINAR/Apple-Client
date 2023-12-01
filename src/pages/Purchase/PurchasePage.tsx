@@ -1,11 +1,5 @@
-import { ColumnCarouselWrapper } from '../../components/ColumnCarousel/ColumnCarouselWrapper';
-
 const PurchasePage = () => {
-  return (
-    <div>
-      <ColumnCarouselWrapper />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default PurchasePage;
