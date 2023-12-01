@@ -50,10 +50,10 @@ const ShowIpadPage = () => {
   }, [location]);
 
   return (
-    <>
+    <S.ShowIpadPageContainer>
       <Gnb DATA={GNB_CONTENTS} />
       <Banner />
-      <S.ShowIpadPageContainer className='gray'>
+      <div className='gray'>
         <PageHeader />
         <S.NbContainer>
           <Nb
@@ -72,26 +72,30 @@ const ShowIpadPage = () => {
           />
         </S.NbContainer>
 
-        <ShowFirstSection headerInfo={IPAD_COMMON_HEADER_TITLE.filter((it) => it.section === 1)} />
+        <S.ContentsContainer>
+          <ShowFirstSection
+            headerInfo={IPAD_COMMON_HEADER_TITLE.filter((it) => it.section === 1)}
+          />
 
-        {renderCommonSection({ section: 2, productAsset: 1, subtitleIdx: 0 })}
-        {renderCommonSection({ section: 3, productAsset: 2, subtitleIdx: 1 })}
-        {renderCommonSection({ section: 4, productAsset: 3, subtitleIdx: 2 })}
+          {renderCommonSection({ section: 2, productAsset: 1, subtitleIdx: 0 })}
+          {renderCommonSection({ section: 3, productAsset: 2, subtitleIdx: 1 })}
+          {renderCommonSection({ section: 4, productAsset: 3, subtitleIdx: 2 })}
 
-        <ShowFifthSection
-          data={res?.filter((it) => it.productAsset === 4)}
-          headerInfo={IPAD_COMMON_HEADER_TITLE.filter((it) => it.section === 5)}
-        />
+          <ShowFifthSection
+            data={res?.filter((it) => it.productAsset === 4)}
+            headerInfo={IPAD_COMMON_HEADER_TITLE.filter((it) => it.section === 5)}
+          />
 
-        <ShowSixthSection
-          data={res?.filter((it) => it.productAsset === 5)}
-          headerInfo={IPAD_COMMON_HEADER_TITLE.filter((it) => it.section === 6)}
-        />
+          <ShowSixthSection
+            data={res?.filter((it) => it.productAsset === 5)}
+            headerInfo={IPAD_COMMON_HEADER_TITLE.filter((it) => it.section === 6)}
+          />
 
-        {renderCommonSection({ section: 7, productAsset: 6, subtitleIdx: 3 })}
-        {renderCommonSection({ section: 8, productAsset: 7, subtitleIdx: 4 })}
-      </S.ShowIpadPageContainer>
-    </>
+          {renderCommonSection({ section: 7, productAsset: 6, subtitleIdx: 3 })}
+          {renderCommonSection({ section: 8, productAsset: 7, subtitleIdx: 4 })}
+        </S.ContentsContainer>
+      </div>
+    </S.ShowIpadPageContainer>
   );
 };
 

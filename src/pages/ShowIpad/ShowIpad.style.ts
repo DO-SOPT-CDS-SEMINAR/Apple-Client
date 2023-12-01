@@ -5,8 +5,10 @@ export const ShowIpadPageContainer = styled.div`
   flex-direction: column;
 
   height: 100%;
+`;
 
-  padding-top: 4.2rem;
+export const ContentsContainer = styled.div`
+  overflow-x: hidden;
 `;
 
 export const NbContainer = styled.div`
