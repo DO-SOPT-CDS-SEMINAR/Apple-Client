@@ -1,5 +1,7 @@
+import * as S from './Purchase.style';
+
 const PurchasePage = () => {
-  return <div></div>;
+  return <S.Container></S.Container>;
 };
 
 export default PurchasePage;
