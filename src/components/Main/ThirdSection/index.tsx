@@ -15,7 +15,7 @@ interface Product {
 
 const ThirdSection = ({ data }: ThirdSectionProps) => {
   return (
-    <S.SectionWrapper>
+    <S.SectionWrapper id='section3'>
       <SectionHeader title='Apple 독점 제공.' subtitle='연말연시 기분을 만끽하기에 딱인 곳.' />
       <S.ScrollWrapper>
         <S.ScrollContent>

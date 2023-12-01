@@ -15,7 +15,7 @@ interface Product {
 
 const FourthSection = ({ data }: FourthSectionProps) => {
   return (
-    <S.SectionWrapper>
+    <S.SectionWrapper id='section4'>
       <SectionHeader title='특별 할인.' subtitle='비즈니스, 학교 등을 위한 혜택.' />
       <S.ScrollWrapper>
         <S.ScrollContent>
