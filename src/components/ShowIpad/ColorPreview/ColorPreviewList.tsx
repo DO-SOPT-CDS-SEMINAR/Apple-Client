@@ -17,11 +17,11 @@ import {
 
 export const COLOR_PREVIEW_LIST = [
   {
-    key: 1,
+    key: 0,
     value: [<IcSwatchSmSilver key='1' />, <IcSwatchSmLightsilver key='2' />],
   },
   {
-    key: 2,
+    key: 1,
     value: [
       <IcSwatchSmDarkgray key='1' />,
       <IcSwatchSmTurquiose key='2' />,
@@ -31,7 +31,7 @@ export const COLOR_PREVIEW_LIST = [
     ],
   },
   {
-    key: 3,
+    key: 2,
     value: [
       <IcSwatchSmNavy key='1' />,
       <IcSwatchSmCoral key='2' />,
@@ -40,11 +40,11 @@ export const COLOR_PREVIEW_LIST = [
     ],
   },
   {
-    key: 4,
+    key: 3,
     value: [<IcSwatchSmDarkgray key='1' />, <IcSwatchSmLightsilver key='2' />],
   },
   {
-    key: 5,
+    key: 4,
     value: [<IcSwatchSmSilver key='1' />, <IcSwatchSmLightsilver key='2' />],
   },
   {
