@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   gap: 10rem;
   width: 32.8rem;
-  max-height: 100vh;
+  max-height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   -ms-overflow-style: none; /* IE, Edge에서 스크롤바 감추기 */
@@ -91,5 +91,45 @@ export const ItemWrapper = styled.div`
 
 export const ItemBox = styled.div`
   display: flex;
+`;
+
+export const ItemText = styled.div`
+  display: flex;
   flex-direction: column;
+  gap: 0.4rem;
+  margin: 0.8rem;
+`;
+
+export const ItemTitle = styled.div`
+  display: flex;
+  ${({ theme: { fonts } }) => fonts.body3_1};
+`;
+
+export const ItemSub = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: ${({ theme: { colors } }) => colors.pointColor.blue0};
+  ${({ theme: { fonts } }) => fonts.body3_1};
+
+  > p {
+    ${({ theme: { fonts } }) => fonts.body3};
+    color: ${({ theme: { colors } }) => colors.grayScale.black};
+  }
+`;
+
+export const LastText = styled.span`
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  ${({ theme: { fonts } }) => fonts.body3_1};
+
+  > p {
+    ${({ theme: { fonts } }) => fonts.body3};
+    color: ${({ theme: { colors } }) => colors.grayScale.black};
+  }
+`;
+
+export const SaveText = styled.div`
+  display: flex;
+  ${({ theme: { fonts } }) => fonts.body3_1};
 `;

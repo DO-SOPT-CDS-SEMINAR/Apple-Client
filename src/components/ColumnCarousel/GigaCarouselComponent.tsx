@@ -4,7 +4,7 @@ import * as S from './ColumnCarousel.style';
 export const GigaCarouselComponent = () => {
   return (
     <S.ComponentWrapper>
-      <S.Text>색상. 맘에 드는 색상을 선택하세요.</S.Text>
+      <S.Text>모델. 원하는 사이즈와 디스플레이를 선택하세요.</S.Text>
       <S.GigaWrapper>
         <S.TypeWrapper>
           <GigaTypeButton giga={128} gigaType='GB' price={1249000} />
