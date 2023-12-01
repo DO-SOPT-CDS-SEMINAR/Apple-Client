@@ -1,5 +1,4 @@
 import { DisplayTypeButton } from '../../common/Button/DisplayTypeButton';
-import { GigaTypeButton } from '../../common/Button/GigaTypeButton';
 import * as S from './ColumnCarousel.style';
 
 export const ConnectCarouselComponent = () => {
