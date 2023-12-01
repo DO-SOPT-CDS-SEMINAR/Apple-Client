@@ -10,6 +10,8 @@ import SecondSection from '../../components/Main/SecondSection';
 import ThirdSection from '../../components/Main/ThirdSection';
 import FourthSection from '../../components/Main/FourthSection';
 
+import * as S from './Main.sytle';
+
 interface FilterItemProps {
   mainItemAsset: number;
   mainItemName: string;
@@ -42,11 +44,15 @@ const MainPage = () => {
       <Gnb DATA={GNB_CONTENTS} />
       <TitleHeader />
       <Category />
-      <Nb DATA={MAIN_BUTTON_DATA} />
-      <FirstSection data={firstSectionData} />
-      <SecondSection data={secondSectionData} />
-      <ThirdSection data={thirdSectionData} />
-      <FourthSection data={fourthSectionData} />
+      <S.SectionWrapper>
+        <S.NbWrapper>
+          <Nb DATA={MAIN_BUTTON_DATA} />
+        </S.NbWrapper>
+        <FirstSection data={firstSectionData} />
+        <SecondSection data={secondSectionData} />
+        <ThirdSection data={thirdSectionData} />
+        <FourthSection data={fourthSectionData} />
+      </S.SectionWrapper>
     </div>
   );
 };
