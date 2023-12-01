@@ -20,7 +20,7 @@ const ShowFirstSection = ({ headerInfo }: ShowFirstSectionProps) => {
   const { title, subtitle } = headerInfo[0];
 
   return (
-    <S.ShowFirstSectionContainer>
+    <S.ShowFirstSectionContainer id='section1'>
       <ShowIpadHeader title={title} subTitle={subtitle} />
       <CommonSwiper>
         {res &&

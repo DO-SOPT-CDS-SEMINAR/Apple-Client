@@ -4,7 +4,7 @@ export const PageHeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
 
-  margin: 0 12rem 2.6rem;
+  margin: 4.2rem 12rem 2.6rem;
 `;
 
 export const HeadText = styled.p`

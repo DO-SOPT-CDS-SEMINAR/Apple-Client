@@ -93,6 +93,8 @@ import MainIcStore from './main_ic_store.svg?react';
 import MainIcTrade from './main_ic_trade.svg?react';
 import MainImgChatSpecialist from './main_img_chat_specialist.svg?react';
 
+import FooterIcApple from './footer_ic_apple.svg?react';
+
 export { AddIcAngle };
 export { AddIcEye };
 export { AddIcFold };
@@ -186,3 +188,5 @@ export { MainIcPinstore };
 export { MainIcStore };
 export { MainIcTrade };
 export { MainImgChatSpecialist };
+
+export { FooterIcApple };
