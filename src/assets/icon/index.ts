@@ -33,6 +33,34 @@ import IcSwatchSmSpacegray from './ic_swatch_sm_spacegray.svg?react';
 import IcSwatchSmTurquiose from './ic_swatch_sm_turquiose.svg?react';
 import IcSwatchSmYellow from './ic_swatch_sm_yellow.svg?react';
 
+import IconIpadproCtype from './icon_ipadpro_ctype.svg?react';
+import ImgIpadpro5g from './img_ipadpro_5g.svg?react';
+import ImgIpadproA14 from './img_ipadpro_a14.svg?react';
+import ImgIpadproA15 from './img_ipadpro_a15.svg?react';
+import ImgIpadproAdapter from './img_ipadpro_adapter.svg?react';
+import ImgIpadproAppleacEx from './img_ipadpro_appleac_ex.svg?react';
+import ImgIpadproAppleacIc from './img_ipadpro_appleac_ic.svg?react';
+import ImgIpadproAppletvEx from './img_ipadpro_appletv_ex.svg?react';
+import ImgIpadproAppletvIc from './img_ipadpro_appletv_ic.svg?react';
+import ImgIpadproCameraUltrawide from './img_ipadpro_camera_ultrawide.svg?react';
+import ImgIpadproCameraWide from './img_ipadpro_camera_wide.svg?react';
+import ImgIpadproCompareIpad from './img_ipadpro_compare_ipad.svg?react';
+import ImgIpadproCompareIpadair from './img_ipadpro_compare_ipadair.svg?react';
+import ImgIpadproCompareIpadmini from './img_ipadpro_compare_ipadmini.svg?react';
+import ImgIpadproCtype from './img_ipadpro_ctype.svg?react';
+import ImgIpadproFront from './img_ipadpro_front.svg?react';
+import ImgIpadproIpad from './img_ipadpro_ipad.svg?react';
+import ImgIpadproKeyboard1 from './img_ipadpro_keyboard_1.svg?react';
+import ImgIpadproKeyboard2 from './img_ipadpro_keyboard_2.svg?react';
+import ImgIpadproM1 from './img_ipadpro_m1.svg?react';
+import ImgIpadproPencil1 from './img_ipadpro_pencil_1.svg?react';
+import ImgIpadproPencil2 from './img_ipadpro_pencil_2.svg?react';
+import ImgIpadproTouchid from './img_ipadpro_touchid.svg?react';
+import ImgIpadproWide from './img_ipadpro_wide.svg?react';
+
+import IpadIcRight from './ipad_ic_right.svg?react';
+import IpadImgChatSpecialist from './ipad_img_chat_specialist.svg?react';
+
 import IpadImgSwPattern01 from './ipad_img_sw_pattern01.svg?react';
 import IpadImgSwPattern02 from './ipad_img_sw_pattern02.svg?react';
 import IpadImgSwPattern03 from './ipad_img_sw_pattern03.svg?react';
@@ -63,6 +91,9 @@ import MainIcCard from './main_ic_card.svg?react';
 import MainIcPinstore from './main_ic_pinstore.svg?react';
 import MainIcStore from './main_ic_store.svg?react';
 import MainIcTrade from './main_ic_trade.svg?react';
+import MainImgChatSpecialist from './main_img_chat_specialist.svg?react';
+
+import FooterIcApple from './footer_ic_apple.svg?react';
 
 export { AddIcAngle };
 export { AddIcEye };
@@ -98,6 +129,34 @@ export { IcSwatchSmSpacegray };
 export { IcSwatchSmTurquiose };
 export { IcSwatchSmYellow };
 
+export { IconIpadproCtype };
+export { ImgIpadpro5g };
+export { ImgIpadproA14 };
+export { ImgIpadproA15 };
+export { ImgIpadproAdapter };
+export { ImgIpadproAppleacEx };
+export { ImgIpadproAppleacIc };
+export { ImgIpadproAppletvEx };
+export { ImgIpadproAppletvIc };
+export { ImgIpadproCameraUltrawide };
+export { ImgIpadproCameraWide };
+export { ImgIpadproCompareIpad };
+export { ImgIpadproCompareIpadair };
+export { ImgIpadproCompareIpadmini };
+export { ImgIpadproCtype };
+export { ImgIpadproFront };
+export { ImgIpadproIpad };
+export { ImgIpadproKeyboard1 };
+export { ImgIpadproKeyboard2 };
+export { ImgIpadproM1 };
+export { ImgIpadproPencil1 };
+export { ImgIpadproPencil2 };
+export { ImgIpadproTouchid };
+export { ImgIpadproWide };
+
+export { IpadIcRight };
+export { IpadImgChatSpecialist };
+
 export { IpadImgSwPattern01 };
 export { IpadImgSwPattern02 };
 export { IpadImgSwPattern03 };
@@ -128,3 +187,6 @@ export { MainIcCard };
 export { MainIcPinstore };
 export { MainIcStore };
 export { MainIcTrade };
+export { MainImgChatSpecialist };
+
+export { FooterIcApple };

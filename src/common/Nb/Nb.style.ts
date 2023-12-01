@@ -18,8 +18,11 @@ export const NbWrapper = styled.header<NbWrapperProps>`
 
   padding-left: 12rem;
 
+  background-color: ${({ theme: { colors } }) => colors.grayScale.white};
   border-bottom: ${({ theme: { colors }, $isTab }) =>
     $isTab && css`0.1rem solid ${colors.grayScale.gray3}`};
+
+  background-color: ${({ theme: { colors } }) => colors.grayScale.white};
 
   gap: ${({ $isTab }) => ($isTab ? css`15.167rem` : css`3.5rem`)};
 `;
