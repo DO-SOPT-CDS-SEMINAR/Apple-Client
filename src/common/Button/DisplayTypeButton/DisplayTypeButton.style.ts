@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.button`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   padding: 1.5rem;
   border-radius: 1.2rem;
@@ -23,15 +24,16 @@ export const Wrapper = styled.button`
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-
-  gap: 0.6rem;
 `;
 
 export const Title = styled.p`
+  display: flex;
   ${({ theme: { fonts } }) => fonts.body1};
 `;
 
 export const SubText = styled.p`
+  display: flex;
+  width: 17.2rem;
   ${({ theme: { fonts } }) => fonts.caption2};
 `;
 

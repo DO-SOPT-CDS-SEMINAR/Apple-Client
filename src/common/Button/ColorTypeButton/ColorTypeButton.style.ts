@@ -9,6 +9,7 @@ export const Wrapper = styled.button`
   padding: 1.5rem;
   border-radius: 1.2rem;
   gap: 0.8rem;
+  width: 15.3rem;
 
   border: 0.1rem solid ${({ theme: { colors } }) => colors.grayScale.gray5};
   ${({ theme: { colors } }) => colors.grayScale.gray8};
