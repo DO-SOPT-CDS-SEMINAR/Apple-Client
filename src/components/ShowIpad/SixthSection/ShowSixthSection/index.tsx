@@ -30,7 +30,7 @@ const ShowSixthSection = ({ data, headerInfo }: ShowSixthSectionProps) => {
   const bottom = SIXTH_SECTION_ADD_INFO.filter((it) => it.id === 3 || it.id === 5);
 
   return (
-    <S.ShowSixthSectionContainer>
+    <S.ShowSixthSectionContainer id='section6'>
       <ShowIpadHeader title={title} subTitle={subtitle} />
 
       <CommonSwiper>

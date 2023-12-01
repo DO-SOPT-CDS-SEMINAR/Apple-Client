@@ -11,6 +11,7 @@ import Gnb from '../../common/Gnb';
 import { GNB_CONTENTS } from '../../constant/gnbContents';
 import Banner from '../../common/Banner';
 import Nb from '../../common/Nb';
+import { useEffect, useState } from 'react';
 
 interface RenderedCommonSectionProps {
   section: number;
@@ -20,6 +21,14 @@ interface RenderedCommonSectionProps {
 
 const ShowIpadPage = () => {
   const { res } = useGetIpadItems();
+
+  const [isClicked, setIsClicked] = useState(10);
+  const location = document.querySelector(`#section${isClicked + 1}`);
+
+  const goClickedSection = (location: Element) => {
+    // Element 형식에는 offsetTop 속성을 활용할 수 없기 때문에 HTMLElement로 활용
+    window.scrollTo({ top: (location as HTMLElement).offsetTop, behavior: 'smooth' });
+  };
 
   const renderCommonSection = ({
     section,
@@ -34,24 +43,34 @@ const ShowIpadPage = () => {
     />
   );
 
+  useEffect(() => {
+    if (location) {
+      goClickedSection(location);
+    }
+  }, [location]);
+
   return (
     <>
       <Gnb DATA={GNB_CONTENTS} />
       <Banner />
       <S.ShowIpadPageContainer className='gray'>
         <PageHeader />
-        <Nb
-          DATA={[
-            '모든 모델',
-            '쇼핑안내',
-            '각종 할인 방법',
-            '남다른 Apple Store',
-            '액세서리',
-            '설정 및 지원',
-            'iPad 경험',
-            '특별 할인',
-          ]}
-        />
+        <S.NbContainer>
+          <Nb
+            DATA={[
+              '모든 모델',
+              '쇼핑안내',
+              '각종 할인 방법',
+              '남다른 Apple Store',
+              '액세서리',
+              '설정 및 지원',
+              'iPad 경험',
+              '특별 할인',
+            ]}
+            isClicked={isClicked}
+            setIsClicked={setIsClicked}
+          />
+        </S.NbContainer>
 
         <ShowFirstSection headerInfo={IPAD_COMMON_HEADER_TITLE.filter((it) => it.section === 1)} />
 

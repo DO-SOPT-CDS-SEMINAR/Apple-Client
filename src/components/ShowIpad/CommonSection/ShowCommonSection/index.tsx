@@ -23,7 +23,7 @@ const ShowCommonSection = ({ section, data, subName, headerInfo }: ShowCommonSec
   const { title, subtitle } = headerInfo[0];
 
   return (
-    <S.ShowCommonSectionContainer>
+    <S.ShowCommonSectionContainer id={`section${section}`}>
       <ShowIpadHeader title={title} subTitle={subtitle} />
 
       {(section === 2 || section === 4 || section === 8) && (
