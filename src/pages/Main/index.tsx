@@ -9,6 +9,7 @@ import FirstSection from '../../components/Main/FirstSection';
 import SecondSection from '../../components/Main/SecondSection';
 import ThirdSection from '../../components/Main/ThirdSection';
 import FourthSection from '../../components/Main/FourthSection';
+import { useState } from 'react';
 
 interface FilterItemProps {
   mainItemAsset: number;
@@ -19,6 +20,7 @@ interface FilterItemProps {
 
 const MainPage = () => {
   const { res: mainItemsData } = useGetMain();
+  const [isClicked, setIsClicked] = useState(10);
 
   if (!mainItemsData) {
     return <div>loading...</div>;
@@ -42,7 +44,7 @@ const MainPage = () => {
       <Gnb DATA={GNB_CONTENTS} />
       <TitleHeader />
       <Category />
-      <Nb DATA={MAIN_BUTTON_DATA} />
+      <Nb DATA={MAIN_BUTTON_DATA} isClicked={isClicked} setIsClicked={setIsClicked} />
       <FirstSection data={firstSectionData} />
       <SecondSection data={secondSectionData} />
       <ThirdSection data={thirdSectionData} />

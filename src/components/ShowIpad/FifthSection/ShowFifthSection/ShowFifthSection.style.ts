@@ -5,4 +5,5 @@ export const ShowFifthSectionContainer = styled.section`
   flex-direction: column;
 
   margin-top: 7.9rem;
+  padding-left: 12rem;
 `;
