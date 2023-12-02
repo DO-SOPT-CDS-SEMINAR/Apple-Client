@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable react/jsx-key */
 import HoveredProduct from '../../../../common/HoveredProduct';
 import { IconComponents } from '../../../../constant/iconComponents';
