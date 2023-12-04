@@ -15,7 +15,7 @@ interface Product {
 
 const FirstSection = ({ data }: FirstSectionProps) => {
   return (
-    <S.SectionWrapper>
+    <S.SectionWrapper id='section1'>
       <SectionHeader title='최신 제품.' subtitle='주고싶은 특별한 누군가를 위한 선물.' />
       <S.ScrollWrapper>
         <S.ScrollContent>
