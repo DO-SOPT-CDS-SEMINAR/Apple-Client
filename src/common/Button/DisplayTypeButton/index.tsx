@@ -5,7 +5,7 @@ export interface DisplayTypeButtonProps {
   title: string;
   subtext: string;
   price: number;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export const DisplayTypeButton = ({
