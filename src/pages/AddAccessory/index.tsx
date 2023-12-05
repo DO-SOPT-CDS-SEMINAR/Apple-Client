@@ -10,6 +10,19 @@ import ToggleMenu from '../../components/AddAccessory/toggle';
 import ImgCarousel from '../../components/AddAccessory/ImgCarousel';
 
 const AddAccssoryPage = () => {
+  const carouselItems = {
+    data: {
+      name: 'iPad Pro 12.9(6세대)용 Magic Keyboard - 한국어 - 화이트',
+      cost: '519,000',
+      imgUrls: [
+        'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MJQL3LL?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1665602254156',
+        'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipadpro11-digitalmat-gallery-2-202210?wid=728&hei=666&fmt=png-alpha&.v=1665083965975',
+        'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipadpro11-digitalmat-gallery-1-202210?wid=728&hei=666&fmt=png-alpha&.v=1664477161220',
+        'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipadpro11-digitalmat-gallery-2-202210?wid=728&hei=666&fmt=png-alpha&.v=1665083965975',
+        'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipadpro11-digitalmat-gallery-1-202210?wid=728&hei=666&fmt=png-alpha&.v=1664477161220',
+      ],
+    },
+  };
   return (
     <>
       <S.Dim></S.Dim>
@@ -22,7 +35,7 @@ const AddAccssoryPage = () => {
           <S.Title>꼭 필요한 것부터 알아두면 좋은 것까지.</S.Title>
           <S.ContextWrapper>
             <S.ImgWrapper>
-              <ImgCarousel />
+              <ImgCarousel imgUrls={carouselItems.data.imgUrls} />
               <S.ItemInfo>
                 <p>2개의 색상 제공</p>
                 <div>
@@ -32,9 +45,9 @@ const AddAccssoryPage = () => {
               </S.ItemInfo>
             </S.ImgWrapper>
             <S.ContextText>
-              <S.SubTitle>iPad Pro 12.9(6세대)용 Magic Keyboard - 한국어 - 화이트</S.SubTitle>
+              <S.SubTitle>{carouselItems.data.name}</S.SubTitle>
               <S.PriceWrapper>
-                <p>￦519,000</p>
+                <p>￦{carouselItems.data.cost}</p>
                 <BuyButton>구입하기</BuyButton>
               </S.PriceWrapper>
               <ItemInfo />
