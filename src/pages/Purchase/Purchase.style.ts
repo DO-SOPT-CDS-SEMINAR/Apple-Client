@@ -22,13 +22,21 @@ export const TypeContainer = styled.div`
 export const TitleContainer = styled.div`
   display: flex;
   position: fixed;
-  width: 100vw;
+  justify-content: space-between;
+  width: 100%;
   margin: 3rem 0;
 `;
 
 export const LeftTitle = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+export const RightButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: -20rem;
 `;
 export const ButtonContainer = styled.div`
   display: flex;
