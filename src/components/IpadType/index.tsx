@@ -62,10 +62,16 @@ const IpadType = () => {
           </Carousel>
         )}
       </S.Container>
-      <S.ButtonLeft onClick={handlePrevImage}>
+      <S.ButtonLeft
+        onClick={handlePrevImage}
+        style={{ display: imageIndex === 0 ? 'none' : 'block' }}
+      >
         <IpadproIcLeftCircleNormal />
       </S.ButtonLeft>
-      <S.ButtonRight onClick={handleNextImage}>
+      <S.ButtonRight
+        onClick={handleNextImage}
+        style={{ display: imageIndex === imageUrls.length - 1 ? 'none' : 'block' }}
+      >
         <IpadproIcRightCircleNormal />
       </S.ButtonRight>
     </S.ParentContainer>

@@ -40,12 +40,12 @@ export const ButtonLeft = styled.button`
   display: flex;
   position: absolute;
   top: 18rem;
+  left: -0.5rem;
   z-index: 0;
 `;
 export const ButtonRight = styled.button`
   display: flex;
   position: relative;
-  top: 20rem;
   left: -6rem;
   z-index: 0;
 `;
