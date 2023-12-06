@@ -6,6 +6,7 @@ export type DisplayTypeButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   title: string;
   subtext: string;
   price: number;
+  onClick?: () => void;
 };
 
 export const DisplayTypeButton = ({

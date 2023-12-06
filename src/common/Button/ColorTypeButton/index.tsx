@@ -5,11 +5,17 @@ export type ColorTypeButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   ColorComponent: string;
   disabled?: boolean;
   children: React.ReactNode;
+  onClick?: () => void;
 };
 
-export const ColorTypeButton = ({ ColorComponent, disabled, children }: ColorTypeButtonProps) => {
+export const ColorTypeButton = ({
+  ColorComponent,
+  disabled,
+  children,
+  onClick,
+}: ColorTypeButtonProps) => {
   return (
-    <S.Wrapper disabled={disabled}>
+    <S.Wrapper disabled={disabled} onClick={onClick}>
       <ColorComponent />
       <S.Color>{children}</S.Color>
     </S.Wrapper>

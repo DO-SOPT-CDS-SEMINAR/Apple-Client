@@ -56,7 +56,26 @@ export const Price = styled.p`
 export const CarouselContainer = styled.div`
   display: flex;
   position: relative;
+  flex-direction: column;
   left: -40rem;
   margin-top: 38.4rem;
-  z-index: 2;
+  z-index: 1;
+  gap: 10rem;
+`;
+
+export const LastText = styled.span`
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  ${({ theme: { fonts } }) => fonts.body3_1};
+
+  > p {
+    ${({ theme: { fonts } }) => fonts.body3};
+    color: ${({ theme: { colors } }) => colors.grayScale.black};
+  }
+`;
+
+export const SaveText = styled.div`
+  display: flex;
+  ${({ theme: { fonts } }) => fonts.body3_1};
 `;
