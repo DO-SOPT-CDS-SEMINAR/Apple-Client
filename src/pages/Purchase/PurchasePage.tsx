@@ -6,6 +6,11 @@ import IpadType from '../../components/IpadType';
 import * as S from './Purchase.style';
 import AddAccssoryPage from '../AddAccessory';
 import { IpadproIcScrabNormal } from '../../assets/icon';
+import CommonFooter from '../../common/Footer/CommonFooter';
+import ShowIpadPage from '../ShowIpad';
+import FirstSection from '../../components/BottomComponents/FirstSection';
+import SecondSection from '../../components/BottomComponents/SecondSection';
+import ThirdSection from '../../components/BottomComponents/ThirdSection';
 
 const PurchasePage = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -47,6 +52,12 @@ const PurchasePage = () => {
           </S.LastText>
         </S.CarouselContainer>
       </S.Container>
+      <FirstSection />
+      <SecondSection />
+      <ThirdSection />
+      <S.FooterWrapper>
+        <CommonFooter />
+      </S.FooterWrapper>
     </>
   );
 };
