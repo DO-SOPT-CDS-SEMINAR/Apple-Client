@@ -116,20 +116,3 @@ export const ItemSub = styled.div`
     color: ${({ theme: { colors } }) => colors.grayScale.black};
   }
 `;
-
-export const LastText = styled.span`
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  ${({ theme: { fonts } }) => fonts.body3_1};
-
-  > p {
-    ${({ theme: { fonts } }) => fonts.body3};
-    color: ${({ theme: { colors } }) => colors.grayScale.black};
-  }
-`;
-
-export const SaveText = styled.div`
-  display: flex;
-  ${({ theme: { fonts } }) => fonts.body3_1};
-`;

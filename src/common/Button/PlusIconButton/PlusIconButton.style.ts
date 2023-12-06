@@ -8,8 +8,10 @@ export const Wrapper = styled.button`
   padding: 1.2rem 1.6rem;
   border-radius: 4.2rem;
   gap: 0.4rem;
+  width: fit-content;
 
   background-color: ${({ theme: { colors } }) => colors.grayScale.gray2};
   color: ${({ theme: { colors } }) => colors.grayScale.gray8};
   ${({ theme: { fonts } }) => fonts.caption2};
+  margin: 0.6rem;
 `;
