@@ -1,11 +1,10 @@
 import { useRef, useState, useEffect } from 'react';
-import { AddToCartButton } from '../../common/Button/AddToCartButton';
 import { ColorCarouselComponent } from './ColorCarouselComponent';
 import * as S from './ColumnCarousel.style';
 import { ConnectCarouselComponent } from './ConnectCarouselComponent';
 import { GigaCarouselComponent } from './GigaCarouselComponent';
 import { ModelCarouselComponent } from './ModelCarouselComponent';
-import { IpadproIcApplebag, IpadproIcScrabNormal, IpadproIcTruck } from '../../assets/icon';
+import { IpadproIcApplebag, IpadproIcTruck } from '../../assets/icon';
 import axios from 'axios';
 
 export const ColumnCarouselWrapper = () => {
@@ -45,7 +44,6 @@ export const ColumnCarouselWrapper = () => {
       wrapperRef.current.scrollBy({ top: delta, behavior: 'smooth' }); // 스크롤 이동
     }
   };
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -98,15 +96,6 @@ export const ColumnCarouselWrapper = () => {
           </S.ItemText>
         </S.ItemBox>
       </S.ItemWrapper>
-      <AddToCartButton>장바구니에 담기</AddToCartButton>
-      <S.LastText>
-        <p>시간이 좀 더 필요하신가요?</p>선택한 기기를 관심 목록에 모두 저장해두고 언제든
-        살펴보던곳부터 다시 이어 보세요.
-        <S.SaveText>
-          <IpadproIcScrabNormal />
-          나중을 위해 저장
-        </S.SaveText>
-      </S.LastText>
     </S.Wrapper>
   );
 };

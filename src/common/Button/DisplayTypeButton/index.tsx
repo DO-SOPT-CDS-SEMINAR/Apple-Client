@@ -1,12 +1,13 @@
+import { ButtonHTMLAttributes } from 'react';
 import * as S from './DisplayTypeButton.style';
 
-export interface DisplayTypeButtonProps {
+export type DisplayTypeButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   disabled?: boolean;
   title: string;
   subtext: string;
   price: number;
   onClick?: () => void;
-}
+};
 
 export const DisplayTypeButton = ({
   title,
