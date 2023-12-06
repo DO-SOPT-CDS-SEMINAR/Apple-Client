@@ -8,10 +8,16 @@ export type DisplayTypeButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   price: number;
 };
 
-export const DisplayTypeButton = ({ title, subtext, price, disabled }: DisplayTypeButtonProps) => {
+export const DisplayTypeButton = ({
+  title,
+  subtext,
+  price,
+  disabled,
+  onClick,
+}: DisplayTypeButtonProps) => {
   const formattedPrice = price.toLocaleString();
   return (
-    <S.Wrapper disabled={disabled}>
+    <S.Wrapper disabled={disabled} onClick={onClick}>
       <S.TextWrapper>
         <S.Title>{title}</S.Title>
         <S.SubText>{subtext}</S.SubText>
