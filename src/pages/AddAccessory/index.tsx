@@ -8,7 +8,6 @@ import { IcSwatchSilver } from '../../assets/icon';
 import { IcSwatchSpaceGray } from '../../assets/icon';
 import ToggleMenu from '../../components/AddAccessory/toggle';
 import ImgCarousel from '../../components/AddAccessory/ImgCarousel';
-import { useState } from 'react';
 
 const AddAccssoryPage = () => {
   const carouselItems = {
