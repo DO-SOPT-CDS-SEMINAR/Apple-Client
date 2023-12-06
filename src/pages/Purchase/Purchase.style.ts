@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   width: 100%;
-  overflow-y: hidden;
+  overflow: hidden;
   padding: 0 12rem;
 `;
 
@@ -78,4 +78,13 @@ export const LastText = styled.span`
 export const SaveText = styled.div`
   display: flex;
   ${({ theme: { fonts } }) => fonts.body3_1};
+`;
+
+export const FooterWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  background-color: ${({ theme: { colors } }) => colors.grayScale.gray2};
 `;
