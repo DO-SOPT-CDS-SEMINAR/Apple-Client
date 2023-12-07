@@ -7,7 +7,7 @@ interface ShowIpadHeaderProps {
 
 const ShowIpadHeader = ({ title, subTitle }: ShowIpadHeaderProps) => {
   return (
-    <S.HeaderContainer>
+    <S.HeaderContainer id='header'>
       <S.Title>{title}</S.Title>
       <S.SubTitle>{subTitle}</S.SubTitle>
     </S.HeaderContainer>
